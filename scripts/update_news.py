@@ -11,6 +11,9 @@ Each feed generates an HTML fragment for Quarto.
 
 If an individual feed fails, its previous HTML output
 is preserved without interrupting the other feeds.
+
+A timestamp is generated whenever at least one feed
+updates successfully.
 """
 
 from datetime import datetime, timezone
@@ -27,6 +30,8 @@ import feedparser
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 NEWS_DIR = BASE_DIR / "news"
+
+TIMESTAMP_FILE = NEWS_DIR / "last_updated.html"
 
 MAX_ARTICLES = 3
 
@@ -121,7 +126,7 @@ def retrieve_news(url, keywords=None):
 
 
 # ==========================================================
-# Generate HTML
+# Generate article HTML
 # ==========================================================
 
 def generate_html(articles):
@@ -192,6 +197,39 @@ def update_feed(name, config):
 
 
 # ==========================================================
+# Generate update timestamp
+# ==========================================================
+
+def update_timestamp():
+    """Record the time of the latest successful news retrieval."""
+
+    updated_utc = datetime.now(timezone.utc)
+
+    updated_label = updated_utc.strftime(
+        "%B %d, %Y at %H:%M UTC"
+    )
+
+    timestamp_html = (
+        '<p class="news-last-updated">'
+        f'News updated: {escape(updated_label)}'
+        '</p>\n'
+    )
+
+    TIMESTAMP_FILE.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    TIMESTAMP_FILE.write_text(
+        timestamp_html,
+        encoding="utf-8",
+    )
+
+    print(f"\nNews timestamp: {updated_label}")
+    print(f"Saved: {TIMESTAMP_FILE}")
+
+
+# ==========================================================
 # Main
 # ==========================================================
 
@@ -214,8 +252,23 @@ def main():
         status = "SUCCESS" if success else "FAILED"
         print(f"{name}: {status}")
 
-    if not all(results.values()):
+    successful = sum(results.values())
+    total = len(results)
+
+    print(f"\nSuccessful feeds: {successful}/{total}")
+
+    # Generate timestamp only if at least one feed succeeded.
+    if successful > 0:
+        update_timestamp()
+
+    # Preserve the existing published website if all feeds fail.
+    if successful == 0:
+        print("WARNING: All feeds failed; preserving cached headlines.")
         raise SystemExit(1)
+
+    # Allow publication when some feeds succeed.
+    if successful < total:
+        print("WARNING: Partial update; failed feeds retain cached headlines.")
 
 
 if __name__ == "__main__":

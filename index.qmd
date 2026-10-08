@@ -18,6 +18,10 @@ format:
 
 ### Space & Astronomy News
 
+```{=html}
+{{< include news/last_updated.html >}}
+```
+
 **NASA — Latest News**
 
 ```{=html}
