@@ -11,6 +11,41 @@
     "href": "index.html",
     "title": "Jeffrey Sabby",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Stellar Astrophysics • Eclipsing Binary Stars • Spectroscopy • Exoplanets • Observational Astronomy • Mechatronics • Scientific Computing"
+  },
+  {
+    "objectID": "index.html#scientific-identity",
+    "href": "index.html#scientific-identity",
+    "title": "Jeffrey Sabby",
+    "section": "Scientific Identity",
+    "text": "Scientific Identity\nI am an astrophysicist, physicist, educator, observational astronomer, and engineer whose work is driven by a fundamental interest in understanding physical systems through observation, measurement, computation, and experiment.\nMy research has focused particularly on stellar astrophysics, eclipsing binary systems, spectroscopy, stellar radial and rotational velocities, exoplanets, and observational astronomy. I am especially interested in problems where careful observations can be combined with physical models and computational methods to extract fundamental properties of astronomical systems.\nMuch of my work also lies at the intersection of astronomy, instrumentation, mechatronics, and computation. I design and build astronomical instrumentation and automated observatories, develop scientific software and data-analysis methods, and work with embedded computers, sensors, telemetry, data-acquisition systems, autonomous vehicles, and feedback-control systems. My engineering interests include Raspberry Pi and microcontroller-based systems, real-time sensing, avionics, GNSS/RTK positioning, 3D-printed mechanical systems, autonomous rovers and multirotor aircraft, and experimentally validated control systems.\nTeaching and research are closely connected in my work. I approach both from the perspective that physics is not simply a collection of established results, but a process of asking questions, constructing testable models, making measurements, confronting those models with evidence, and revising our understanding when the observations demand it."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Jeffrey Sabby",
+    "section": "Research Interests",
+    "text": "Research Interests\nMy current and continuing research interests include:\n\nStellar astrophysics\nEclipsing and spectroscopic binary systems\nStellar radial and rotational velocities\nAstronomical spectroscopy\nExoplanet detection and characterization\nTime-series analysis\nObservational astronomy\nAstronomical instrumentation\nMechatronics and embedded systems\nSensors, telemetry, and data acquisition\nAutonomous systems and feedback control\nMicrocontrollers, Raspberry Pi, and real-time instrumentation\n3D-printed mechanical and electromechanical systems\nAutomated observatories\nScientific computing and data analysis"
+  },
+  {
+    "objectID": "index.html#scientific-approach",
+    "href": "index.html#scientific-approach",
+    "title": "Jeffrey Sabby",
+    "section": "Scientific Approach",
+    "text": "Scientific Approach\nMy work follows a simple principle: physical understanding should remain anchored to observation and testable prediction.\nThe recurring workflow is:\nQuestion → Model → Prediction → Observation → Measurement → Analysis → Validation → Interpretation\nComputational methods, instrumentation, and theory are tools within that process. Their value ultimately depends on whether they improve our ability to make reproducible measurements, test physical models, quantify uncertainty, and extract reliable information from nature."
+  },
+  {
+    "objectID": "index.html#mechatronics-and-engineering",
+    "href": "index.html#mechatronics-and-engineering",
+    "title": "Jeffrey Sabby",
+    "section": "Mechatronics and Engineering",
+    "text": "Mechatronics and Engineering\nMy engineering work emphasizes the integration of mechanics, electronics, sensors, computation, and control into experimentally testable systems.\nRecent projects have included:\n\nNavio2/Raspberry Pi avionics systems\nAutonomous rover platforms\nAutonomous quadcopter and hexacopter systems\nReal-time telemetry and data acquisition\nRTK-enhanced GNSS positioning\nEnvironmental sensor packages\n3D-printed avionics housings\n3D-printed gimbal and thrust-vectoring hardware\nFeedback-control systems for rocket stabilization\nAutonomous mission planning\nEmbedded sensing and microcontroller-based instrumentation\n\nA recurring theme in these projects is the integration of physical modeling with direct experimental measurement. Systems are designed, instrumented, tested, and analyzed using recorded sensor and telemetry data so that predicted behavior can be compared directly with measured performance.\nThese projects reflect the same philosophy that guides my astrophysical research: construct a physical model, instrument the system, acquire quantitative data, compare prediction with measurement, and use the residuals to improve the design."
+  },
+  {
+    "objectID": "index.html#current-areas-of-work",
+    "href": "index.html#current-areas-of-work",
+    "title": "Jeffrey Sabby",
+    "section": "Current Areas of Work",
+    "text": "Current Areas of Work\nCurrent efforts include observational studies of binary stars and exoplanets, astronomical data analysis, scientific software development, automated observing systems, embedded instrumentation, autonomous mechatronic systems, and computational approaches to astrophysical and engineering problems.\nAdditional sections of this site will document current research projects, publications, observatories, scientific software, teaching materials, mechatronics projects, and selected technical work.\n\n\nResearch • Publications • Teaching • Software • Observatories • Mechatronics"
   }
 ]
