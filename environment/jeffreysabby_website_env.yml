@@ -1,0 +1,74 @@
+# =============================================================================
+# Jeffrey Sabby Website - Conda Environment
+# =============================================================================
+#
+# Purpose:
+#   Python/Jupyter computational environment supporting jeffreysabby.com.
+#
+#   Primary website publishing is handled by Quarto, installed separately
+#   as a system-level application.
+#
+#   This environment provides:
+#     - Jupyter notebook execution
+#     - Jupyter Book support
+#     - Numerical and scientific computing
+#     - Data analysis
+#     - Scientific visualization
+#     - Astronomy and astrophysics support
+#     - Astronomical archive/catalog access
+#
+# Environment:
+#   jeffreysabby_website_env
+#
+# Primary channel:
+#   conda-forge
+#
+# =============================================================================
+
+name: jeffreysabby_website_env
+
+channels:
+  - conda-forge
+
+dependencies:
+
+  # ---------------------------------------------------------------------------
+  # Python
+  # ---------------------------------------------------------------------------
+
+  - python=3.13
+
+  # ---------------------------------------------------------------------------
+  # Jupyter Ecosystem
+  # ---------------------------------------------------------------------------
+
+  - jupyter
+  - jupyterlab
+  - ipykernel
+  - jupyter-book
+
+  # ---------------------------------------------------------------------------
+  # Numerical and Scientific Computing
+  # ---------------------------------------------------------------------------
+
+  - numpy
+  - scipy
+
+  # ---------------------------------------------------------------------------
+  # Data Analysis
+  # ---------------------------------------------------------------------------
+
+  - pandas
+
+  # ---------------------------------------------------------------------------
+  # Scientific Visualization
+  # ---------------------------------------------------------------------------
+
+  - matplotlib
+
+  # ---------------------------------------------------------------------------
+  # Astronomy and Astrophysics
+  # ---------------------------------------------------------------------------
+
+  - astropy
+  - astroquery
