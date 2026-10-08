@@ -1,1 +1,1 @@
-Sitemap: https://jsabby.github.io/JeffreySabbyWebsite/sitemap.xml
+Sitemap: https://jeffreysabby.com/sitemap.xml
