@@ -1,1 +1,224 @@
-/* css styles */
+/* ==========================================================
+   Jeffrey Sabby — Academic Website
+   Three-Column Navigation and Updates Layout
+   ========================================================== */
+
+
+/* ==========================================================
+   1. Main Page Background
+   ========================================================== */
+
+body {
+    background-color: #f5f6f8;
+}
+
+
+/* ==========================================================
+   2. Left-Hand Floating Navigation Panel
+   ========================================================== */
+
+#quarto-sidebar {
+    padding: 1.25rem 1rem;
+    background-color: #eef4f9;
+    border: 1px solid #cfdeeb;
+    border-radius: 8px;
+
+    /* Align with the right-hand news panel */
+    margin-top: 1.75rem;
+
+    /* Floating panel dimensions */
+    height: 75vh;
+    max-height: calc(100vh - 8rem);
+
+    /* Allow internal scrolling */
+    overflow-y: auto;
+}
+
+
+/* ==========================================================
+   3. Left Sidebar Content Alignment
+   ========================================================== */
+
+/*
+   Quarto adds internal spacing above its navigation content.
+
+   Move the navigation content upward without changing the
+   outer position of the floating sidebar panel.
+*/
+
+#quarto-sidebar .sidebar-menu-container {
+    padding-top: 0 !important;
+    margin-top: -12px !important;
+}
+
+
+/* ==========================================================
+   4. Left Sidebar Section Headings
+   ========================================================== */
+
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container {
+    margin-top: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container .sidebar-item-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #243b53;
+}
+
+
+/* ==========================================================
+   5. Left Sidebar Navigation Links
+   ========================================================== */
+
+#quarto-sidebar .sidebar-item-text.sidebar-link {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    padding: 0.04rem 0.4rem;
+    border-radius: 5px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Compact spacing between individual navigation links */
+
+#quarto-sidebar .sidebar-item:not(.sidebar-item-section) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* Navigation hover effect */
+
+#quarto-sidebar a.sidebar-link:hover {
+    background-color: #e9f1f8;
+    color: #155a8a;
+}
+
+
+/* Active navigation link */
+
+#quarto-sidebar a.sidebar-link.active {
+    color: #155a8a;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   6. Right-Hand Space & Astronomy News Panel
+   ========================================================== */
+
+.x-updates-panel {
+    background-color: #eef4f9;
+    border: 1px solid #cfdeeb;
+    border-radius: 8px;
+
+    /* Match the left panel's internal padding */
+    padding: 1.25rem 1rem;
+
+    /* Quarto controls the right margin's vertical position */
+    margin-top: 0;
+
+    /* Prevent long headlines from overflowing */
+    overflow-wrap: anywhere;
+}
+
+
+/* Right-hand panel heading */
+
+.x-updates-panel h3 {
+    color: #243b53;
+    font-size: 1.05rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ==========================================================
+   7. Right Panel Sticky Positioning
+   ========================================================== */
+
+@media (min-width: 992px) {
+
+    .x-updates-panel {
+        position: sticky;
+        top: 1.5rem;
+    }
+
+}
+
+
+/* ==========================================================
+   8. Responsive Layout — Tablets and Mobile Devices
+   ========================================================== */
+
+@media (max-width: 991px) {
+
+    /* Left navigation panel */
+
+    #quarto-sidebar {
+        padding: 0.75rem;
+        margin-top: 0.75rem;
+        height: auto;
+        max-height: none;
+    }
+
+    /* Restore normal navigation positioning */
+
+    #quarto-sidebar .sidebar-menu-container {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* Right news panel */
+
+    .x-updates-panel {
+        position: static;
+        margin-top: 1rem;
+    }
+
+}
+
+/* ==========================================================
+   NASA News Feed
+   ========================================================== */
+
+.nasa-news-feed {
+    margin-top: 0.5rem;
+}
+
+.nasa-news-feed .news-article {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #d5e0e9;
+}
+
+.nasa-news-feed .news-article:first-child {
+    padding-top: 0.25rem;
+}
+
+.nasa-news-feed .news-article:last-child {
+    border-bottom: none;
+}
+
+.nasa-news-feed .news-date {
+    font-size: 0.75rem;
+    color: #66788a;
+    margin-bottom: 0.25rem;
+}
+
+.nasa-news-feed .news-article a {
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #155a8a;
+    text-decoration: none;
+}
+
+.nasa-news-feed .news-article a:hover {
+    color: #0b4168;
+    text-decoration: underline;
+}

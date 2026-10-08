@@ -3,11 +3,44 @@ project:
 
 website:
   title: "Jeffrey Sabby"
+
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+
+  sidebar:
+    style: "floating"
+    contents:
+      - section: "Social Media"
+        contents:
+          - text: "YouTube"
+            href: https://www.youtube.com/@DrJeffreySabby
+          - text: "Facebook"
+            href: https://www.facebook.com/jsabby
+          - text: "X (Twitter)"
+            href: https://x.com/jasabby
+
+      - section: "Professional & Academic"
+        contents:
+          - text: "ORCID"
+            href: https://orcid.org/0000-0003-3097-1425
+          - text: "ResearchGate"
+            href: https://www.researchgate.net/profile/Jeffrey-Sabby
+          - text: "Google Scholar"
+            href: "https://scholar.google.com/citations?hl=en&user=kqZhcjgAAAAJ"
+          - text: "NASA ADS / SciX"
+            href: "https://scixplorer.org/search?p=1&q=Sabby%2C+J&sort=score+desc&sort=date+desc&d=astrophysics"
+          - text: "LinkedIn"
+            href: https://www.linkedin.com/in/dr-jeffrey-sabby-76569b27/
+
+      - section: "Scientific Computing & Software"
+        contents:
+          - text: "GitHub"
+            href: https://github.com/jsabby
+          - text: "GitLab"
+            href: https://gitlab.com/jsabby
 
 format:
   html:
@@ -16,6 +49,11 @@ format:
       - brand
     css: styles.css
     toc: true
+    link-external-newwindow: true
+    include-after-body: external-links.html
 
-
-
+    grid:
+      sidebar-width: 320px
+      body-width: 1000px
+      margin-width: 320px
+      gutter-width: 1.5rem

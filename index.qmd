@@ -1,7 +1,7 @@
 ---
 title: "Jeffrey Sabby"
 toc: false
-page-layout: full
+page-layout: article
 format:
   html:
     include-in-header:
@@ -13,25 +13,47 @@ format:
         </style>
 ---
 
-<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+::: {.column-margin}
+<div class="x-updates-panel">
 
-# Dr. Jeffrey Sabby
+### Space & Astronomy News
 
-### Astrophysicist • Physicist • Educator • Observational Astronomer • Mechatronics
+**NASA — Latest News**
 
-*Stellar Astrophysics • Eclipsing Binary Stars • Spectroscopy • Exoplanets • Observational Astronomy • Mechatronics • Scientific Computing*
+```{=html}
+{{< include news/nasa_news.html >}}
+```
+
+[More NASA News](https://www.nasa.gov/news/){target="_blank"}
+
+---
+
+**SpaceX — Missions & Launches**
+
+```{=html}
+{{< include news/spacex_news.html >}}
+```
+
+[Visit SpaceX](https://www.spacex.com/){target="_blank"}
+
+---
+
+**Astronomy Research**
+
+```{=html}
+{{< include news/astronomy_news.html >}}
+```
+
+[More Astronomy News](https://phys.org/space-news/astronomy/){target="_blank"}
 
 </div>
+:::
 
-<div style="text-align: center; margin: 2rem auto 2.5rem auto;">
+<div class="homepage-banner" style="text-align: center; margin: 2rem auto 2rem auto;">
 
-<img src="images/observatory_telescope.jpeg"
-     alt="Astronomical telescope and instrumentation"
-     style="width: 70%; max-width: 1100px; height: auto; border-radius: 6px;">
-
-<p style="font-size: 0.9rem; margin-top: 0.5rem;">
-Astronomical telescope and instrumentation
-</p>
+<img src="images/wide_cinematic_astrophysics_sabby_header.png"
+     alt="Dr. Jeffrey Sabby — Astrophysics, Physics, Computational Science, and Mechatronics"
+     style="display: block; width: 100%; height: auto; border-radius: 6px;">
 
 </div>
 
