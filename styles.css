@@ -222,3 +222,15 @@ body {
     color: #0b4168;
     text-decoration: underline;
 }
+
+/* ==========================================================
+   Space & Astronomy News — Last Updated Timestamp
+   ========================================================== */
+
+.news-last-updated {
+    font-size: 0.72rem;
+    color: #66788a;
+    font-style: italic;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
