@@ -46,12 +46,9 @@ page-layout: article
 </div>
 :::
 
-<div class="homepage-banner" style="text-align: center; margin: 2rem auto 2rem auto;">
-
-<img src="images/wide_cinematic_astrophysics_sabby_header.png"
-     alt="Dr. Jeffrey Sabby — Astrophysics, Physics, Computational Science, and Mechatronics"
-     style="display: block; width: 100%; height: auto; border-radius: 6px;">
-
+<div class="website-hero">
+  <img src="images/wide_cinematic_astrophysics_sabby_header.png"
+       alt="Dr. Jeffrey Sabby — Astrophysics, Physics, Computational Science, and Mechatronics">
 </div>
 
 ---

@@ -234,3 +234,34 @@ body {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
 }
+
+/* ==========================================================
+   9. Global Website HERO Images
+   ========================================================== */
+
+/*
+   Standardized HERO presentation across all website pages.
+
+   - Uses the full available width of the center column.
+   - Preserves each image's original aspect ratio.
+   - Prevents distortion and unnecessary cropping.
+   - Maintains consistent rounded corners.
+   - Applies to the homepage and all research pages.
+*/
+
+.website-hero {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+
+    /* Standard spacing above and below every HERO */
+    margin: 1.5rem auto 2rem auto;
+}
+
+.website-hero img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

@@ -1,0 +1,300 @@
+/* ============================================================
+   RT CrB — Interactive Scientific Dashboard
+   ------------------------------------------------------------
+   Project: JeffreySabbyWebsite
+   Research: Spectroscopic Eclipsing Binaries
+   Target: RT Coronae Borealis
+
+   Purpose:
+       Styling for synchronized photometric, spectroscopic,
+       and orbital visualizations.
+
+   Scientific data:
+       EBOP photometric solution
+       SPECOB spectroscopic solution
+       Sabby & Lacy (2003)
+
+   Version: 1.0.0
+   Date: 2026-10-09
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. Dashboard Container
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d8e0e8;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    box-sizing: border-box;
+}
+
+#rtcrb-dashboard *,
+#rtcrb-dashboard *::before,
+#rtcrb-dashboard *::after {
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------------------------
+   2. Dashboard Header
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard .rtcrb-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#rtcrb-dashboard .rtcrb-title {
+    margin-bottom: 0.4rem;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    color: #17365d;
+}
+
+#rtcrb-dashboard .rtcrb-subtitle {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    color: #536170;
+}
+
+
+/* ------------------------------------------------------------
+   3. Orbital Phase Controls
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard .rtcrb-controls {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    margin: 1.5rem 0;
+    padding: 1rem;
+
+    background-color: #f4f7fb;
+
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+}
+
+#rtcrb-dashboard .rtcrb-controls label {
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    color: #263746;
+}
+
+#rtcrb-dashboard .rtcrb-phase-slider {
+    flex: 1 1 250px;
+
+    min-width: 150px;
+    max-width: 500px;
+
+    cursor: pointer;
+}
+
+#rtcrb-dashboard .rtcrb-phase-value {
+    min-width: 70px;
+
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-align: center;
+
+    color: #17365d;
+}
+
+
+/* ------------------------------------------------------------
+   4. Dashboard Buttons
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard .rtcrb-button {
+    padding: 0.5rem 1rem;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: #17365d;
+    background-color: #ffffff;
+
+    border: 1px solid #b8c8d8;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#rtcrb-dashboard .rtcrb-button:hover {
+    background-color: #e7eef7;
+    border-color: #8ca9c6;
+}
+
+#rtcrb-dashboard .rtcrb-button:focus-visible {
+    outline: 3px solid #527fae;
+    outline-offset: 2px;
+}
+
+
+/* ------------------------------------------------------------
+   5. Visualization Layout
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard .rtcrb-visualizations {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    width: 100%;
+}
+
+#rtcrb-dashboard .rtcrb-panel {
+    width: 100%;
+    min-width: 0;
+
+    padding: 1rem;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+}
+
+#rtcrb-dashboard .rtcrb-panel-title {
+    margin: 0 0 0.8rem;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    color: #17365d;
+}
+
+
+/* ------------------------------------------------------------
+   6. Plotly Visualization Containers
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard .rtcrb-plot {
+    width: 100%;
+    min-width: 0;
+    min-height: 350px;
+}
+
+#rtcrb-dashboard .rtcrb-orbit {
+    width: 100%;
+    min-height: 400px;
+}
+
+
+/* ------------------------------------------------------------
+   7. Scientific Notes and Data Provenance
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard .rtcrb-note {
+    margin-top: 0.8rem;
+
+    font-size: 0.85rem;
+    line-height: 1.6;
+
+    color: #536170;
+}
+
+#rtcrb-dashboard .rtcrb-source {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+
+    font-size: 0.85rem;
+    line-height: 1.6;
+
+    color: #536170;
+
+    border-top: 1px solid #e0e6ed;
+}
+
+
+/* ------------------------------------------------------------
+   8. Status and Error Messages
+   ------------------------------------------------------------ */
+
+#rtcrb-dashboard .rtcrb-status {
+    margin: 0.8rem 0;
+    padding: 0.7rem 1rem;
+
+    font-size: 0.9rem;
+
+    color: #263746;
+    background-color: #f4f7fb;
+
+    border-radius: 6px;
+}
+
+#rtcrb-dashboard .rtcrb-error {
+    color: #8b1e1e;
+    background-color: #fff1f1;
+
+    border: 1px solid #e7b9b9;
+}
+
+
+/* ------------------------------------------------------------
+   9. Responsive Layout
+   ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+
+    #rtcrb-dashboard {
+        padding: 0.8rem;
+        margin: 1rem auto;
+    }
+
+    #rtcrb-dashboard .rtcrb-title {
+        font-size: 1.25rem;
+    }
+
+    #rtcrb-dashboard .rtcrb-controls {
+        gap: 0.7rem;
+        padding: 0.8rem;
+    }
+
+    #rtcrb-dashboard .rtcrb-panel {
+        padding: 0.5rem;
+    }
+
+    #rtcrb-dashboard .rtcrb-plot {
+        min-height: 300px;
+    }
+
+    #rtcrb-dashboard .rtcrb-orbit {
+        min-height: 320px;
+    }
+}
+
+
+/* ============================================================
+   End of RT CrB Dashboard Stylesheet
+   ============================================================ */

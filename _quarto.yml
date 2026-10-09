@@ -1,5 +1,9 @@
 project:
   type: website
+  resources:
+    - research/eclipsing_binaries/data/*.csv
+    - research/eclipsing_binaries/dashboard/*.js
+    - research/eclipsing_binaries/dashboard/*.css
 
 website:
   title: "Dr. Jeffrey Sabby Ph.D"
@@ -117,6 +121,6 @@ format:
 
     grid:
       sidebar-width: 320px
-      body-width: 1000px
+      body-width: 1200px
       margin-width: 320px
       gutter-width: 1.5rem

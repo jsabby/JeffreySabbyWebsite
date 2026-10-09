@@ -5,10 +5,9 @@ sidebar: research-sidebar
 toc: false
 ---
 
-<div style="text-align: center; margin-bottom: 2rem;">
+<div class="website-hero">
   <img src="../images/wide_cinematic_research_sabby_header.png"
-       alt="Dr. Jeffrey Sabby — Scientific Research"
-       style="width: 100%; max-width: 1000px; height: auto; border-radius: 5px;">
+       alt="Dr. Jeffrey Sabby — Scientific Research">
 </div>
 
 ::: {.column-margin}
