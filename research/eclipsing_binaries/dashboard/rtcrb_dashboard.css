@@ -294,6 +294,28 @@
     }
 }
 
+/* ------------------------------------------------------------
+   10. Mobile Orbital Geometry Layout
+   ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+
+    /* Display orbital diagrams vertically on narrow screens. */
+
+    #rtcrb-dashboard .rtcrb-orbital-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 1.25rem !important;
+    }
+
+    /* Give each Plotly diagram the available width. */
+
+    #rtcrb-dashboard #rtcrb-orbit-plot,
+    #rtcrb-dashboard #rtcrb-orbital-plane-plot {
+        width: 100% !important;
+        min-width: 0;
+        min-height: 340px;
+    }
+}
 
 /* ============================================================
    End of RT CrB Dashboard Stylesheet

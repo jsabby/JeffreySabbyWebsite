@@ -1221,7 +1221,7 @@
        9. Synchronization
        -------------------------------------------------------- */
 
-    function updatePhase(phase) {
+    async function updatePhase(phase) {
 
         state.phase = normalizePhase(phase);
 
@@ -1241,13 +1241,17 @@
 
         const shape = phaseLine(state.phase);
 
+        const updates = [];
+
         // Update EBOP photometric visualization.
 
         if (photometryPlot && photometryPlot.data) {
 
-            Plotly.relayout(
-                photometryPlot,
-                {shapes: [shape]}
+            updates.push(
+                Plotly.relayout(
+                    photometryPlot,
+                    {shapes: [shape]}
+                )
             );
         }
 
@@ -1255,9 +1259,11 @@
 
         if (radialVelocityPlot && radialVelocityPlot.data) {
 
-            Plotly.relayout(
-                radialVelocityPlot,
-                {shapes: [shape]}
+            updates.push(
+                Plotly.relayout(
+                    radialVelocityPlot,
+                    {shapes: [shape]}
+                )
             );
         }
 
@@ -1265,11 +1271,13 @@
 
         if (orbitPlot && orbitPlot.data) {
 
-            Plotly.relayout(
-                orbitPlot,
-                {
-                    shapes: projectedStellarDisks(state.phase)
-                }
+            updates.push(
+                Plotly.relayout(
+                    orbitPlot,
+                    {
+                        shapes: projectedStellarDisks(state.phase)
+                    }
+                )
             );
         }
 
@@ -1279,29 +1287,37 @@
 
             const positions = orbitalPositions(state.phase);
 
-            Plotly.relayout(
-                orbitalPlanePlot,
-                {
-                    shapes: [
+            updates.push(
+                Plotly.relayout(
+                    orbitalPlanePlot,
+                    {
+                        shapes: [
 
-                        stellarDisk(
-                            positions.xA,
-                            positions.yA,
-                            CONFIG.orbit.radiusA,
-                            CONFIG.colors.primary
-                        ),
+                            stellarDisk(
+                                positions.xA,
+                                positions.yA,
+                                CONFIG.orbit.radiusA,
+                                CONFIG.colors.primary
+                            ),
 
-                        stellarDisk(
-                            positions.xB,
-                            positions.yB,
-                            CONFIG.orbit.radiusB,
-                            CONFIG.colors.secondary
-                        )
+                            stellarDisk(
+                                positions.xB,
+                                positions.yB,
+                                CONFIG.orbit.radiusB,
+                                CONFIG.colors.secondary
+                            )
 
-                    ]
-                }
+                        ]
+                    }
+                )
             );
         }
+
+        // Wait until all four visualizations finish updating.
+        // This prevents animation frames from accumulating
+        // faster than the browser can render them.
+
+        await Promise.all(updates);
     }
 
 
@@ -1313,7 +1329,7 @@
 
         if (state.animationTimer !== null) {
 
-            clearInterval(state.animationTimer);
+            clearTimeout(state.animationTimer);
 
             state.animationTimer = null;
 
@@ -1325,7 +1341,61 @@
 
             playButton.textContent = "Play";
 
+            playButton.setAttribute("aria-pressed", "false");
+
         }
+    }
+
+
+    function scheduleAnimationFrame() {
+
+        if (!state.playing) {
+            return;
+        }
+
+        state.animationTimer = setTimeout(async () => {
+
+            state.animationTimer = null;
+
+            if (!state.playing) {
+                return;
+            }
+
+            const nextPhase = normalizePhase(
+
+                state.phase +
+                CONFIG.animationPhaseIncrement
+
+            );
+
+            try {
+
+                await updatePhase(nextPhase);
+
+            } catch (error) {
+
+                console.error(
+                    "RT CrB animation update failed:",
+                    error
+                );
+
+                stopAnimation();
+
+                setStatus(
+                    "Animation update failed; see browser console.",
+                    true
+                );
+
+                return;
+            }
+
+            if (state.playing) {
+
+                scheduleAnimationFrame();
+
+            }
+
+        }, CONFIG.animationIntervalMs);
     }
 
 
@@ -1341,18 +1411,11 @@
 
             playButton.textContent = "Pause";
 
+            playButton.setAttribute("aria-pressed", "true");
+
         }
 
-        state.animationTimer = setInterval(() => {
-
-            updatePhase(
-
-                state.phase +
-                CONFIG.animationPhaseIncrement
-
-            );
-
-        }, CONFIG.animationIntervalMs);
+        scheduleAnimationFrame();
     }
 
 
@@ -1374,11 +1437,11 @@
 
         stopAnimation();
 
-        updatePhase(CONFIG.initialPhase);
+        void updatePhase(CONFIG.initialPhase);
     }
 
 
-    /* --------------------------------------------------------
+        /* --------------------------------------------------------
        11. Event Handlers
        -------------------------------------------------------- */
 
@@ -1394,7 +1457,7 @@
 
                     stopAnimation();
 
-                    updatePhase(
+                    void updatePhase(
                         numeric(event.target.value)
                     );
 
@@ -1474,7 +1537,7 @@
 
             registerControls();
 
-            updatePhase(CONFIG.initialPhase);
+            await updatePhase(CONFIG.initialPhase);
 
 
             setStatus(
