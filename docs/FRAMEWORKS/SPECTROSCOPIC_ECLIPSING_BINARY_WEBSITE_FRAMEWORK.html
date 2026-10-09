@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>spectroscopic_eclipsing_binary_website_framework – Dr. Jeffrey Sabby Ph.D</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-05b5cac302f10f8e745d1afe76d12ebf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Dr.&nbsp;Jeffrey Sabby Ph.D</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#spectroscopic-eclipsing-binary-website-framework" id="toc-spectroscopic-eclipsing-binary-website-framework" class="nav-link active" data-scroll-target="#spectroscopic-eclipsing-binary-website-framework">Spectroscopic Eclipsing Binary Website Framework</a>
+  <ul class="collapse">
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">1. Purpose</a></li>
+  </ul></li>
+  <li><a href="#scientific-philosophy" id="toc-scientific-philosophy" class="nav-link" data-scroll-target="#scientific-philosophy">2. Scientific Philosophy</a></li>
+  <li><a href="#research-identity" id="toc-research-identity" class="nav-link" data-scroll-target="#research-identity">3. Research Identity</a></li>
+  <li><a href="#core-scientific-concept" id="toc-core-scientific-concept" class="nav-link" data-scroll-target="#core-scientific-concept">4. Core Scientific Concept</a></li>
+  <li><a href="#persistent-research-portal-architecture" id="toc-persistent-research-portal-architecture" class="nav-link" data-scroll-target="#persistent-research-portal-architecture">5. Persistent Research Portal Architecture</a></li>
+  <li><a href="#default-landing-system-rt-crb" id="toc-default-landing-system-rt-crb" class="nav-link" data-scroll-target="#default-landing-system-rt-crb">6. Default Landing System — RT CrB</a></li>
+  <li><a href="#spectroscopic-eclipsing-binary-systems" id="toc-spectroscopic-eclipsing-binary-systems" class="nav-link" data-scroll-target="#spectroscopic-eclipsing-binary-systems">Spectroscopic Eclipsing Binary Systems</a></li>
+  <li><a href="#dynamic-center-content" id="toc-dynamic-center-content" class="nav-link" data-scroll-target="#dynamic-center-content">7. Dynamic Center Content</a></li>
+  <li><a href="#separate-system-pages" id="toc-separate-system-pages" class="nav-link" data-scroll-target="#separate-system-pages">8. Separate System Pages</a></li>
+  <li><a href="#current-system-page-template" id="toc-current-system-page-template" class="nav-link" data-scroll-target="#current-system-page-template">9. Current-System Page Template</a></li>
+  <li><a href="#proposed-system-page-template" id="toc-proposed-system-page-template" class="nav-link" data-scroll-target="#proposed-system-page-template">10. Proposed-System Page Template</a></li>
+  <li><a href="#hero-design" id="toc-hero-design" class="nav-link" data-scroll-target="#hero-design">11. Hero Design</a></li>
+  <li><a href="#light-curve" id="toc-light-curve" class="nav-link" data-scroll-target="#light-curve">12. Light Curve</a></li>
+  <li><a href="#radial-velocity-curve" id="toc-radial-velocity-curve" class="nav-link" data-scroll-target="#radial-velocity-curve">13. Radial-Velocity Curve</a></li>
+  <li><a href="#absolute-properties" id="toc-absolute-properties" class="nav-link" data-scroll-target="#absolute-properties">14. Absolute Properties</a></li>
+  <li><a href="#scientific-uncertainties" id="toc-scientific-uncertainties" class="nav-link" data-scroll-target="#scientific-uncertainties">15. Scientific Uncertainties</a></li>
+  <li><a href="#scientific-provenance" id="toc-scientific-provenance" class="nav-link" data-scroll-target="#scientific-provenance">16. Scientific Provenance</a></li>
+  <li><a href="#research-status-labels" id="toc-research-status-labels" class="nav-link" data-scroll-target="#research-status-labels">17. Research Status Labels</a></li>
+  <li><a href="#interactive-binary-system-dashboard" id="toc-interactive-binary-system-dashboard" class="nav-link" data-scroll-target="#interactive-binary-system-dashboard">18. Interactive Binary-System Dashboard</a></li>
+  <li><a href="#dashboard-scientific-principle" id="toc-dashboard-scientific-principle" class="nav-link" data-scroll-target="#dashboard-scientific-principle">19. Dashboard Scientific Principle</a></li>
+  <li><a href="#dashboard-orbital-geometry" id="toc-dashboard-orbital-geometry" class="nav-link" data-scroll-target="#dashboard-orbital-geometry">20. Dashboard — Orbital Geometry</a></li>
+  <li><a href="#dashboard-light-curve-synchronization" id="toc-dashboard-light-curve-synchronization" class="nav-link" data-scroll-target="#dashboard-light-curve-synchronization">21. Dashboard — Light-Curve Synchronization</a></li>
+  <li><a href="#dashboard-radial-velocity-synchronization" id="toc-dashboard-radial-velocity-synchronization" class="nav-link" data-scroll-target="#dashboard-radial-velocity-synchronization">22. Dashboard — Radial-Velocity Synchronization</a></li>
+  <li><a href="#dashboard-controls" id="toc-dashboard-controls" class="nav-link" data-scroll-target="#dashboard-controls">23. Dashboard Controls</a></li>
+  <li><a href="#dashboard-system-state" id="toc-dashboard-system-state" class="nav-link" data-scroll-target="#dashboard-system-state">24. Dashboard System State</a></li>
+  <li><a href="#dashboard-physical-model" id="toc-dashboard-physical-model" class="nav-link" data-scroll-target="#dashboard-physical-model">25. Dashboard Physical Model</a></li>
+  <li><a href="#dashboard-development-strategy" id="toc-dashboard-development-strategy" class="nav-link" data-scroll-target="#dashboard-development-strategy">26. Dashboard Development Strategy</a>
+  <ul class="collapse">
+  <li><a href="#version-1-core-demonstration" id="toc-version-1-core-demonstration" class="nav-link" data-scroll-target="#version-1-core-demonstration">Version 1 — Core Demonstration</a></li>
+  <li><a href="#version-2-rt-crb-research-model" id="toc-version-2-rt-crb-research-model" class="nav-link" data-scroll-target="#version-2-rt-crb-research-model">Version 2 — RT CrB Research Model</a></li>
+  <li><a href="#version-3-advanced-research-features" id="toc-version-3-advanced-research-features" class="nav-link" data-scroll-target="#version-3-advanced-research-features">Version 3 — Advanced Research Features</a></li>
+  </ul></li>
+  <li><a href="#dashboard-implementation" id="toc-dashboard-implementation" class="nav-link" data-scroll-target="#dashboard-implementation">27. Dashboard Implementation</a></li>
+  <li><a href="#dashboard-reusability" id="toc-dashboard-reusability" class="nav-link" data-scroll-target="#dashboard-reusability">28. Dashboard Reusability</a></li>
+  <li><a href="#dashboard-accessibility" id="toc-dashboard-accessibility" class="nav-link" data-scroll-target="#dashboard-accessibility">29. Dashboard Accessibility</a></li>
+  <li><a href="#source-driven-research-narrative" id="toc-source-driven-research-narrative" class="nav-link" data-scroll-target="#source-driven-research-narrative">30. Source-Driven Research Narrative</a></li>
+  <li><a href="#paper-digestion" id="toc-paper-digestion" class="nav-link" data-scroll-target="#paper-digestion">31. Paper Digestion</a></li>
+  <li><a href="#boil-it-down-principle" id="toc-boil-it-down-principle" class="nav-link" data-scroll-target="#boil-it-down-principle">32. “Boil It Down” Principle</a></li>
+  <li><a href="#layered-scientific-depth" id="toc-layered-scientific-depth" class="nav-link" data-scroll-target="#layered-scientific-depth">33. Layered Scientific Depth</a>
+  <ul class="collapse">
+  <li><a href="#level-1-general-reader" id="toc-level-1-general-reader" class="nav-link" data-scroll-target="#level-1-general-reader">Level 1 — General Reader</a></li>
+  <li><a href="#level-2-interested-student" id="toc-level-2-interested-student" class="nav-link" data-scroll-target="#level-2-interested-student">Level 2 — Interested Student</a></li>
+  <li><a href="#level-3-scientist-advanced-student" id="toc-level-3-scientist-advanced-student" class="nav-link" data-scroll-target="#level-3-scientist-advanced-student">Level 3 — Scientist / Advanced Student</a></li>
+  <li><a href="#level-4-original-research" id="toc-level-4-original-research" class="nav-link" data-scroll-target="#level-4-original-research">Level 4 — Original Research</a></li>
+  </ul></li>
+  <li><a href="#published-results-vs.-current-investigation" id="toc-published-results-vs.-current-investigation" class="nav-link" data-scroll-target="#published-results-vs.-current-investigation">34. Published Results vs.&nbsp;Current Investigation</a></li>
+  <li><a href="#research-chronology" id="toc-research-chronology" class="nav-link" data-scroll-target="#research-chronology">35. Research Chronology</a></li>
+  <li><a href="#scientific-question" id="toc-scientific-question" class="nav-link" data-scroll-target="#scientific-question">36. Scientific Question</a></li>
+  <li><a href="#standard-system-identity-block" id="toc-standard-system-identity-block" class="nav-link" data-scroll-target="#standard-system-identity-block">37. Standard System Identity Block</a></li>
+  <li><a href="#lhs-research-navigation" id="toc-lhs-research-navigation" class="nav-link" data-scroll-target="#lhs-research-navigation">38. LHS Research Navigation</a></li>
+  <li><a href="#binary-systems-accordion" id="toc-binary-systems-accordion" class="nav-link" data-scroll-target="#binary-systems-accordion">39. Binary Systems Accordion</a></li>
+  <li><a href="#per-system-lhs-navigation" id="toc-per-system-lhs-navigation" class="nav-link" data-scroll-target="#per-system-lhs-navigation">40. Per-System LHS Navigation</a></li>
+  <li><a href="#accordion-behavior" id="toc-accordion-behavior" class="nav-link" data-scroll-target="#accordion-behavior">41. Accordion Behavior</a></li>
+  <li><a href="#large-target-programs" id="toc-large-target-programs" class="nav-link" data-scroll-target="#large-target-programs">42. Large Target Programs</a></li>
+  <li><a href="#publications-navigation" id="toc-publications-navigation" class="nav-link" data-scroll-target="#publications-navigation">43. Publications Navigation</a></li>
+  <li><a href="#rhs-papers-of-the-week" id="toc-rhs-papers-of-the-week" class="nav-link" data-scroll-target="#rhs-papers-of-the-week">44. RHS — Papers of the Week</a></li>
+  <li><a href="#papers-of-the-week" id="toc-papers-of-the-week" class="nav-link" data-scroll-target="#papers-of-the-week">Papers of the Week</a></li>
+  <li><a href="#number-of-featured-papers" id="toc-number-of-featured-papers" class="nav-link" data-scroll-target="#number-of-featured-papers">45. Number of Featured Papers</a></li>
+  <li><a href="#paper-selection-topics" id="toc-paper-selection-topics" class="nav-link" data-scroll-target="#paper-selection-topics">46. Paper Selection Topics</a></li>
+  <li><a href="#paper-of-the-week-entry" id="toc-paper-of-the-week-entry" class="nav-link" data-scroll-target="#paper-of-the-week-entry">47. Paper-of-the-Week Entry</a></li>
+  <li><a href="#papers-of-the-week-provenance" id="toc-papers-of-the-week-provenance" class="nav-link" data-scroll-target="#papers-of-the-week-provenance">48. Papers-of-the-Week Provenance</a></li>
+  <li><a href="#papers-of-the-week-data-architecture" id="toc-papers-of-the-week-data-architecture" class="nav-link" data-scroll-target="#papers-of-the-week-data-architecture">49. Papers-of-the-Week Data Architecture</a></li>
+  <li><a href="#relationship-to-daily-astronomy-read" id="toc-relationship-to-daily-astronomy-read" class="nav-link" data-scroll-target="#relationship-to-daily-astronomy-read">50. Relationship to Daily Astronomy Read</a></li>
+  <li><a href="#responsive-mobile-design" id="toc-responsive-mobile-design" class="nav-link" data-scroll-target="#responsive-mobile-design">51. Responsive / Mobile Design</a></li>
+  <li><a href="#mobile-dashboard" id="toc-mobile-dashboard" class="nav-link" data-scroll-target="#mobile-dashboard">52. Mobile Dashboard</a></li>
+  <li><a href="#global-website-footer" id="toc-global-website-footer" class="nav-link" data-scroll-target="#global-website-footer">53. Global Website Footer</a></li>
+  <li><a href="#footer-purpose" id="toc-footer-purpose" class="nav-link" data-scroll-target="#footer-purpose">54. Footer Purpose</a></li>
+  <li><a href="#proposed-footer-structure" id="toc-proposed-footer-structure" class="nav-link" data-scroll-target="#proposed-footer-structure">55. Proposed Footer Structure</a></li>
+  <li><a href="#footer-visual-design" id="toc-footer-visual-design" class="nav-link" data-scroll-target="#footer-visual-design">56. Footer Visual Design</a></li>
+  <li><a href="#citation-support" id="toc-citation-support" class="nav-link" data-scroll-target="#citation-support">57. Citation Support</a></li>
+  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">58. Accessibility</a></li>
+  <li><a href="#figure-and-data-integrity" id="toc-figure-and-data-integrity" class="nav-link" data-scroll-target="#figure-and-data-integrity">59. Figure and Data Integrity</a></li>
+  <li><a href="#data-provenance" id="toc-data-provenance" class="nav-link" data-scroll-target="#data-provenance">60. Data Provenance</a></li>
+  <li><a href="#naming-conventions" id="toc-naming-conventions" class="nav-link" data-scroll-target="#naming-conventions">61. Naming Conventions</a></li>
+  <li><a href="#possible-directory-architecture" id="toc-possible-directory-architecture" class="nav-link" data-scroll-target="#possible-directory-architecture">62. Possible Directory Architecture</a></li>
+  <li><a href="#development-workflow" id="toc-development-workflow" class="nav-link" data-scroll-target="#development-workflow">63. Development Workflow</a></li>
+  <li><a href="#pycharm-workflow" id="toc-pycharm-workflow" class="nav-link" data-scroll-target="#pycharm-workflow">64. PyCharm Workflow</a></li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation">65. Validation</a>
+  <ul class="collapse">
+  <li><a href="#scientific-validation" id="toc-scientific-validation" class="nav-link" data-scroll-target="#scientific-validation">Scientific Validation</a></li>
+  <li><a href="#technical-validation" id="toc-technical-validation" class="nav-link" data-scroll-target="#technical-validation">Technical Validation</a></li>
+  <li><a href="#editorial-validation" id="toc-editorial-validation" class="nav-link" data-scroll-target="#editorial-validation">Editorial Validation</a></li>
+  </ul></li>
+  <li><a href="#design-restraint" id="toc-design-restraint" class="nav-link" data-scroll-target="#design-restraint">66. Design Restraint</a></li>
+  <li><a href="#long-term-scalability" id="toc-long-term-scalability" class="nav-link" data-scroll-target="#long-term-scalability">67. Long-Term Scalability</a></li>
+  <li><a href="#future-possibilities" id="toc-future-possibilities" class="nav-link" data-scroll-target="#future-possibilities">68. Future Possibilities</a></li>
+  <li><a href="#architectural-summary" id="toc-architectural-summary" class="nav-link" data-scroll-target="#architectural-summary">69. Architectural Summary</a></li>
+  <li><a href="#central-design-principle" id="toc-central-design-principle" class="nav-link" data-scroll-target="#central-design-principle">70. Central Design Principle</a></li>
+  <li><a href="#framework-status" id="toc-framework-status" class="nav-link" data-scroll-target="#framework-status">71. Framework Status</a>
+  <ul class="collapse">
+  <li><a href="#end-of-framework" id="toc-end-of-framework" class="nav-link" data-scroll-target="#end-of-framework">End of Framework</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="spectroscopic-eclipsing-binary-website-framework" class="level1">
+<h1>Spectroscopic Eclipsing Binary Website Framework</h1>
+<p><strong>Project:</strong> Jeffrey Sabby Website<br>
+<strong>Research Area:</strong> Spectroscopic Eclipsing Binary Systems<br>
+<strong>Website Framework:</strong> Quarto<br>
+<strong>Development Environment:</strong> PyCharm Professional<br>
+<strong>Author:</strong> Dr.&nbsp;Jeffrey Sabby<br>
+<strong>Framework Status:</strong> Design Baseline<br>
+<strong>Created:</strong> October 9, 2026<br>
+<strong>Version:</strong> 1.0</p>
+<hr>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">1. Purpose</h2>
+<p>This document defines the scientific, structural, visual, navigational, and implementation framework for the <strong>Spectroscopic Eclipsing Binary Systems</strong> research section of the Jeffrey Sabby website.</p>
+<p>The purpose of this section is not simply to provide a general educational description of eclipsing binary stars. It is intended to function as a public-facing representation of an active astrophysical research program.</p>
+<p>The section should communicate:</p>
+<ul>
+<li>what spectroscopic eclipsing binary systems are,</li>
+<li>why they are important astrophysical laboratories,</li>
+<li>how they are observed,</li>
+<li>how photometric and spectroscopic observations complement one another,</li>
+<li>how orbital and stellar properties are derived,</li>
+<li>which binary systems are currently being investigated,</li>
+<li>which systems are proposed for future investigation,</li>
+<li>what observational data exist,</li>
+<li>what analysis and modeling methods are being used,</li>
+<li>what results have been obtained,</li>
+<li>what work has been published,</li>
+<li>what new questions are currently being investigated,</li>
+<li>and how the research connects to the broader scientific literature.</li>
+</ul>
+<p>The website should be scientifically rigorous while remaining accessible to a scientifically interested general reader.</p>
+<p>The governing principle is:</p>
+<blockquote class="blockquote">
+<p><strong>Preserve the science while making the physical meaning understandable.</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="scientific-philosophy" class="level1">
+<h1>2. Scientific Philosophy</h1>
+<p>The Spectroscopic Eclipsing Binary section should reflect the scientific method rather than functioning merely as a collection of target descriptions.</p>
+<p>The preferred conceptual progression for each system is:</p>
+<pre class="text"><code>Scientific Question
+        ↓
+Background
+        ↓
+Observational Strategy
+        ↓
+Observations
+        ↓
+Measurements
+        ↓
+Analysis
+        ↓
+Physical Model
+        ↓
+Uncertainty / Validation
+        ↓
+Results
+        ↓
+Astrophysical Interpretation
+        ↓
+Publication
+        ↓
+New Questions</code></pre>
+<p>Whenever practical, the website should distinguish clearly between:</p>
+<ul>
+<li>observation,</li>
+<li>measurement,</li>
+<li>inference,</li>
+<li>model,</li>
+<li>interpretation,</li>
+<li>published result,</li>
+<li>and ongoing investigation.</li>
+</ul>
+<p>Exploratory or preliminary results must not be presented as established conclusions.</p>
+<hr>
+</section>
+<section id="research-identity" class="level1">
+<h1>3. Research Identity</h1>
+<p>The section should communicate that spectroscopic eclipsing binary systems are an area of actual research rather than merely a subject being explained.</p>
+<p>The visitor should encounter the research through the progression:</p>
+<pre class="text"><code>What are these systems?
+        ↓
+Why are they scientifically important?
+        ↓
+How are they observed?
+        ↓
+What can be measured?
+        ↓
+How are physical properties determined?
+        ↓
+Which systems are being investigated?
+        ↓
+What have we learned?
+        ↓
+What questions remain?</code></pre>
+<p>The central theme is <strong>precision stellar astrophysics through the combination of photometry and spectroscopy</strong>.</p>
+<hr>
+</section>
+<section id="core-scientific-concept" class="level1">
+<h1>4. Core Scientific Concept</h1>
+<p>Spectroscopic eclipsing binary systems provide an unusually direct method for determining fundamental stellar properties.</p>
+<p>Photometry provides information about eclipse geometry and relative stellar dimensions.</p>
+<p>Spectroscopy provides information about orbital velocities and the dynamical scale of the system.</p>
+<p>For a double-lined spectroscopic binary, the radial-velocity semi-amplitudes</p>
+<p><span class="math display">\[
+K_1
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+K_2
+\]</span></p>
+<p>provide the mass ratio</p>
+<p><span class="math display">\[
+q = \frac{M_2}{M_1} = \frac{K_1}{K_2}.
+\]</span></p>
+<p>The eclipses constrain the orbital inclination</p>
+<p><span class="math display">\[
+i.
+\]</span></p>
+<p>Combining the spectroscopic and photometric solutions allows the actual stellar masses and radii to be determined.</p>
+<p>Conceptually:</p>
+<pre class="text"><code>PHOTOMETRY
+Light Curve
+        ↓
+Eclipse Geometry
+        ↓
+Inclination
+Fractional Radii
+Luminosity Ratio
+        │
+        │
+        ├───────────────┐
+        │               │
+        ↓               ↓
+                    COMBINED
+                   ORBITAL MODEL
+                        ↓
+                 Absolute Properties
+                        ↓
+                 M1, M2, R1, R2
+                 Teff, L, log g, ...
+                        ↑
+        │               │
+        ├───────────────┘
+        │
+        ↓
+SPECTROSCOPY
+Spectral-Line Shifts
+        ↓
+Radial Velocities
+        ↓
+K1, K2, γ, e, ω</code></pre>
+<p>A central message of the website should be:</p>
+<blockquote class="blockquote">
+<p><strong>Spectroscopy establishes the dynamical scale of the system, while eclipses establish its geometry. Together they allow fundamental stellar properties to be measured.</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="persistent-research-portal-architecture" class="level1">
+<h1>5. Persistent Research Portal Architecture</h1>
+<p>The Spectroscopic Eclipsing Binary section will use a persistent three-region research portal architecture.</p>
+<pre class="text"><code>┌─────────────────────┬───────────────────────────────┬─────────────────────┐
+│                     │                               │                     │
+│        LHS          │            CENTER             │         RHS         │
+│                     │                               │                     │
+│ Research Navigation │ Selected Binary System        │ Papers of the Week  │
+│                     │                               │                     │
+│ Current Systems     │ Hero                          │ Current Literature   │
+│ Proposed Systems    │ Observations                  │                     │
+│ Publications        │ Dashboard                     │ Short Synopses      │
+│                     │ Absolute Properties           │                     │
+│ Professional        │ Research Narrative            │ ADS / HTML / PDF    │
+│ Computing           │ Analysis                      │                     │
+│ Social              │ Results                       │                     │
+│                     │                               │                     │
+└─────────────────────┴───────────────────────────────┴─────────────────────┘</code></pre>
+<p>The fundamental rule is:</p>
+<blockquote class="blockquote">
+<p><strong>The LHS and RHS remain persistent while the center research content changes according to the selected binary system.</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="default-landing-system-rt-crb" class="level1">
+<h1>6. Default Landing System — RT CrB</h1>
+<p><strong>RT CrB</strong> will serve as the default and flagship system for the Spectroscopic Eclipsing Binary research section.</p>
+<p>When a visitor first enters this portion of the website, the center content will display RT CrB.</p>
+<p>RT CrB therefore serves two purposes:</p>
+<ol type="1">
+<li>an actual research target,</li>
+<li>the default demonstration of the scientific methodology used throughout the research program.</li>
+</ol>
+<p>RT CrB is particularly suitable because it connects:</p>
+<ul>
+<li>historical observations,</li>
+<li>spectroscopy,</li>
+<li>photometry,</li>
+<li>radial velocities,</li>
+<li>absolute stellar properties,</li>
+<li>published research,</li>
+<li>activity/timing behavior,</li>
+<li>archival observations,</li>
+<li>TESS observations,</li>
+<li>and modern reanalysis.</li>
+</ul>
+<p>RT CrB should not, however, define the entire section.</p>
+<p>The section title remains:</p>
+</section>
+<section id="spectroscopic-eclipsing-binary-systems" class="level1">
+<h1>Spectroscopic Eclipsing Binary Systems</h1>
+<p>RT CrB is the flagship <strong>example within the broader research program</strong>.</p>
+<hr>
+</section>
+<section id="dynamic-center-content" class="level1">
+<h1>7. Dynamic Center Content</h1>
+<p>Selecting another system from the LHS navigation changes the central content.</p>
+<p>For example:</p>
+<pre class="text"><code>RT CrB
+   ↓
+WW Aur
+   ↓
+FT Ori
+   ↓
+Other Current System
+   ↓
+Proposed System</code></pre>
+<p>The surrounding research environment remains unchanged.</p>
+<p>Conceptually:</p>
+<pre class="text"><code>LHS              CENTER             RHS
+persistent       dynamic            persistent</code></pre>
+<p>The active system should be visually indicated in the LHS navigation.</p>
+<hr>
+</section>
+<section id="separate-system-pages" class="level1">
+<h1>8. Separate System Pages</h1>
+<p>Although the user experience should feel like the center panel is being replaced, individual systems should preferably be implemented as separate Quarto pages.</p>
+<p>Example URLs:</p>
+<pre class="text"><code>/research/binaries/rt-crb/
+/research/binaries/ww-aur/
+/research/binaries/ft-ori/</code></pre>
+<p>Advantages include:</p>
+<ul>
+<li>direct linking,</li>
+<li>bookmarking,</li>
+<li>search-engine indexing,</li>
+<li>browser Back/Forward support,</li>
+<li>independent page growth,</li>
+<li>easier maintenance,</li>
+<li>simpler debugging,</li>
+<li>clearer provenance,</li>
+<li>and long-term scalability.</li>
+</ul>
+<p>All system pages should share common LHS and RHS components.</p>
+<hr>
+</section>
+<section id="current-system-page-template" class="level1">
+<h1>9. Current-System Page Template</h1>
+<p>Current binary systems should follow a consistent scientific structure.</p>
+<p>Recommended structure:</p>
+<pre class="text"><code>System Hero
+
+Scientific Question
+
+System Identity
+
+Light Curve + Radial Velocity Data
+
+Interactive Orbital Dashboard
+
+Absolute Properties
+
+Research Narrative
+
+Observations &amp; Data
+
+Analysis &amp; Modeling
+
+Results
+
+Astrophysical Interpretation
+
+Research Chronology
+
+Related Publications
+
+Current Questions / Future Work</code></pre>
+<p>Not every system must contain every section immediately.</p>
+<p>The framework should allow sections to grow as research progresses.</p>
+<hr>
+</section>
+<section id="proposed-system-page-template" class="level1">
+<h1>10. Proposed-System Page Template</h1>
+<p>Proposed systems require a different emphasis.</p>
+<p>Recommended structure:</p>
+<pre class="text"><code>System Hero
+
+Scientific Motivation
+
+System Identity
+
+Why This System?
+
+Known Properties
+
+Existing Literature
+
+Existing Observations
+
+Available Archival Data
+
+Scientific Questions
+
+Proposed Observations
+
+Proposed Analysis
+
+Expected Scientific Value
+
+Research Status</code></pre>
+<p>A proposed target should not appear to have completed analysis or results when those stages have not occurred.</p>
+<hr>
+</section>
+<section id="hero-design" class="level1">
+<h1>11. Hero Design</h1>
+<p>The system hero should immediately communicate that the visitor is viewing real astrophysical research.</p>
+<p>For RT CrB, the preferred hero concept incorporates:</p>
+<ul>
+<li>RT CrB identification,</li>
+<li>representative light curve,</li>
+<li>radial-velocity curve,</li>
+<li>concise research description,</li>
+<li>and connection to the system’s absolute physical properties.</li>
+</ul>
+<p>Possible subtitle:</p>
+<blockquote class="blockquote">
+<p><strong>Precision stellar astrophysics through combined photometry and spectroscopy</strong></p>
+</blockquote>
+<p>The hero should emphasize real research data rather than generic stock astronomical imagery.</p>
+<hr>
+</section>
+<section id="light-curve" class="level1">
+<h1>12. Light Curve</h1>
+<p>The RT CrB light curve should be based on actual observational or published data whenever possible.</p>
+<p>The visualization should communicate:</p>
+<ul>
+<li>primary eclipse,</li>
+<li>secondary eclipse,</li>
+<li>out-of-eclipse behavior,</li>
+<li>orbital phase,</li>
+<li>observational scatter,</li>
+<li>and fitted/model behavior where appropriate.</li>
+</ul>
+<p>Observed data and fitted/model curves should be visually distinguishable.</p>
+<hr>
+</section>
+<section id="radial-velocity-curve" class="level1">
+<h1>13. Radial-Velocity Curve</h1>
+<p>The radial-velocity visualization should display both stellar components.</p>
+<p>The display should identify:</p>
+<ul>
+<li>primary star,</li>
+<li>secondary star,</li>
+<li>orbital phase,</li>
+<li>systemic velocity,</li>
+<li>radial-velocity semi-amplitudes,</li>
+<li>observations,</li>
+<li>and fitted orbital solution.</li>
+</ul>
+<p>Where scientifically appropriate, uncertainties should be displayed.</p>
+<hr>
+</section>
+<section id="absolute-properties" class="level1">
+<h1>14. Absolute Properties</h1>
+<p>A prominent <strong>Absolute Properties</strong> presentation will be included.</p>
+<p>Possible stellar properties include:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Property</th>
+<th style="text-align: right;">Primary</th>
+<th style="text-align: right;">Secondary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mass</td>
+<td style="text-align: right;"><span class="math inline">\(M_1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(M_2\)</span></td>
+</tr>
+<tr class="even">
+<td>Radius</td>
+<td style="text-align: right;"><span class="math inline">\(R_1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(R_2\)</span></td>
+</tr>
+<tr class="odd">
+<td>Effective Temperature</td>
+<td style="text-align: right;"><span class="math inline">\(T_{\mathrm{eff},1}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(T_{\mathrm{eff},2}\)</span></td>
+</tr>
+<tr class="even">
+<td>Surface Gravity</td>
+<td style="text-align: right;"><span class="math inline">\(\log g_1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\log g_2\)</span></td>
+</tr>
+<tr class="odd">
+<td>Luminosity</td>
+<td style="text-align: right;"><span class="math inline">\(L_1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(L_2\)</span></td>
+</tr>
+<tr class="even">
+<td>Bolometric Magnitude</td>
+<td style="text-align: right;"><span class="math inline">\(M_{\mathrm{bol},1}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(M_{\mathrm{bol},2}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Rotational Velocity</td>
+<td style="text-align: right;"><span class="math inline">\(v\sin i_1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(v\sin i_2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>System properties may include:</p>
+<ul>
+<li>orbital period,</li>
+<li>semimajor axis,</li>
+<li>eccentricity,</li>
+<li>inclination,</li>
+<li>mass ratio,</li>
+<li>systemic velocity,</li>
+<li>distance,</li>
+<li>age,</li>
+<li>evolutionary state,</li>
+<li>and other scientifically relevant quantities.</li>
+</ul>
+<p>Only quantities supported by the underlying analysis should be shown.</p>
+<hr>
+</section>
+<section id="scientific-uncertainties" class="level1">
+<h1>15. Scientific Uncertainties</h1>
+<p>Uncertainties are first-class scientific quantities.</p>
+<p>A website intended for a general audience should not remove uncertainties merely to simplify presentation.</p>
+<p>For example, prefer:</p>
+<p><span class="math display">\[
+M_1 = 1.42 \pm 0.02\,M_\odot
+\]</span></p>
+<p>rather than:</p>
+<p><span class="math display">\[
+M_1 = 1.42\,M_\odot
+\]</span></p>
+<p>when the uncertainty is known and scientifically relevant.</p>
+<p>The website should preserve the distinction between measurement precision and exact values.</p>
+<hr>
+</section>
+<section id="scientific-provenance" class="level1">
+<h1>16. Scientific Provenance</h1>
+<p>Numerical results must have identifiable provenance.</p>
+<p>Possible provenance labels include:</p>
+<pre class="text"><code>Published Result
+Sabby et al. (2003)
+
+Current Reanalysis
+TESS + modern modeling
+
+This Work
+
+Literature Value</code></pre>
+<p>Historical and current values must not be silently mixed.</p>
+<p>Where different analyses produce different values, those differences should be documented rather than hidden.</p>
+<hr>
+</section>
+<section id="research-status-labels" class="level1">
+<h1>17. Research Status Labels</h1>
+<p>Research state should be clearly visible when appropriate.</p>
+<p>Recommended labels include:</p>
+<pre class="text"><code>PUBLISHED
+CURRENT ANALYSIS
+PROPOSED
+ARCHIVAL REANALYSIS
+PRELIMINARY</code></pre>
+<p>These labels should be visually restrained and should not dominate the scientific content.</p>
+<hr>
+</section>
+<section id="interactive-binary-system-dashboard" class="level1">
+<h1>18. Interactive Binary-System Dashboard</h1>
+<p>One of the signature features of the research section will be an interactive binary-system dashboard.</p>
+<p>The dashboard should synchronize several representations of the same physical orbit.</p>
+<p>Primary components:</p>
+<ol type="1">
+<li>orbital geometry,</li>
+<li>light curve,</li>
+<li>radial-velocity curves,</li>
+<li>system state / orbital phase.</li>
+</ol>
+<hr>
+</section>
+<section id="dashboard-scientific-principle" class="level1">
+<h1>19. Dashboard Scientific Principle</h1>
+<p>The dashboard should communicate that:</p>
+<blockquote class="blockquote">
+<p><strong>The orbit, light curve, and radial-velocity curves are not separate phenomena. They are different observational manifestations of the same physical system.</strong></p>
+</blockquote>
+<p>A single orbital phase variable</p>
+<p><span class="math display">\[
+\phi \in [0,1]
+\]</span></p>
+<p>should control all visualizations.</p>
+<hr>
+</section>
+<section id="dashboard-orbital-geometry" class="level1">
+<h1>20. Dashboard — Orbital Geometry</h1>
+<p>The orbital display should show:</p>
+<ul>
+<li>primary star,</li>
+<li>secondary star,</li>
+<li>barycentric motion,</li>
+<li>relative stellar radii,</li>
+<li>observer line of sight,</li>
+<li>orbital inclination,</li>
+<li>and eclipse geometry.</li>
+</ul>
+<p>Where appropriate, the geometry should reflect the actual inferred RT CrB parameters rather than an arbitrary schematic.</p>
+<hr>
+</section>
+<section id="dashboard-light-curve-synchronization" class="level1">
+<h1>21. Dashboard — Light-Curve Synchronization</h1>
+<p>A moving phase marker should track the corresponding location on the light curve.</p>
+<p>As the orbital geometry changes, the visitor should see the corresponding photometric state.</p>
+<p>Examples:</p>
+<pre class="text"><code>Quadrature
+    ↓
+stars spatially separated
+    ↓
+baseline system brightness
+
+Primary Eclipse
+    ↓
+projected stellar overlap
+    ↓
+primary light-curve minimum</code></pre>
+<hr>
+</section>
+<section id="dashboard-radial-velocity-synchronization" class="level1">
+<h1>22. Dashboard — Radial-Velocity Synchronization</h1>
+<p>Markers should move simultaneously along the primary and secondary radial-velocity curves.</p>
+<p>The dashboard should allow the visitor to see:</p>
+<ul>
+<li>approaching motion,</li>
+<li>receding motion,</li>
+<li>quadrature,</li>
+<li>conjunction,</li>
+<li>systemic-velocity crossing,</li>
+<li>and the relationship between orbital geometry and Doppler velocity.</li>
+</ul>
+<hr>
+</section>
+<section id="dashboard-controls" class="level1">
+<h1>23. Dashboard Controls</h1>
+<p>Minimum controls:</p>
+<ul>
+<li>phase slider,</li>
+<li>Play,</li>
+<li>Pause,</li>
+<li>Reset if useful.</li>
+</ul>
+<p>The phase slider should allow manual exploration.</p>
+<p>Animation should be optional rather than mandatory.</p>
+<hr>
+</section>
+<section id="dashboard-system-state" class="level1">
+<h1>24. Dashboard System State</h1>
+<p>The dashboard may display dynamically:</p>
+<ul>
+<li>orbital phase,</li>
+<li>eclipse state,</li>
+<li>primary radial velocity,</li>
+<li>secondary radial velocity,</li>
+<li>approaching/receding state,</li>
+<li>projected separation,</li>
+<li>and other useful quantities.</li>
+</ul>
+<p>The state panel should remain concise.</p>
+<hr>
+</section>
+<section id="dashboard-physical-model" class="level1">
+<h1>25. Dashboard Physical Model</h1>
+<p>For circular systems, orbital phase mapping is straightforward.</p>
+<p>For eccentric systems, the model should use the appropriate orbital relationships:</p>
+<p><span class="math display">\[
+\phi \rightarrow M \rightarrow E \rightarrow \nu,
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(M\)</span> is mean anomaly,</li>
+<li><span class="math inline">\(E\)</span> is eccentric anomaly,</li>
+<li><span class="math inline">\(\nu\)</span> is true anomaly.</li>
+</ul>
+<p>The radial velocity can then be represented using</p>
+<p><span class="math display">\[
+v_r = \gamma + K[\cos(\nu+\omega)+e\cos\omega].
+\]</span></p>
+<p>The orbital display, radial velocities, and eclipse geometry should derive from a physically consistent model whenever possible.</p>
+<hr>
+</section>
+<section id="dashboard-development-strategy" class="level1">
+<h1>26. Dashboard Development Strategy</h1>
+<p>The dashboard should be developed incrementally.</p>
+<section id="version-1-core-demonstration" class="level2">
+<h2 class="anchored" data-anchor-id="version-1-core-demonstration">Version 1 — Core Demonstration</h2>
+<ul>
+<li>phase slider,</li>
+<li>Play/Pause,</li>
+<li>orbital schematic,</li>
+<li>synchronized light curve,</li>
+<li>synchronized RV curves,</li>
+<li>primary/secondary identification,</li>
+<li>current phase.</li>
+</ul>
+</section>
+<section id="version-2-rt-crb-research-model" class="level2">
+<h2 class="anchored" data-anchor-id="version-2-rt-crb-research-model">Version 2 — RT CrB Research Model</h2>
+<ul>
+<li>actual RT CrB observational points,</li>
+<li>fitted curves,</li>
+<li>uncertainties,</li>
+<li>actual inclination,</li>
+<li>eccentricity if applicable,</li>
+<li>relative radii,</li>
+<li>systemic velocity,</li>
+<li>quadrature markers,</li>
+<li>eclipse identification.</li>
+</ul>
+</section>
+<section id="version-3-advanced-research-features" class="level2">
+<h2 class="anchored" data-anchor-id="version-3-advanced-research-features">Version 3 — Advanced Research Features</h2>
+<p>Possible later additions:</p>
+<ul>
+<li>Roche geometry,</li>
+<li>limb darkening,</li>
+<li>stellar distortion,</li>
+<li>spots,</li>
+<li>activity modulation,</li>
+<li>residual plots,</li>
+<li>historical versus modern solutions,</li>
+<li>TESS comparison,</li>
+<li>or other system-specific effects.</li>
+</ul>
+<p>Advanced features should only be added when they serve a scientific purpose.</p>
+<hr>
+</section>
+</section>
+<section id="dashboard-implementation" class="level1">
+<h1>27. Dashboard Implementation</h1>
+<p>The dashboard should be developed within the existing PyCharm website project.</p>
+<p>Preferred technologies:</p>
+<pre class="text"><code>HTML
+CSS
+JavaScript
+SVG</code></pre>
+<p>Avoid unnecessary heavy frameworks.</p>
+<p>A possible structure is:</p>
+<pre class="text"><code>assets/
+└── rt_crb_dashboard/
+    ├── dashboard.html
+    ├── dashboard.css
+    ├── dashboard.js
+    └── data/
+        ├── rtcrb_lightcurve.csv
+        ├── rtcrb_rv.csv
+        └── rtcrb_parameters.json</code></pre>
+<p>The component should be modular so that the same framework can eventually support other systems.</p>
+<hr>
+</section>
+<section id="dashboard-reusability" class="level1">
+<h1>28. Dashboard Reusability</h1>
+<p>The long-term goal should be to separate the visualization engine from system-specific data.</p>
+<p>Conceptually:</p>
+<pre class="text"><code>Binary Dashboard Engine
+        +
+System Data
+        ↓
+Interactive System Visualization</code></pre>
+<p>For example:</p>
+<pre class="text"><code>dashboard.js
+        +
+rtcrb_parameters.json
+        ↓
+RT CrB Dashboard</code></pre>
+<p>or:</p>
+<pre class="text"><code>dashboard.js
+        +
+wwaur_parameters.json
+        ↓
+WW Aur Dashboard</code></pre>
+<p>This prevents unnecessary duplication.</p>
+<hr>
+</section>
+<section id="dashboard-accessibility" class="level1">
+<h1>29. Dashboard Accessibility</h1>
+<p>The dashboard must remain scientifically useful without continuous animation.</p>
+<p>Requirements should include:</p>
+<ul>
+<li>Play/Pause control,</li>
+<li>manual phase selection,</li>
+<li>keyboard-accessible controls where practical,</li>
+<li>readable labels,</li>
+<li>sufficient contrast,</li>
+<li>reduced-motion support,</li>
+<li>and a meaningful static fallback.</li>
+</ul>
+<p>Users who disable JavaScript or cannot interact with the animation should still be able to understand the science.</p>
+<hr>
+</section>
+<section id="source-driven-research-narrative" class="level1">
+<h1>30. Source-Driven Research Narrative</h1>
+<p>The research narrative should be derived primarily from authoritative source material.</p>
+<p>For systems with published work, the original research paper should serve as a primary scientific source.</p>
+<p>Workflow:</p>
+<pre class="text"><code>Original Paper
+      ↓
+Structured Scientific Digestion
+      ↓
+Scientific Summary
+      ↓
+Public-Facing Narrative
+      ↓
+Website</code></pre>
+<hr>
+</section>
+<section id="paper-digestion" class="level1">
+<h1>31. Paper Digestion</h1>
+<p>For each paper, extract:</p>
+<ul>
+<li>scientific question,</li>
+<li>motivation,</li>
+<li>system description,</li>
+<li>observational setup,</li>
+<li>instrumentation,</li>
+<li>observations,</li>
+<li>data reduction,</li>
+<li>radial-velocity analysis,</li>
+<li>light-curve analysis,</li>
+<li>orbital solution,</li>
+<li>absolute dimensions,</li>
+<li>uncertainties,</li>
+<li>astrophysical interpretation,</li>
+<li>conclusions,</li>
+<li>important figures,</li>
+<li>important tables,</li>
+<li>and later questions raised by the work.</li>
+</ul>
+<p>This structured digestion should precede webpage writing.</p>
+<hr>
+</section>
+<section id="boil-it-down-principle" class="level1">
+<h1>32. “Boil It Down” Principle</h1>
+<p>The published paper remains the scientific authority.</p>
+<p>The website should translate the paper for a common reader without sacrificing scientific accuracy.</p>
+<p>For example, rather than beginning with mass functions and inclination corrections, the website may explain:</p>
+<blockquote class="blockquote">
+<p>By measuring how the spectral lines of the two stars repeatedly shift toward the blue and red as they orbit one another, we determine how quickly each star moves. The eclipses reveal how the orbit is oriented to our line of sight. Together, these measurements allow the actual masses and sizes of both stars to be determined.</p>
+</blockquote>
+<p>Technical details can then be progressively exposed for readers who want greater depth.</p>
+<hr>
+</section>
+<section id="layered-scientific-depth" class="level1">
+<h1>33. Layered Scientific Depth</h1>
+<p>The website should support multiple reader levels.</p>
+<section id="level-1-general-reader" class="level2">
+<h2 class="anchored" data-anchor-id="level-1-general-reader">Level 1 — General Reader</h2>
+<ul>
+<li>physical explanation,</li>
+<li>concise narrative,</li>
+<li>major scientific conclusions.</li>
+</ul>
+</section>
+<section id="level-2-interested-student" class="level2">
+<h2 class="anchored" data-anchor-id="level-2-interested-student">Level 2 — Interested Student</h2>
+<ul>
+<li>light curves,</li>
+<li>radial velocities,</li>
+<li>orbital geometry,</li>
+<li>important equations,</li>
+<li>dashboard.</li>
+</ul>
+</section>
+<section id="level-3-scientist-advanced-student" class="level2">
+<h2 class="anchored" data-anchor-id="level-3-scientist-advanced-student">Level 3 — Scientist / Advanced Student</h2>
+<ul>
+<li>absolute properties,</li>
+<li>uncertainties,</li>
+<li>methodology,</li>
+<li>analysis,</li>
+<li>literature,</li>
+<li>provenance.</li>
+</ul>
+</section>
+<section id="level-4-original-research" class="level2">
+<h2 class="anchored" data-anchor-id="level-4-original-research">Level 4 — Original Research</h2>
+<ul>
+<li>ADS,</li>
+<li>DOI,</li>
+<li>journal article,</li>
+<li>PDF/HTML where legally and technically available,</li>
+<li>underlying datasets where appropriate.</li>
+</ul>
+<p>The reader should be able to choose how deeply to investigate.</p>
+<hr>
+</section>
+</section>
+<section id="published-results-vs.-current-investigation" class="level1">
+<h1>34. Published Results vs.&nbsp;Current Investigation</h1>
+<p>Historical published results and current work must remain clearly separated.</p>
+<p>For RT CrB, this may include:</p>
+<pre class="text"><code>Published Research
+        ↓
+Original observations and analysis
+        ↓
+Published interpretation
+
+Current Investigation
+        ↓
+TESS / archival data
+        ↓
+Modern computational analysis
+        ↓
+Testing previous interpretations
+        ↓
+New questions</code></pre>
+<p>This distinction is essential for scientific integrity.</p>
+<hr>
+</section>
+<section id="research-chronology" class="level1">
+<h1>35. Research Chronology</h1>
+<p>Where scientifically useful, system pages may include a research timeline.</p>
+<p>For RT CrB, conceptually:</p>
+<pre class="text"><code>Original Observations
+        ↓
+Original Analysis
+        ↓
+2003 Publication
+        ↓
+Archival Era
+        ↓
+TESS Observations
+        ↓
+Modern Reanalysis
+        ↓
+Current Investigation</code></pre>
+<p>The chronology emphasizes that scientific understanding evolves as new observations and methods become available.</p>
+<hr>
+</section>
+<section id="scientific-question" class="level1">
+<h1>36. Scientific Question</h1>
+<p>Every system page should include a concise <strong>Scientific Question</strong> near the top.</p>
+<p>This should answer:</p>
+<blockquote class="blockquote">
+<p>Why are we investigating this system?</p>
+</blockquote>
+<p>The page should not merely catalog the star.</p>
+<p>The scientific question should guide the subsequent narrative:</p>
+<pre class="text"><code>Question
+   ↓
+Observations
+   ↓
+Measurements
+   ↓
+Model
+   ↓
+Results
+   ↓
+Interpretation</code></pre>
+<hr>
+</section>
+<section id="standard-system-identity-block" class="level1">
+<h1>37. Standard System Identity Block</h1>
+<p>Each system should have a standardized identity panel.</p>
+<p>Possible fields:</p>
+<pre class="text"><code>System:
+Other Names:
+Classification:
+Spectroscopic Type:
+Orbital Period:
+Spectral Type(s):
+Magnitude:
+Coordinates:
+TIC:
+Gaia:
+Other Catalog IDs:
+Research Status:
+Primary Data Sources:</code></pre>
+<p>Only relevant and verified fields should be displayed.</p>
+<p>This block should facilitate comparison between systems.</p>
+<hr>
+</section>
+<section id="lhs-research-navigation" class="level1">
+<h1>38. LHS Research Navigation</h1>
+<p>The left-hand sidebar/bubble is the persistent research navigator.</p>
+<p>Top-level structure:</p>
+<pre class="text"><code>SPECTROSCOPIC ECLIPSING BINARIES
+
+Research Overview
+
+▸ Binary Systems
+
+▸ Publications
+
+────────────────────
+
+PROFESSIONAL
+
+COMPUTING
+
+SOCIAL</code></pre>
+<p>The existing Professional, Computing, and Social links remain part of the site and are moved downward to make room for research-specific navigation.</p>
+<hr>
+</section>
+<section id="binary-systems-accordion" class="level1">
+<h1>39. Binary Systems Accordion</h1>
+<p>Binary Systems expands to:</p>
+<pre class="text"><code>▾ Binary Systems
+
+    ▸ Current Systems
+
+    ▸ Proposed Systems</code></pre>
+<p>Current Systems expands to active research targets.</p>
+<p>Example:</p>
+<pre class="text"><code>▾ Current Systems
+
+    ▸ RT CrB
+    ▸ WW Aur
+    ▸ FT Ori
+    ▸ ...</code></pre>
+<p>Proposed Systems contains future candidate targets.</p>
+<hr>
+</section>
+<section id="per-system-lhs-navigation" class="level1">
+<h1>40. Per-System LHS Navigation</h1>
+<p>An active current system may expand to:</p>
+<pre class="text"><code>▾ RT CrB
+
+    Overview
+    Observations &amp; Data
+    Analysis &amp; Modeling
+    Results
+    Publications</code></pre>
+<p>Proposed systems may use a lighter structure:</p>
+<pre class="text"><code>▾ Proposed System
+
+    Overview
+    Scientific Motivation
+    Existing Data
+    Proposed Observations</code></pre>
+<hr>
+</section>
+<section id="accordion-behavior" class="level1">
+<h1>41. Accordion Behavior</h1>
+<p>The full navigation hierarchy should not be displayed simultaneously.</p>
+<p>Use collapsible accordion/tree behavior.</p>
+<p>Recommended behavior:</p>
+<ul>
+<li>collapsed by default where appropriate,</li>
+<li>Current Systems and Proposed Systems expand independently,</li>
+<li>individual targets expand when selected,</li>
+<li>only one binary target should normally be fully expanded at a time,</li>
+<li>active system is visually highlighted.</li>
+</ul>
+<p>This allows deep navigation without consuming excessive vertical space.</p>
+<hr>
+</section>
+<section id="large-target-programs" class="level1">
+<h1>42. Large Target Programs</h1>
+<p>If the research program grows to approximately 20 current systems and 20 proposed systems, do not display all targets simultaneously.</p>
+<p>Instead:</p>
+<pre class="text"><code>Current Systems
+    RT CrB
+    WW Aur
+    FT Ori
+    ...
+    View All Systems →</code></pre>
+<p>A dedicated systems catalog can display the complete target list.</p>
+<hr>
+</section>
+<section id="publications-navigation" class="level1">
+<h1>43. Publications Navigation</h1>
+<p>Publications remain a separate top-level LHS item.</p>
+<p>Example:</p>
+<pre class="text"><code>▸ Publications
+
+    Sabby et al. — RT CrB
+    Paper 2
+    Paper 3
+
+    View All Publications →</code></pre>
+<p>For astronomy publications, ADS should generally be the preferred external destination because it provides:</p>
+<ul>
+<li>abstract,</li>
+<li>citation information,</li>
+<li>references,</li>
+<li>DOI,</li>
+<li>journal links,</li>
+<li>and available full-text resources.</li>
+</ul>
+<hr>
+</section>
+<section id="rhs-papers-of-the-week" class="level1">
+<h1>44. RHS — Papers of the Week</h1>
+<p>The persistent RHS panel will feature current scientific literature relevant to the research program.</p>
+<p>Recommended title:</p>
+</section>
+<section id="papers-of-the-week" class="level1">
+<h1>Papers of the Week</h1>
+<p>The RHS remains unchanged as the visitor moves among binary systems.</p>
+<p>Conceptually:</p>
+<blockquote class="blockquote">
+<p><strong>Center:</strong> What we are working on.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>RHS:</strong> What the field is working on.</p>
+</blockquote>
+<hr>
+</section>
+<section id="number-of-featured-papers" class="level1">
+<h1>45. Number of Featured Papers</h1>
+<p>The preferred initial number is approximately <strong>three featured papers</strong>.</p>
+<p>This provides sufficient scientific variety without overwhelming the sidebar.</p>
+<p>A link can provide access to additional papers:</p>
+<pre class="text"><code>More Papers →</code></pre>
+<p>The design may later support two to five papers depending on available space and synopsis length.</p>
+<hr>
+</section>
+<section id="paper-selection-topics" class="level1">
+<h1>46. Paper Selection Topics</h1>
+<p>Relevant literature may include:</p>
+<ul>
+<li>eclipsing binaries,</li>
+<li>spectroscopic binaries,</li>
+<li>detached eclipsing binaries,</li>
+<li>absolute dimensions,</li>
+<li>stellar masses and radii,</li>
+<li>stellar structure,</li>
+<li>stellar evolution,</li>
+<li>radial velocities,</li>
+<li>light-curve modeling,</li>
+<li>tidal evolution,</li>
+<li>synchronization,</li>
+<li>circularization,</li>
+<li>apsidal motion,</li>
+<li>magnetic activity,</li>
+<li>starspots,</li>
+<li>orbital-period variation,</li>
+<li>TESS binary research,</li>
+<li>Kepler binary research,</li>
+<li>spectroscopy,</li>
+<li>photometry,</li>
+<li>instrumentation,</li>
+<li>and relevant computational methods.</li>
+</ul>
+<hr>
+</section>
+<section id="paper-of-the-week-entry" class="level1">
+<h1>47. Paper-of-the-Week Entry</h1>
+<p>Each entry may contain:</p>
+<pre class="text"><code>Paper Title
+
+Authors
+Journal / arXiv / ADS
+
+Short Synopsis
+
+Why It Matters
+
+ADS | HTML | PDF</code></pre>
+<p>The synopsis should normally be approximately two to four sentences.</p>
+<p>The text must be an original summary rather than copied from the abstract.</p>
+<hr>
+</section>
+<section id="papers-of-the-week-provenance" class="level1">
+<h1>48. Papers-of-the-Week Provenance</h1>
+<p>The RHS should display an update indicator such as:</p>
+<pre class="text"><code>Updated Weekly
+October 2026</code></pre>
+<p>Links should point to authoritative sources whenever possible:</p>
+<ul>
+<li>ADS,</li>
+<li>DOI,</li>
+<li>journal/publisher,</li>
+<li>arXiv,</li>
+<li>official HTML,</li>
+<li>official PDF.</li>
+</ul>
+<hr>
+</section>
+<section id="papers-of-the-week-data-architecture" class="level1">
+<h1>49. Papers-of-the-Week Data Architecture</h1>
+<p>The literature panel should eventually be data-driven.</p>
+<p>Possible source files:</p>
+<pre class="text"><code>papers_of_week.yml</code></pre>
+<p>or:</p>
+<pre class="text"><code>papers_of_week.json</code></pre>
+<p>Possible fields:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">journal</span><span class="kw">:</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">synopsis</span><span class="kw">:</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="fu">why_it_matters</span><span class="kw">:</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ads</span><span class="kw">:</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="fu">doi</span><span class="kw">:</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span><span class="kw">:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This allows the sidebar to be updated without rewriting page markup.</p>
+<hr>
+</section>
+<section id="relationship-to-daily-astronomy-read" class="level1">
+<h1>50. Relationship to Daily Astronomy Read</h1>
+<p>The literature-selection methodology can build upon the existing <strong>Daily Astronomy Read</strong> process.</p>
+<p>The website version should be narrower and specifically tuned to the Spectroscopic Eclipsing Binary research program.</p>
+<p>The two processes may share discovery and evaluation methods while remaining separate products.</p>
+<hr>
+</section>
+<section id="responsive-mobile-design" class="level1">
+<h1>51. Responsive / Mobile Design</h1>
+<p>The desktop three-column architecture must degrade gracefully on narrow displays.</p>
+<p>Desktop:</p>
+<pre class="text"><code>LHS | CENTER | RHS</code></pre>
+<p>Mobile priority:</p>
+<pre class="text"><code>CENTER
+
+Research Navigation
+(collapsible)
+
+Papers of the Week</code></pre>
+<p>Alternatively, Research Navigation may be accessible from a compact control near the top of the page.</p>
+<p>Nothing scientifically important should disappear merely because the viewport is narrow.</p>
+<hr>
+</section>
+<section id="mobile-dashboard" class="level1">
+<h1>52. Mobile Dashboard</h1>
+<p>The dashboard must remain usable on phones and tablets.</p>
+<p>Requirements:</p>
+<ul>
+<li>controls large enough for touch,</li>
+<li>plots resize responsively,</li>
+<li>labels remain readable,</li>
+<li>no required hover interaction,</li>
+<li>no horizontal page overflow,</li>
+<li>phase slider remains usable,</li>
+<li>animation remains optional.</li>
+</ul>
+<p>Complex dashboard panels may stack vertically.</p>
+<hr>
+</section>
+<section id="global-website-footer" class="level1">
+<h1>53. Global Website Footer</h1>
+<p>A persistent footer should be added across the entire Jeffrey Sabby website.</p>
+<p>The footer is a <strong>global website component</strong>, not a binary-research-specific component.</p>
+<p>It should remain consistent across research, teaching, computing, and other major sections.</p>
+<hr>
+</section>
+<section id="footer-purpose" class="level1">
+<h1>54. Footer Purpose</h1>
+<p>The footer provides:</p>
+<ol type="1">
+<li>identity,</li>
+<li>global navigation,</li>
+<li>provenance.</li>
+</ol>
+<p>It should remain visually subordinate to the main page.</p>
+<hr>
+</section>
+<section id="proposed-footer-structure" class="level1">
+<h1>55. Proposed Footer Structure</h1>
+<p>Conceptually:</p>
+<pre class="text"><code>────────────────────────────────────────────────────────────
+
+JS / Dr. Jeffrey Sabby
+Astrophysics • Physics • Computational Science • Mechatronics
+
+
+RESEARCH
+
+Spectroscopic Eclipsing Binaries
+Observational Astronomy
+Exoplanets
+Scientific Computing
+
+
+TEACHING
+
+Astrophysics
+Orbital Mechanics
+Digital Signal Processing
+Course Resources
+
+
+CONNECT
+
+Professional
+GitHub
+Publications / ADS
+Contact
+
+
+────────────────────────────────────────────────────────────
+
+© 2026 Jeffrey Sabby
+Built with Quarto</code></pre>
+<p>The exact content can evolve as the overall website grows.</p>
+<hr>
+</section>
+<section id="footer-visual-design" class="level1">
+<h1>56. Footer Visual Design</h1>
+<p>The footer should use:</p>
+<ul>
+<li>a thin upper rule,</li>
+<li>generous whitespace,</li>
+<li>restrained typography,</li>
+<li>muted secondary text,</li>
+<li>three or four compact columns,</li>
+<li>consistent website colors,</li>
+<li>and responsive stacking on narrow displays.</li>
+</ul>
+<p>A simple <code>JS</code> identity mark may be used rather than introducing an unnecessary complex logo.</p>
+<hr>
+</section>
+<section id="citation-support" class="level1">
+<h1>57. Citation Support</h1>
+<p>The website should eventually support a <strong>Cite This Work</strong> mechanism where appropriate.</p>
+<p>For published research, this should point to the actual paper citation.</p>
+<p>Possible outputs include:</p>
+<ul>
+<li>formatted citation,</li>
+<li>ADS,</li>
+<li>DOI,</li>
+<li>BibTeX.</li>
+</ul>
+<p>For original datasets or website-based research products, citation information may be provided if scientifically warranted.</p>
+<hr>
+</section>
+<section id="accessibility" class="level1">
+<h1>58. Accessibility</h1>
+<p>Accessibility should be considered during implementation rather than retrofitted later.</p>
+<p>Requirements include:</p>
+<ul>
+<li>semantic headings,</li>
+<li>descriptive link text,</li>
+<li>image alternative text,</li>
+<li>keyboard-accessible navigation,</li>
+<li>sufficient contrast,</li>
+<li>readable typography,</li>
+<li>responsive layouts,</li>
+<li>reduced-motion support,</li>
+<li>accessible interactive controls,</li>
+<li>and meaningful static alternatives to animations.</li>
+</ul>
+<hr>
+</section>
+<section id="figure-and-data-integrity" class="level1">
+<h1>59. Figure and Data Integrity</h1>
+<p>Scientific figures should:</p>
+<ul>
+<li>identify axes,</li>
+<li>include physical units,</li>
+<li>distinguish observations from models,</li>
+<li>show uncertainties when appropriate,</li>
+<li>avoid misleading axis ranges,</li>
+<li>identify data sources,</li>
+<li>and retain sufficient resolution.</li>
+</ul>
+<p>Plots should prioritize scientific interpretation over decorative appearance.</p>
+<hr>
+</section>
+<section id="data-provenance" class="level1">
+<h1>60. Data Provenance</h1>
+<p>Whenever observational data are displayed, record:</p>
+<ul>
+<li>source,</li>
+<li>instrument where applicable,</li>
+<li>observation date or epoch,</li>
+<li>processing status,</li>
+<li>calibration status,</li>
+<li>archive/source repository,</li>
+<li>and analysis provenance.</li>
+</ul>
+<p>For archival datasets, distinguish archival data from newly obtained observations.</p>
+<hr>
+</section>
+<section id="naming-conventions" class="level1">
+<h1>61. Naming Conventions</h1>
+<p>Consistent naming should be established before large-scale implementation.</p>
+<p>Suggested URL convention:</p>
+<pre class="text"><code>rt-crb
+ww-aur
+ft-ori</code></pre>
+<p>Suggested internal file convention:</p>
+<pre class="text"><code>rt_crb
+ww_aur
+ft_ori</code></pre>
+<p>Avoid mixing multiple conventions unnecessarily.</p>
+<hr>
+</section>
+<section id="possible-directory-architecture" class="level1">
+<h1>62. Possible Directory Architecture</h1>
+<p>A conceptual structure may be:</p>
+<pre class="text"><code>research/
+└── binaries/
+    ├── rt-crb.qmd
+    ├── ww-aur.qmd
+    ├── ft-ori.qmd
+    ├── systems.qmd
+    └── publications.qmd
+
+assets/
+└── binaries/
+    ├── shared/
+    │   ├── binary-dashboard.js
+    │   ├── binary-dashboard.css
+    │   └── ...
+    │
+    ├── rt_crb/
+    │   ├── data/
+    │   ├── figures/
+    │   └── ...
+    │
+    ├── ww_aur/
+    │   ├── data/
+    │   ├── figures/
+    │   └── ...
+    │
+    └── ft_ori/
+        ├── data/
+        ├── figures/
+        └── ...</code></pre>
+<p>The final structure should conform to the existing JeffreySabbyWebsite architecture rather than forcing unnecessary reorganization.</p>
+<hr>
+</section>
+<section id="development-workflow" class="level1">
+<h1>63. Development Workflow</h1>
+<p>Development should proceed incrementally.</p>
+<p>Recommended sequence:</p>
+<pre class="text"><code>1. Establish framework
+2. Obtain RT CrB source paper
+3. Digest paper scientifically
+4. Obtain RT CrB light curve
+5. Obtain RT CrB radial velocities
+6. Obtain absolute-property results
+7. Build RT CrB narrative
+8. Build static RT CrB center page
+9. Build dashboard prototype
+10. Validate orbital physics
+11. Replace placeholders with real data
+12. Implement LHS accordion
+13. Implement RHS Papers of the Week
+14. Implement shared footer
+15. Validate responsive behavior
+16. Validate accessibility
+17. Validate links
+18. Render Quarto site
+19. Commit to Git
+20. Publish</code></pre>
+<p>Each stage should be tested before adding unnecessary complexity.</p>
+<hr>
+</section>
+<section id="pycharm-workflow" class="level1">
+<h1>64. PyCharm Workflow</h1>
+<p>The website is maintained in the existing PyCharm project.</p>
+<p>Because direct editing integration with PyCharm is not relied upon, complete code/configuration files should be supplied in chat for manual copy-and-paste into PyCharm.</p>
+<p>Changes should be introduced incrementally and tested after each meaningful step.</p>
+<p>Avoid large untested multi-file changes when a smaller validated sequence is possible.</p>
+<hr>
+</section>
+<section id="validation" class="level1">
+<h1>65. Validation</h1>
+<p>Before publication, each system page should be checked for:</p>
+<section id="scientific-validation" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-validation">Scientific Validation</h2>
+<ul>
+<li>correct numerical values,</li>
+<li>correct units,</li>
+<li>correct uncertainties,</li>
+<li>correct orbital interpretation,</li>
+<li>correct citations,</li>
+<li>correct distinction between observation and inference.</li>
+</ul>
+</section>
+<section id="technical-validation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-validation">Technical Validation</h2>
+<ul>
+<li>Quarto renders successfully,</li>
+<li>links work,</li>
+<li>dashboard loads,</li>
+<li>controls function,</li>
+<li>plots resize correctly,</li>
+<li>no JavaScript console errors,</li>
+<li>mobile layout works.</li>
+</ul>
+</section>
+<section id="editorial-validation" class="level2">
+<h2 class="anchored" data-anchor-id="editorial-validation">Editorial Validation</h2>
+<ul>
+<li>narrative is understandable,</li>
+<li>jargon is defined where necessary,</li>
+<li>paper-derived material is accurately paraphrased,</li>
+<li>no unsupported claims are introduced,</li>
+<li>published and preliminary work are clearly distinguished.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="design-restraint" class="level1">
+<h1>66. Design Restraint</h1>
+<p>The research section should look modern and sophisticated without becoming visually theatrical.</p>
+<p>Avoid:</p>
+<ul>
+<li>unnecessary animation,</li>
+<li>excessive color,</li>
+<li>decorative effects that compete with data,</li>
+<li>generic stock-space imagery when actual research data are available,</li>
+<li>excessive cards,</li>
+<li>overly dense sidebars,</li>
+<li>and interaction for interaction’s sake.</li>
+</ul>
+<p>The guiding aesthetic should be:</p>
+<blockquote class="blockquote">
+<p><strong>Research visualization rather than astronomy exhibition.</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="long-term-scalability" class="level1">
+<h1>67. Long-Term Scalability</h1>
+<p>The framework should support growth from the initial flagship systems to a much larger observing/research program.</p>
+<p>The architecture should accommodate:</p>
+<ul>
+<li>approximately 20 current systems,</li>
+<li>approximately 20 proposed systems,</li>
+<li>multiple publications,</li>
+<li>new observing campaigns,</li>
+<li>archival datasets,</li>
+<li>TESS/Kepler data,</li>
+<li>spectroscopy,</li>
+<li>photometry,</li>
+<li>new analysis methods,</li>
+<li>and future research results.</li>
+</ul>
+<p>Scalability should be achieved through reusable templates and data-driven components rather than duplication.</p>
+<hr>
+</section>
+<section id="future-possibilities" class="level1">
+<h1>68. Future Possibilities</h1>
+<p>Possible future features include:</p>
+<ul>
+<li>searchable binary-system catalog,</li>
+<li>sortable target tables,</li>
+<li>observation timelines,</li>
+<li>downloadable public datasets,</li>
+<li>interactive spectra,</li>
+<li>spectral-line identification,</li>
+<li>O−C diagrams,</li>
+<li>period-change visualization,</li>
+<li>TESS sector visualization,</li>
+<li>historical-versus-modern parameter comparisons,</li>
+<li>Roche geometry,</li>
+<li>evolutionary tracks,</li>
+<li>HR-diagram placement,</li>
+<li>synchronization comparisons,</li>
+<li>apsidal-motion visualization,</li>
+<li>observing-status indicators,</li>
+<li>bibliography database,</li>
+<li>BibTeX export,</li>
+<li>and links to associated software repositories.</li>
+</ul>
+<p>These should only be implemented when they support an actual scientific or communication need.</p>
+<hr>
+</section>
+<section id="architectural-summary" class="level1">
+<h1>69. Architectural Summary</h1>
+<p>The final conceptual architecture is:</p>
+<pre class="text"><code>GLOBAL WEBSITE HEADER
+        │
+        ▼
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   SPECTROSCOPIC ECLIPSING BINARY RESEARCH PORTAL           │
+│                                                             │
+│  ┌───────────────┬───────────────────────┬───────────────┐  │
+│  │               │                       │               │  │
+│  │      LHS      │        CENTER         │      RHS      │  │
+│  │               │                       │               │  │
+│  │ Research      │ Selected Binary       │ Papers of     │  │
+│  │ Overview      │                       │ the Week      │  │
+│  │               │ Hero                  │               │  │
+│  │ Binary        │ Scientific Question   │ Paper 1       │  │
+│  │ Systems       │ System Identity       │ Paper 2       │  │
+│  │               │ Light Curve           │ Paper 3       │  │
+│  │ Current       │ RV Curve              │               │  │
+│  │ Proposed      │ Dashboard             │ More →        │  │
+│  │               │ Absolute Properties   │               │  │
+│  │ Publications  │ Narrative             │               │  │
+│  │               │ Analysis              │               │  │
+│  │ Professional  │ Results               │               │  │
+│  │ Computing     │ Interpretation        │               │  │
+│  │ Social        │ Publications          │               │  │
+│  │               │                       │               │  │
+│  └───────────────┴───────────────────────┴───────────────┘  │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+        │
+        ▼
+GLOBAL WEBSITE FOOTER</code></pre>
+<hr>
+</section>
+<section id="central-design-principle" class="level1">
+<h1>70. Central Design Principle</h1>
+<p>The Spectroscopic Eclipsing Binary Systems section should ultimately allow a visitor to move naturally through the entire scientific inference process:</p>
+<pre class="text"><code>We observe the stars.
+        ↓
+We measure their changing brightness.
+        ↓
+We measure their changing radial velocities.
+        ↓
+We determine the orbital geometry.
+        ↓
+We construct a physical model.
+        ↓
+We determine stellar masses and radii.
+        ↓
+We compare those properties with stellar physics.
+        ↓
+We interpret the system.
+        ↓
+We publish the results.
+        ↓
+New observations produce new questions.</code></pre>
+<p>The website should therefore not merely <strong>describe</strong> spectroscopic eclipsing binaries.</p>
+<p>It should allow the visitor to understand <strong>how observations become astrophysical knowledge</strong>.</p>
+<hr>
+</section>
+<section id="framework-status" class="level1">
+<h1>71. Framework Status</h1>
+<p>This document represents the agreed design baseline for the Spectroscopic Eclipsing Binary Systems section of the Jeffrey Sabby website as of October 9, 2026.</p>
+<p>Major architectural decisions currently locked in include:</p>
+<ul>
+<li>RT CrB as the default flagship system,</li>
+<li>persistent LHS research navigation,</li>
+<li>dynamic system-specific center content,</li>
+<li>persistent RHS Papers of the Week,</li>
+<li>separate Quarto pages for individual systems,</li>
+<li>expandable Current and Proposed Systems navigation,</li>
+<li>source-driven research narratives,</li>
+<li>plain-language translation of published research,</li>
+<li>actual observational data where available,</li>
+<li>prominent Absolute Properties,</li>
+<li>synchronized interactive binary dashboard,</li>
+<li>scientific provenance,</li>
+<li>explicit uncertainties,</li>
+<li>research-status distinctions,</li>
+<li>responsive/mobile behavior,</li>
+<li>accessibility,</li>
+<li>global website footer,</li>
+<li>scalable target architecture,</li>
+<li>and preservation of scientific rigor throughout the public-facing presentation.</li>
+</ul>
+<p>Changes to these architectural principles should be deliberate and documented.</p>
+<hr>
+<section id="end-of-framework" class="level2">
+<h2 class="anchored" data-anchor-id="end-of-framework">End of Framework</h2>
+<p><strong>File:</strong></p>
+<pre class="text"><code>/Users/jeffreysabby/Library/CloudStorage/Dropbox/My_Websites/JeffreySabbyWebsite/docs/FRAMEWORKS/SPECTROSCOPIC_ECLIPSING_BINARY_WEBSITE_FRAMEWORK.md</code></pre>
+<p><strong>Version:</strong> 1.0<br>
+<strong>Date:</strong> October 9, 2026<br>
+<strong>Status:</strong> Design Baseline</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(
+        ".sidebar a[href^='http']"
+    );
+
+    links.forEach(function (link) {
+        if (link.hostname !== window.location.hostname) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+        }
+    });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jeffreysabby\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

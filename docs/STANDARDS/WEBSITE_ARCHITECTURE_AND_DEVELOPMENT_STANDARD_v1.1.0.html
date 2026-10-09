@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -45,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5d9e38664a2c8f7100765893e2adeb4a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-05b5cac302f10f8e745d1afe76d12ebf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,7 +142,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -129,7 +164,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research/index.html"> 
+    <a class="nav-link active" href="../../research/index.html" aria-current="page"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
@@ -142,10 +177,173 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exoplanet Research</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Research Areas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research/eclipsing_binaries/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Spectroscopic Eclipsing Binaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research/exoplanets/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exoplanets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research/rocketry/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rocketry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research/drones/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Drones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research/rovers/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rovers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research/observatory_automation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Observatory Automation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Social Media</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://www.youtube.com/@DrJeffreySabby" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">YouTube</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://www.facebook.com/jsabby" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Facebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://x.com/jasabby" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">X (Twitter)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Professional &amp; Academic</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://orcid.org/0000-0003-3097-1425" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ORCID</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://www.researchgate.net/profile/Jeffrey-Sabby" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ResearchGate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://scholar.google.com/citations?hl=en&amp;user=kqZhcjgAAAAJ" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Scholar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://scixplorer.org/search?p=1&amp;q=Sabby%2C+J&amp;sort=score+desc&amp;sort=date+desc&amp;d=astrophysics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NASA ADS / SciX</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://www.linkedin.com/in/dr-jeffrey-sabby-76569b27/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LinkedIn</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Scientific Computing &amp; Software</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/jsabby" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gitlab.com/jsabby" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitLab</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -176,9 +374,9 @@ window.Quarto = {
 <strong>Website:</strong> https://jeffreysabby.com<br>
 <strong>Repository:</strong> https://github.com/jsabby/JeffreySabbyWebsite<br>
 <strong>Document:</strong> WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.md<br>
-<strong>Version:</strong> 1.0.0<br>
-<strong>Date:</strong> October 8, 2026<br>
-<strong>Status:</strong> Initial Architectural Standard<br>
+<strong>Version:</strong> 1.1.0<br>
+<strong>Date:</strong> October 9, 2026<br>
+<strong>Status:</strong> Active Architectural Standard — Three-Column Research Layout Validated<br>
 <strong>Author:</strong> Jeffrey Sabby<br>
 <strong>Development Collaboration:</strong> Kepler (OpenAI)</p>
 <hr>
@@ -658,7 +856,7 @@ window.Quarto = {
 </section>
 <section id="layout-consistency" class="level2">
 <h2 class="anchored" data-anchor-id="layout-consistency">5.4 Layout Consistency</h2>
-<p>The existing homepage provides the initial visual reference.</p>
+<p>The homepage, Research Overview page, and RT CrB page provide the current validated visual references.</p>
 <p>Current layout characteristics include:</p>
 <ul>
 <li>A wide central content column.</li>
@@ -685,6 +883,125 @@ window.Quarto = {
 <li>No essential information should depend on hover interactions.</li>
 </ul>
 <p>Desktop appearance shall not be optimized at the expense of mobile usability.</p>
+</section>
+<section id="validated-three-column-implementation-october-9-2026" class="level2">
+<h2 class="anchored" data-anchor-id="validated-three-column-implementation-october-9-2026">5.6 Validated Three-Column Implementation (October 9, 2026)</h2>
+<p>The three-column arrangement has been visually confirmed in local Quarto previews of the following pages:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Page</th>
+<th>Source</th>
+<th>Left column</th>
+<th>Center column</th>
+<th>Right column</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Home</td>
+<td><code>index.qmd</code></td>
+<td>Professional and social navigation</td>
+<td>Scientific identity and HERO</td>
+<td>Space &amp; Astronomy News</td>
+</tr>
+<tr class="even">
+<td>Research Overview</td>
+<td><code>research/index.qmd</code></td>
+<td>Research navigation</td>
+<td>Research overview and HERO</td>
+<td>Research Discoveries &amp; Publications</td>
+</tr>
+<tr class="odd">
+<td>RT CrB</td>
+<td><code>research/eclipsing_binaries/index.qmd</code></td>
+<td>Research navigation</td>
+<td>RT CrB title, HERO, scientific narrative</td>
+<td>Papers of the Week</td>
+</tr>
+</tbody>
+</table>
+<p>The reference screenshots were reviewed on October 9, 2026. This validation establishes <strong>visual consistency at the tested desktop viewport</strong>, not a guarantee of identical pixel dimensions at all resolutions or across browsers. Mobile behavior remains to be tested independently.</p>
+<p>The preferred implementation uses Quarto’s existing layout facilities, including the contextual <code>sidebar</code> setting and a <code>column-margin</code> container for the right-hand panel. Do not replace working native layout behavior with a custom CSS grid without a demonstrated requirement.</p>
+<p>The primary layout requirements are:</p>
+<ol type="1">
+<li>Keep the contextual navigation on the left.</li>
+<li>Keep the main scientific content visually dominant.</li>
+<li>Place topic-relevant information in a compact right-hand panel.</li>
+<li>Align the top of the right panel with the introductory content or HERO region as appropriate.</li>
+<li>Preserve a consistent horizontal rhythm across the three columns.</li>
+<li>Avoid introducing large unused margins or horizontal overflow.</li>
+<li>Test any shared CSS or layout changes on Home, Research Overview, and RT CrB before acceptance.</li>
+</ol>
+</section>
+<section id="hero-image-standard" class="level2">
+<h2 class="anchored" data-anchor-id="hero-image-standard">5.7 HERO Image Standard</h2>
+<p>A HERO is a prominent introductory visual; it is not a substitute for an evidence-based scientific figure.</p>
+<p><strong>Approved visual pattern:</strong></p>
+<ul>
+<li>Place the Quarto page title and subtitle above the HERO.</li>
+<li>Center the HERO in the principal content column.</li>
+<li>Use responsive sizing: <code>width: 100%; height: auto</code> within the content container.</li>
+<li>Preserve the source aspect ratio; do not stretch or crop by default.</li>
+<li>Use a modest, consistent corner radius where appropriate.</li>
+<li>Include meaningful <code>alt</code> text.</li>
+<li>Use the same effective content-column width on comparable desktop pages.</li>
+<li>Avoid arbitrary per-page <code>max-width</code> restrictions that make one HERO appear narrower than the others.</li>
+<li>Verify alignment against the body text and neighboring right panel.</li>
+</ul>
+<p>Example Quarto/HTML pattern:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"research-hero"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center; margin-bottom: 2rem;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../images/example_research_hero.png"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ot">       alt</span><span class="op">=</span><span class="st">"Descriptive summary of the research HERO"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ot">       style</span><span class="op">=</span><span class="st">"display: block; width: 100%; height: auto; border-radius: 8px;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The image path is relative to the <code>.qmd</code> source location; adapt it to the actual directory. Prefer a reusable CSS class when the pattern stabilizes across pages.</p>
+<p><strong>Scientific integrity requirement:</strong> Any quantities, axes, tables, equations, labels, or plots embedded in an AI-generated or composited HERO must be checked against authoritative sources before being represented as actual measurements. Illustrative renderings must be identified as illustrations. Published data and results should appear separately as validated, cited figures or tables.</p>
+</section>
+<section id="page-level-quarto-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="page-level-quarto-metadata">5.8 Page-Level Quarto Metadata</h2>
+<p>Use explicit <code>sidebar</code> metadata for pages that belong to a configured division. A standard Research page begins with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Scientific Research"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Observational Astrophysics, Experimental Physics, and Autonomous Scientific Systems"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sidebar</span><span class="kw">:</span><span class="at"> research-sidebar</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Page-level <code>page-layout</code> should be chosen based on tested behavior, not assumed to be interchangeable. The three-column layout has been validated using Quarto’s standard article flow and <code>column-margin</code> right-hand content. A <code>page-layout: full</code> override may change the width and placement of the body and margins; retain it only when all three columns remain correct in the local preview.</p>
+</section>
+<section id="right-panel-placement-pattern" class="level2">
+<h2 class="anchored" data-anchor-id="right-panel-placement-pattern">5.9 Right-Panel Placement Pattern</h2>
+<p>The Research Overview right panel uses the following Quarto structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"x-updates-panel"</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research Discoveries &amp; Publications</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>*Scientific discovery feeds and selected research papers will appear here.*</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The RT CrB page uses the same structural approach for <strong>Papers of the Week</strong>, with the subject changed to spectroscopic eclipsing binaries and related stellar astrophysics. Panel styling is centralized in <code>styles.css</code>; do not duplicate page-specific CSS unnecessarily.</p>
+</section>
+<section id="layout-acceptance-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="layout-acceptance-criteria">5.10 Layout Acceptance Criteria</h2>
+<p>A new or revised research page is accepted only after visual review confirms:</p>
+<ul>
+<li>Page title and subtitle are legible and correctly positioned.</li>
+<li>HERO and narrative align to the same main content column.</li>
+<li>Left sidebar displays the expected section and active navigation state.</li>
+<li>Right panel is visible and does not overlap the main column.</li>
+<li>No image distortion, clipped text, or horizontal overflow is present.</li>
+<li>Existing pages still render correctly after shared-style changes.</li>
+<li>Narrow-screen behavior has been tested when the page is ready for public release.</li>
+</ul>
 <hr>
 </section>
 </section>
@@ -1112,6 +1429,11 @@ window.Quarto = {
 </section>
 <section id="research-page-standard" class="level1">
 <h1>9. Research Page Standard</h1>
+<section id="current-research-page-baseline-october-9-2026" class="level2">
+<h2 class="anchored" data-anchor-id="current-research-page-baseline-october-9-2026">9.0 Current Research Page Baseline (October 9, 2026)</h2>
+<p>The Research Overview page and the RT CrB page now provide practical implementation examples for the three-column standard. Both show a contextual left navigation area, centered HERO, and right-hand scientific information panel. The RT CrB right panel is titled <strong>Papers of the Week</strong> and is presently a placeholder for curated literature, not a functioning automatic paper-selection service.</p>
+<p>The RT CrB introductory HERO is a visual overview; its numerical annotations and synthetic plots require independent source verification before being cited as observational results. Detailed scientific content and any interactive orbital dashboard are planned future work.</p>
+</section>
 <section id="research-homepage" class="level2">
 <h2 class="anchored" data-anchor-id="research-homepage">9.1 Research Homepage</h2>
 <p>Every major research subject shall have a dedicated homepage.</p>
@@ -1755,6 +2077,15 @@ E = mc^2
 <p>Shared styling should remain in <code>styles.css</code>.</p>
 <p>Automated HTML fragments may be stored in dedicated directories.</p>
 </section>
+<section id="manual-editing-and-collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="manual-editing-and-collaboration">18.2.1 Manual Editing and Collaboration</h2>
+<p>The author maintains the authoritative source in PyCharm. Because the current direct editing connection is not reliable, Kepler shall provide complete copy-ready <code>.qmd</code>, CSS, YAML, or Python replacements in chat when requested, or exact before/after edits for small changes. Do not assume a local edit was applied until the author confirms it.</p>
+<p>Development should proceed one verifiable change at a time: propose the edit, allow the author to apply it, inspect the rendered result, and only then continue. Preserve working code and configuration unless a change is necessary and its consequences are understood.</p>
+</section>
+<section id="hero-asset-management" class="level2">
+<h2 class="anchored" data-anchor-id="hero-asset-management">18.2.2 HERO Asset Management</h2>
+<p>Keep website HERO assets in <code>images/</code> or another explicitly designated media directory. Use descriptive stable filenames, correct relative paths, and responsive rendering. Keep source artwork or original high-resolution assets separately when needed. Do not replace existing media solely to standardize dimensions when CSS can achieve the required visual consistency.</p>
+</section>
 <section id="page-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="page-metadata">18.3 Page Metadata</h2>
 <p>Pages should include appropriate Quarto front matter.</p>
@@ -2078,6 +2409,7 @@ E = mc^2
 </section>
 <section id="phase-2-research-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="phase-2-research-architecture">Phase 2 — Research Architecture</h2>
+<p>Status as of October 9, 2026: Research Overview, contextual sidebar, and three-column layout have been implemented and visually validated at a desktop viewport. Additional nested-topic navigation and responsive testing remain in progress.</p>
 <p>Objectives:</p>
 <ol type="1">
 <li>Add Research to the top navigation.</li>
@@ -2099,6 +2431,7 @@ E = mc^2
 </section>
 <section id="phase-3-exoplanet-prototype" class="level2">
 <h2 class="anchored" data-anchor-id="phase-3-exoplanet-prototype">Phase 3 — Exoplanet Prototype</h2>
+<p>Status: Planned. The initial visual-layout prototype has instead been advanced using the RT CrB page. Exoplanets remains a planned specialized research section.</p>
 <p>Objectives:</p>
 <ol type="1">
 <li>Create the Exoplanet homepage.</li>
@@ -2116,6 +2449,7 @@ E = mc^2
 </section>
 <section id="phase-4-spectroscopic-eclipsing-binaries" class="level2">
 <h2 class="anchored" data-anchor-id="phase-4-spectroscopic-eclipsing-binaries">Phase 4 — Spectroscopic Eclipsing Binaries</h2>
+<p>Status as of October 9, 2026: RT CrB page shell, HERO, introductory narrative, and Papers of the Week placeholder have been created and visually reviewed. Detailed observational analysis, verified scientific figures, citations, and interactive content remain future work.</p>
 <p>Objectives:</p>
 <ol type="1">
 <li>Create the Eclipsing Binary homepage.</li>
@@ -2303,6 +2637,11 @@ E = mc^2
 <td>2026-10-08</td>
 <td>Initial website architecture and development standard</td>
 </tr>
+<tr class="even">
+<td>1.1.0</td>
+<td>2026-10-09</td>
+<td>Validated Home/Research/RT CrB three-column baseline; added HERO, right-panel, page-metadata, layout QA, and manual PyCharm editing standards; updated implementation status</td>
+</tr>
 </tbody>
 </table>
 <hr>
@@ -2342,12 +2681,12 @@ E = mc^2
 <p>The Scientific Discovery Panel will connect each major subject with relevant scientific news, selected research papers, mission information, and authoritative resources.</p>
 <p>Automated retrieval, Quarto rendering, GitHub version control, and GitHub Actions deployment will provide a maintainable technical foundation.</p>
 <p>The website will be developed progressively, with scientific accuracy, reproducibility, consistency, and long-term extensibility guiding all major decisions.</p>
-<p>The immediate next development objective is to establish the Research division and implement the Exoplanet section as the first complete example of the hierarchical scientific website architecture.</p>
+<p>The immediate next development objective is to expand the RT CrB research page from its validated three-column visual foundation into a rigorously sourced scientific overview, followed by observational methods, published results, and clearly distinguished modern reanalysis. The Exoplanet section remains a subsequent specialized research implementation.</p>
 <hr>
 <p><strong>End of Document</strong></p>
 <p><strong>WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.md</strong><br>
-<strong>Version 1.0.0</strong><br>
-<strong>October 8, 2026</strong></p>
+<strong>Version 1.1.0</strong><br>
+<strong>October 9, 2026</strong></p>
 
 
 </section>
@@ -2440,7 +2779,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/jeffreysabby\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
