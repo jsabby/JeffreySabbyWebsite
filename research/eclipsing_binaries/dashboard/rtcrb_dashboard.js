@@ -1441,11 +1441,15 @@
     }
 
 
-        /* --------------------------------------------------------
+    /* --------------------------------------------------------
        11. Event Handlers
        -------------------------------------------------------- */
 
     function registerControls() {
+
+        // ----------------------------------------------------
+        // Orbital-phase slider
+        // ----------------------------------------------------
 
         if (phaseSlider) {
 
@@ -1467,28 +1471,108 @@
         }
 
 
-        if (playButton) {
+        // ----------------------------------------------------
+        // Touch-compatible button handling
+        // ----------------------------------------------------
+        //
+        // iPadOS Safari can delay conventional click events
+        // during continuous Plotly animation.
+        //
+        // Pointer events allow touch and Apple Pencil input
+        // to be processed immediately.
+        //
+        // A touch can also generate a subsequent click event.
+        // Suppress that compatibility click to prevent a
+        // single touch from activating a button twice.
+        //
+        // Conventional mouse clicks and keyboard activation
+        // remain supported.
+        // ----------------------------------------------------
 
-            playButton.addEventListener(
+        function registerButton(button, action) {
+
+            if (!button) {
+                return;
+            }
+
+            let suppressClickUntil = 0;
+
+
+            // Touch and Apple Pencil interactions.
+
+            button.addEventListener(
+
+                "pointerdown",
+
+                event => {
+
+                    if (
+                        event.pointerType !== "touch" &&
+                        event.pointerType !== "pen"
+                    ) {
+                        return;
+                    }
+
+                    if (!event.isPrimary) {
+                        return;
+                    }
+
+                    suppressClickUntil =
+                        performance.now() + 1000;
+
+                    event.preventDefault();
+
+                    action();
+
+                }
+
+            );
+
+
+            // Mouse clicks and keyboard activation.
+
+            button.addEventListener(
 
                 "click",
 
-                toggleAnimation
+                event => {
+
+                    if (
+                        performance.now() <
+                        suppressClickUntil
+                    ) {
+
+                        event.preventDefault();
+
+                        return;
+                    }
+
+                    action();
+
+                }
 
             );
         }
 
 
-        if (resetButton) {
+        // ----------------------------------------------------
+        // Play / Pause button
+        // ----------------------------------------------------
 
-            resetButton.addEventListener(
+        registerButton(
+            playButton,
+            toggleAnimation
+        );
 
-                "click",
 
-                resetDashboard
+        // ----------------------------------------------------
+        // Reset button
+        // ----------------------------------------------------
 
-            );
-        }
+        registerButton(
+            resetButton,
+            resetDashboard
+        );
     }
 
 
