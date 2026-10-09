@@ -2,45 +2,108 @@ project:
   type: website
 
 website:
-  title: "Jeffrey Sabby"
+  title: "Dr. Jeffrey Sabby Ph.D"
 
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: research/index.qmd
+        text: Research
+      - href: about.qmd
+        text: About
 
   sidebar:
-    style: "floating"
-    contents:
-      - section: "Social Media"
-        contents:
-          - text: "YouTube"
-            href: https://www.youtube.com/@DrJeffreySabby
-          - text: "Facebook"
-            href: https://www.facebook.com/jsabby
-          - text: "X (Twitter)"
-            href: https://x.com/jasabby
 
-      - section: "Professional & Academic"
-        contents:
-          - text: "ORCID"
-            href: https://orcid.org/0000-0003-3097-1425
-          - text: "ResearchGate"
-            href: https://www.researchgate.net/profile/Jeffrey-Sabby
-          - text: "Google Scholar"
-            href: "https://scholar.google.com/citations?hl=en&user=kqZhcjgAAAAJ"
-          - text: "NASA ADS / SciX"
-            href: "https://scixplorer.org/search?p=1&q=Sabby%2C+J&sort=score+desc&sort=date+desc&d=astrophysics"
-          - text: "LinkedIn"
-            href: https://www.linkedin.com/in/dr-jeffrey-sabby-76569b27/
+    # --------------------------------------------------
+    # HOME AND ABOUT SIDEBAR
+    # --------------------------------------------------
 
-      - section: "Scientific Computing & Software"
-        contents:
-          - text: "GitHub"
-            href: https://github.com/jsabby
-          - text: "GitLab"
-            href: https://gitlab.com/jsabby
+    - id: home-sidebar
+      style: "floating"
+      contents:
+
+        - section: "Social Media"
+          contents:
+            - text: "YouTube"
+              href: https://www.youtube.com/@DrJeffreySabby
+            - text: "Facebook"
+              href: https://www.facebook.com/jsabby
+            - text: "X (Twitter)"
+              href: https://x.com/jasabby
+
+        - section: "Professional & Academic"
+          contents:
+            - text: "ORCID"
+              href: https://orcid.org/0000-0003-3097-1425
+            - text: "ResearchGate"
+              href: https://www.researchgate.net/profile/Jeffrey-Sabby
+            - text: "Google Scholar"
+              href: "https://scholar.google.com/citations?hl=en&user=kqZhcjgAAAAJ"
+            - text: "NASA ADS / SciX"
+              href: "https://scixplorer.org/search?p=1&q=Sabby%2C+J&sort=score+desc&sort=date+desc&d=astrophysics"
+            - text: "LinkedIn"
+              href: https://www.linkedin.com/in/dr-jeffrey-sabby-76569b27/
+
+        - section: "Scientific Computing & Software"
+          contents:
+            - text: "GitHub"
+              href: https://github.com/jsabby
+            - text: "GitLab"
+              href: https://gitlab.com/jsabby
+
+    # --------------------------------------------------
+    # RESEARCH SIDEBAR
+    # --------------------------------------------------
+
+    - id: research-sidebar
+      style: "floating"
+      contents:
+        - section: "Research Areas"
+          contents:
+            - text: "Research Overview"
+              href: research/index.qmd
+            - text: "Spectroscopic Eclipsing Binaries"
+              href: research/eclipsing_binaries/index.qmd
+            - text: "Exoplanets"
+              href: research/exoplanets/index.qmd
+            - text: "Rocketry"
+              href: research/rocketry/index.qmd
+            - text: "Drones"
+              href: research/drones/index.qmd
+            - text: "Rovers"
+              href: research/rovers/index.qmd
+            - text: "Observatory Automation"
+              href: research/observatory_automation/index.qmd
+
+        - section: "Social Media"
+          contents:
+            - text: "YouTube"
+              href: https://www.youtube.com/@DrJeffreySabby
+            - text: "Facebook"
+              href: https://www.facebook.com/jsabby
+            - text: "X (Twitter)"
+              href: https://x.com/jasabby
+
+        - section: "Professional & Academic"
+          contents:
+            - text: "ORCID"
+              href: https://orcid.org/0000-0003-3097-1425
+            - text: "ResearchGate"
+              href: https://www.researchgate.net/profile/Jeffrey-Sabby
+            - text: "Google Scholar"
+              href: "https://scholar.google.com/citations?hl=en&user=kqZhcjgAAAAJ"
+            - text: "NASA ADS / SciX"
+              href: "https://scixplorer.org/search?p=1&q=Sabby%2C+J&sort=score+desc&sort=date+desc&d=astrophysics"
+            - text: "LinkedIn"
+              href: https://www.linkedin.com/in/dr-jeffrey-sabby-76569b27/
+
+        - section: "Scientific Computing & Software"
+          contents:
+            - text: "GitHub"
+              href: https://github.com/jsabby
+            - text: "GitLab"
+              href: https://gitlab.com/jsabby
 
 format:
   html:

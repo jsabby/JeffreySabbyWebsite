@@ -1,16 +1,9 @@
 ---
-title: "Jeffrey Sabby"
+title: "Dr. Jeffrey Sabby"
+subtitle: "Astrophysics, Physics, Computational Science, and Mechatronics"
+sidebar: home-sidebar
 toc: false
 page-layout: article
-format:
-  html:
-    include-in-header:
-      text: |
-        <style>
-        .quarto-title-block {
-          display: none;
-        }
-        </style>
 ---
 
 ::: {.column-margin}
