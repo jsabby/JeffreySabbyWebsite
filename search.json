@@ -1,5 +1,1006 @@
 [
   {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html",
+    "title": "Exoplanet Research",
+    "section": "",
+    "text": "Project: Jeffrey Sabby Scientific and Academic Website\nWebsite: https://jeffreysabby.com\nRepository: https://github.com/jsabby/JeffreySabbyWebsite\nDocument: WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.md\nVersion: 1.0.0\nDate: October 8, 2026\nStatus: Initial Architectural Standard\nAuthor: Jeffrey Sabby\nDevelopment Collaboration: Kepler (OpenAI)"
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose",
+    "title": "Exoplanet Research",
+    "section": "1.1 Purpose",
+    "text": "1.1 Purpose\nThe Jeffrey Sabby Scientific and Academic Website is intended to provide a comprehensive, scientifically rigorous, and continuously evolving representation of the author’s research, engineering, computational, educational, and scholarly activities.\nThe website is not intended to function solely as a conventional academic biography or static professional portfolio.\nInstead, it will serve as an integrated scientific information environment that combines:\n\nHistorical scientific contributions.\nCurrent research activities.\nScientific publications and scholarly works.\nObservational astronomy programs.\nExperimental engineering and instrumentation.\nScientific computing and software development.\nUniversity teaching and educational resources.\nComputational textbooks and Jupyter Books.\nCurrent scientific news and discoveries.\nSelected scientific papers and research developments.\nLinks to scientific archives, databases, and research facilities.\nReproducible scientific documentation.\n\nThe website will be developed incrementally while maintaining a consistent architecture, appearance, navigation hierarchy, and scientific standard."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#long-term-vision",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#long-term-vision",
+    "title": "Exoplanet Research",
+    "section": "1.2 Long-Term Vision",
+    "text": "1.2 Long-Term Vision\nThe long-term objective is to establish a scientific website in which each major research or educational subject functions as a coherent, interconnected collection of pages.\nVisitors should be able to navigate from a broad scientific discipline to increasingly specialized subjects without losing their understanding of the surrounding scientific context.\nFor example:\nResearch → Exoplanets → Transit Photometry → Current Research Targets\nAt each level, the website should provide:\n\nAppropriate navigation.\nScientifically meaningful content.\nRelevant historical context.\nCurrent research developments.\nLinks to publications and supporting resources.\nConnections to related scientific disciplines.\n\nThe website should remain extensible as new research projects, software systems, educational materials, and publications are developed."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-integrity",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-integrity",
+    "title": "Exoplanet Research",
+    "section": "2.1 Scientific Integrity",
+    "text": "2.1 Scientific Integrity\nScientific content must distinguish between:\n\nEstablished scientific results.\nObservational measurements.\nTheoretical predictions.\nNumerical simulations.\nPreliminary research findings.\nWorking hypotheses.\nInterpretations of existing evidence.\nSpeculative scientific possibilities.\nPublished and unpublished research.\n\nScientific conclusions must not be presented with greater certainty than the supporting evidence justifies.\nWhenever practical, scientific statements should be supported by appropriate references, observations, calculations, or published literature."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-method",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-method",
+    "title": "Exoplanet Research",
+    "section": "2.2 Scientific Method",
+    "text": "2.2 Scientific Method\nThe scientific method will provide the conceptual foundation for research documentation.\nThe preferred scientific workflow is:\n\nScientific Question\nBackground and Existing Knowledge\nPhysical Model or Hypothesis\nTestable Predictions\nObservational or Experimental Strategy\nTarget or System Selection\nInstrumentation\nObservation or Experiment\nRaw Data Acquisition\nCalibration and Data Reduction\nMeasurement\nAnalysis and Modeling\nUncertainty Quantification and Validation\nResults\nScientific Interpretation\nConclusions\nPublication and Dissemination\nNew Scientific Questions\n\nNot every webpage requires all eighteen components.\nHowever, substantive research-project documentation should follow this sequence whenever applicable."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#reproducibility",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#reproducibility",
+    "title": "Exoplanet Research",
+    "section": "2.3 Reproducibility",
+    "text": "2.3 Reproducibility\nResearch documentation should provide sufficient information to understand how results were obtained.\nWhere appropriate, include:\n\nObservational methods.\nInstrument specifications.\nCalibration procedures.\nData sources.\nComputational methods.\nSoftware versions.\nNumerical assumptions.\nMeasurement uncertainties.\nValidation procedures.\nReferences to supporting publications.\nLinks to publicly accessible datasets and source code.\n\nReproducibility is a central objective of the website."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#consistent-presentation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#consistent-presentation",
+    "title": "Exoplanet Research",
+    "section": "2.4 Consistent Presentation",
+    "text": "2.4 Consistent Presentation\nAll major website sections shall follow a common visual and organizational standard.\nConsistency includes:\n\nNavigation structure.\nPage hierarchy.\nTypography.\nHeading levels.\nFigure presentation.\nTables.\nMathematical notation.\nCitations.\nScientific news panels.\nPublication metadata.\nUpdate timestamps.\nInternal and external links.\n\nIndividual sections may introduce specialized content without abandoning the overall website design."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#hierarchical-organization",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#hierarchical-organization",
+    "title": "Exoplanet Research",
+    "section": "2.5 Hierarchical Organization",
+    "text": "2.5 Hierarchical Organization\nScientific information shall be organized hierarchically.\nEach page must have a clearly defined position within the website.\nA visitor should be able to determine:\n\nThe major website division.\nThe current scientific or educational subject.\nThe selected subsection.\nRelated subjects.\nHow to return to a higher organizational level."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#separation-of-content-and-presentation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#separation-of-content-and-presentation",
+    "title": "Exoplanet Research",
+    "section": "2.6 Separation of Content and Presentation",
+    "text": "2.6 Separation of Content and Presentation\nScientific content should remain separate from presentation and navigation configuration whenever practical.\nQuarto source files will contain the principal scientific narrative.\nCSS will control visual styling.\nQuarto configuration will control site-wide navigation and rendering.\nPython programs will handle automated data retrieval and content generation.\nGitHub Actions will handle scheduled execution and deployment.\nThis separation will simplify maintenance and reduce unintended interactions between components."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#home",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#home",
+    "title": "Exoplanet Research",
+    "section": "3.1 Home",
+    "text": "3.1 Home\nThe Home page introduces the author and the major areas of scientific activity.\nIts primary functions are:\n\nPresent scientific identity.\nSummarize research interests.\nIntroduce engineering activities.\nIntroduce scientific computing.\nDescribe educational interests.\nProvide access to major website sections.\nDisplay general space and astronomy news.\nProvide professional and academic links.\n\nThe existing three-column homepage will serve as the visual reference for subsequent development."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research",
+    "title": "Exoplanet Research",
+    "section": "3.2 Research",
+    "text": "3.2 Research\nThe Research division documents scientific investigations and observational programs.\nInitial research categories include:\n\nSpectroscopic Eclipsing Binaries.\nExoplanets.\nRocketry.\nDrones.\nRovers.\nObservatory Automation.\n\nAdditional research categories may be introduced as needed."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#engineering",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#engineering",
+    "title": "Exoplanet Research",
+    "section": "3.3 Engineering",
+    "text": "3.3 Engineering\nThe Engineering division documents the development, construction, testing, and operation of experimental systems.\nInitial subjects may include:\n\nAstronomical Instrumentation.\nMechatronics.\nEmbedded Systems.\nAvionics.\nAutonomous Vehicles.\nSensors and Telemetry.\nData Acquisition.\nFeedback Control.\nGNSS and RTK Positioning.\nMechanical Design.\n3D Printing.\nObservatory Hardware.\n\nResearch-oriented applications of these systems may also appear under Research.\nThe Engineering section will emphasize design, implementation, testing, performance, and validation."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-computing",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-computing",
+    "title": "Exoplanet Research",
+    "section": "3.4 Scientific Computing",
+    "text": "3.4 Scientific Computing\nScientific Computing shall remain independent from Education.\nThis division documents computational research, numerical methods, software development, and scientific analysis systems.\nPotential subjects include:\n\nNumerical Methods.\nComputational Physics.\nComputational Astrophysics.\nScientific Python.\nData Analysis.\nTime-Series Analysis.\nSignal Processing.\nOrbital Mechanics Software.\nBinary-Star Modeling.\nExoplanet Modeling.\nScientific Visualization.\nSoftware Validation.\nReproducible Computing.\nScientific Computing Infrastructure.\n\nThe emphasis is on computational methodology and software as scientific tools."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#education",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#education",
+    "title": "Exoplanet Research",
+    "section": "3.5 Education",
+    "text": "3.5 Education\nEducation documents university teaching, instructional development, and educational resources.\nPotential subjects include:\n\nAstrophysics.\nOrbital Mechanics.\nDigital Signal Processing.\nComputational Physics.\nAstronomy.\nPhysics.\nScientific Programming.\nComputational Notebooks.\nJupyter Books.\nStudent Research.\nLaboratory Instruction.\nTeaching Philosophy.\n\nEducational materials should remain distinguishable from original research publications."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#publications",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#publications",
+    "title": "Exoplanet Research",
+    "section": "3.6 Publications",
+    "text": "3.6 Publications\nPublications provides a consolidated record of scholarly output.\nThe section may include:\n\nPeer-reviewed journal articles.\nConference proceedings.\nTechnical reports.\nScientific monographs.\nComputational textbooks.\nJupyter Books.\nPublicly released scientific software documentation.\nPreprints.\nResearch manuscripts in preparation.\n\nPublication status must be clearly identified.\nUnpublished manuscripts shall not be represented as peer-reviewed publications."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#about",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#about",
+    "title": "Exoplanet Research",
+    "section": "3.7 About",
+    "text": "3.7 About\nThe About section documents academic and professional background.\nPotential content includes:\n\nEducation.\nAcademic Appointments.\nResearch Experience.\nTeaching Experience.\nResearch Facilities.\nProfessional Service.\nAwards and Recognition.\nCurriculum Vitae.\nProfessional Contact Information."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-1-primary-navigation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-1-primary-navigation",
+    "title": "Exoplanet Research",
+    "section": "4.1 Level 1 — Primary Navigation",
+    "text": "4.1 Level 1 — Primary Navigation\nThe top horizontal navigation bar selects the major website division.\nExample:\nHome | Research | Engineering | Scientific Computing | Education | Publications | About\nClicking a primary navigation item opens that division’s homepage.\nThe top navigation bar shall remain consistent throughout the website."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-2-division-navigation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-2-division-navigation",
+    "title": "Exoplanet Research",
+    "section": "4.2 Level 2 — Division Navigation",
+    "text": "4.2 Level 2 — Division Navigation\nThe left sidebar displays the major subjects within the selected division.\nFor example, the Research homepage may display:\nResearch Topics\n\nResearch Overview.\nSpectroscopic Eclipsing Binaries.\nExoplanets.\nRocketry.\nDrones.\nRovers.\nObservatory Automation.\n\nSelecting a topic opens that topic’s homepage."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-3-topic-navigation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-3-topic-navigation",
+    "title": "Exoplanet Research",
+    "section": "4.3 Level 3 — Topic Navigation",
+    "text": "4.3 Level 3 — Topic Navigation\nWhen a visitor enters a specialized subject, the left sidebar changes to display the internal structure of that subject.\nFor example:\nExoplanet Research\n\nOverview.\nDetection Methods.\nTransit Photometry.\nRadial Velocities.\nTESS and Kepler.\nCurrent Research Targets.\nData Analysis.\nModeling.\nPublications.\nResearch Resources.\n\nThe sidebar should provide a clearly identified path back to the parent division."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-4-project-navigation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#level-4-project-navigation",
+    "title": "Exoplanet Research",
+    "section": "4.4 Level 4 — Project Navigation",
+    "text": "4.4 Level 4 — Project Navigation\nIndividual research projects may require additional organizational levels.\nExample:\nResearch Exoplanets Current Research Targets Target A Observations Data Reduction Modeling Results Publications\nAdditional levels should be introduced only when scientifically or organizationally justified."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#navigation-behavior",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#navigation-behavior",
+    "title": "Exoplanet Research",
+    "section": "4.5 Navigation Behavior",
+    "text": "4.5 Navigation Behavior\nThe navigation system shall follow these rules:\n\nThe top navigation remains persistent.\nThe left sidebar reflects the active website section.\nSelecting a specialized topic opens its dedicated homepage.\nSpecialized topics may have their own sidebar configuration.\nA visitor must be able to return to the parent topic.\nThe active page should be visually identifiable.\nNavigation should not require unnecessary duplication of content.\nInternal links should use paths compatible with Quarto rendering.\nNavigation must remain functional on desktop and mobile devices."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#quarto-implementation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#quarto-implementation",
+    "title": "Exoplanet Research",
+    "section": "4.6 Quarto Implementation",
+    "text": "4.6 Quarto Implementation\nThe website will use Quarto’s native navigation capabilities wherever practical.\nThese include:\n\nNavbar configuration.\nSidebar configuration.\nNested navigation.\nSection-specific navigation.\nRelative links.\nPage-level metadata.\nReusable includes.\n\nWhere Quarto’s native behavior does not directly support the desired hierarchy, separate sidebar configurations may be assigned to different topic groups.\nCustom JavaScript should not be introduced unless necessary.\nThe preferred implementation is the simplest maintainable solution that satisfies the navigation requirements."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#left-column-navigation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#left-column-navigation",
+    "title": "Exoplanet Research",
+    "section": "5.1 Left Column — Navigation",
+    "text": "5.1 Left Column — Navigation\nThe left column provides contextual navigation.\nIts content depends on the active website division and topic.\nTypical content includes:\n\nDivision title.\nTopic title.\nParent-section navigation.\nSubtopic links.\nProject links.\nRelated subjects.\n\nThe left column should not become an unstructured collection of unrelated links."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#center-column-scientific-content",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#center-column-scientific-content",
+    "title": "Exoplanet Research",
+    "section": "5.2 Center Column — Scientific Content",
+    "text": "5.2 Center Column — Scientific Content\nThe center column contains the principal page content.\nDepending on the page, it may contain:\n\nScientific narrative.\nHistorical context.\nResearch objectives.\nPhysical theory.\nMathematical development.\nObservational methods.\nExperimental methods.\nInstrumentation.\nFigures.\nTables.\nNumerical results.\nData analysis.\nConclusions.\nReferences.\n\nThe central content area must remain the dominant visual component."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#right-column-scientific-discovery-panel",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#right-column-scientific-discovery-panel",
+    "title": "Exoplanet Research",
+    "section": "5.3 Right Column — Scientific Discovery Panel",
+    "text": "5.3 Right Column — Scientific Discovery Panel\nThe right column provides contextual scientific information.\nPossible components include:\n\nRecent scientific news.\nSelected research papers.\nMission updates.\nObservatory developments.\nScientific database links.\nResearch archive links.\nCurrent discoveries.\nScientific announcements.\nUpdate timestamps.\n\nThe content must be relevant to the current topic."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#layout-consistency",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#layout-consistency",
+    "title": "Exoplanet Research",
+    "section": "5.4 Layout Consistency",
+    "text": "5.4 Layout Consistency\nThe existing homepage provides the initial visual reference.\nCurrent layout characteristics include:\n\nA wide central content column.\nPale-blue sidebar panels.\nConsistent sidebar borders.\nClear heading hierarchy.\nCompact news headlines.\nPublication dates.\nReadable link formatting.\nA restrained scientific color palette.\n\nNew pages should preserve this visual identity."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#responsive-design",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#responsive-design",
+    "title": "Exoplanet Research",
+    "section": "5.5 Responsive Design",
+    "text": "5.5 Responsive Design\nThe layout must remain usable on smaller screens.\nOn mobile devices:\n\nNavigation must remain accessible.\nScientific content must remain readable.\nFigures must scale appropriately.\nTables must not become unusable.\nSide panels may move below the main content.\nNo essential information should depend on hover interactions.\n\nDesktop appearance shall not be optimized at the expense of mobile usability."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose-1",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose-1",
+    "title": "Exoplanet Research",
+    "section": "6.1 Purpose",
+    "text": "6.1 Purpose\nThe Scientific Discovery Panel is a defining feature of the website.\nIts purpose is to connect the author’s scientific work with current developments in the corresponding discipline.\nThe panel should function as a compact scientific discovery resource.\nIt is not intended to reproduce entire articles or papers.\nInstead, it should provide carefully selected summaries and links to original sources."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#contextual-content",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#contextual-content",
+    "title": "Exoplanet Research",
+    "section": "6.2 Contextual Content",
+    "text": "6.2 Contextual Content\nEach major topic may have a specialized discovery panel.\nExamples:\n\n\n\n\n\n\n\nTopic\nDiscovery Panel\n\n\n\n\nHome\nGeneral Space and Astronomy News\n\n\nResearch\nGeneral Scientific Research News\n\n\nEclipsing Binaries\nStellar Astrophysics and Binary-Star Research\n\n\nExoplanets\nExoplanet Discoveries and Research\n\n\nRocketry\nRocket Science and Launch Research\n\n\nDrones\nUAV and Autonomous Flight Research\n\n\nRovers\nPlanetary Robotics and Autonomous Navigation\n\n\nObservatory Automation\nTelescope Instrumentation and Robotic Observatories\n\n\nScientific Computing\nScientific Software and Computational Research\n\n\nEducation\nPhysics and Astronomy Education Developments\n\n\n\nThe discovery panel should adapt to the subject being viewed."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#standard-panel-components",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#standard-panel-components",
+    "title": "Exoplanet Research",
+    "section": "6.3 Standard Panel Components",
+    "text": "6.3 Standard Panel Components\nA complete discovery panel may contain four sections.\n\nA. Current News\nRecent developments from reliable scientific news sources.\n\n\nB. Selected Scientific Papers\nRecent papers relevant to the topic.\n\n\nC. Missions, Facilities, and Programs\nUpdates from relevant observatories, missions, laboratories, or research organizations.\n\n\nD. Scientific Resources\nLinks to databases, archives, journals, and other authoritative resources.\nNot every page must contain all four components.\nThe panel should remain compact and readable."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#news-article-metadata",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#news-article-metadata",
+    "title": "Exoplanet Research",
+    "section": "6.4 News Article Metadata",
+    "text": "6.4 News Article Metadata\nEach news entry should include:\n\nHeadline.\nPublication date.\nSource.\nLink to the original article.\n\nOptional information may include:\n\nShort description.\nScientific category.\nRelated mission.\nRelated research topic."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-paper-metadata",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-paper-metadata",
+    "title": "Exoplanet Research",
+    "section": "6.5 Scientific Paper Metadata",
+    "text": "6.5 Scientific Paper Metadata\nEach selected scientific paper should include:\n\nPaper title.\nAuthor information.\nPublication or posting date.\nJournal or preprint server.\nDOI or arXiv identifier when available.\nLink to the paper.\nConcise scientific summary.\nExplanation of its relevance.\n\nThe presentation should distinguish published papers from preprints."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#paper-selection-philosophy",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#paper-selection-philosophy",
+    "title": "Exoplanet Research",
+    "section": "6.6 Paper Selection Philosophy",
+    "text": "6.6 Paper Selection Philosophy\nSelected papers should be chosen for scientific interest rather than popularity alone.\nSelection criteria include:\n\nRelevance to the page’s scientific topic.\nScientific significance.\nQuality of observational or experimental evidence.\nNovelty of the scientific question.\nMethodological importance.\nRelevance to current research programs.\nAvailability of supporting data.\nPotential for independent analysis.\nConnection to established scientific theory.\nOpportunities for future investigation.\n\nA paper need not represent a major discovery to be scientifically interesting.\nCareful methodological work, improved measurements, unexpected residuals, and new datasets may be equally valuable."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-interpretation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-interpretation",
+    "title": "Exoplanet Research",
+    "section": "6.7 Scientific Interpretation",
+    "text": "6.7 Scientific Interpretation\nWhere summaries are provided, they should distinguish between:\n\nWhat the authors measured.\nWhat the authors modeled.\nWhat the authors concluded.\nWhat remains uncertain.\nWhy the result is scientifically interesting.\n\nAutomated summaries must not invent conclusions, measurements, or implications.\nThe original paper remains the authoritative source."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#news-versus-research-literature",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#news-versus-research-literature",
+    "title": "Exoplanet Research",
+    "section": "6.8 News Versus Research Literature",
+    "text": "6.8 News Versus Research Literature\nScientific news and research literature shall remain distinguishable.\nNews articles may summarize research for a general audience.\nScientific papers provide the underlying methods, evidence, and interpretation.\nWhen possible, news announcements should link to the corresponding scientific publication."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#recommended-number-of-entries",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#recommended-number-of-entries",
+    "title": "Exoplanet Research",
+    "section": "6.9 Recommended Number of Entries",
+    "text": "6.9 Recommended Number of Entries\nInitial display limits:\n\n\n\nContent Type\nRecommended Entries\n\n\n\n\nCurrent News\n3\n\n\nSelected Papers\n2–3\n\n\nMission Updates\n2–3\n\n\nScientific Resources\n3–5\n\n\n\nThese limits are guidelines rather than fixed requirements.\nThe panel should not become so long that it overwhelms the scientific content."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#update-timestamps",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#update-timestamps",
+    "title": "Exoplanet Research",
+    "section": "6.10 Update Timestamps",
+    "text": "6.10 Update Timestamps\nAutomatically updated panels shall display an update timestamp.\nUTC is the preferred time standard.\nExample:\nNews updated: October 9, 2026 at 00:00 UTC\nThe timestamp must correspond to an actual successful update.\nA page render alone must not be represented as a successful data retrieval.\nFor multiple independent feeds, a panel-wide timestamp represents the latest successful update of at least one source unless all sources are verified as current.\nWhere practical, individual sources should maintain their own retrieval timestamps."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-requirements",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-requirements",
+    "title": "Exoplanet Research",
+    "section": "7.1 General Requirements",
+    "text": "7.1 General Requirements\nAutomated scientific information should be obtained from authoritative and reliable sources.\nPreference should be given to:\n\nScientific journals.\nScientific archives.\nResearch institutions.\nSpace agencies.\nObservatory and mission websites.\nUniversity research announcements.\nEstablished science news organizations.\n\nSource reliability must be considered separately from the scientific significance of an individual article."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#astronomy-and-astrophysics-sources",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#astronomy-and-astrophysics-sources",
+    "title": "Exoplanet Research",
+    "section": "7.2 Astronomy and Astrophysics Sources",
+    "text": "7.2 Astronomy and Astrophysics Sources\nPotential sources include:\n\nNASA.\nESA.\nNASA Exoplanet Archive.\nNASA ADS.\narXiv.\nMAST.\nSTScI.\nESO.\nNOIRLab.\nAAS Journals.\nAstronomy & Astrophysics.\nMonthly Notices of the Royal Astronomical Society.\nNature Astronomy.\nThe Astronomical Journal.\nThe Astrophysical Journal.\nThe Astrophysical Journal Letters.\n\nThese are candidate sources, not a claim that each provides a suitable RSS feed or unrestricted API."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#exoplanet-sources",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#exoplanet-sources",
+    "title": "Exoplanet Research",
+    "section": "7.3 Exoplanet Sources",
+    "text": "7.3 Exoplanet Sources\nPotential sources include:\n\nNASA Exoplanet Archive.\nNASA Exoplanet Exploration.\nTESS mission resources.\nKepler mission archives.\nJWST research announcements.\nMAST.\nADS.\narXiv astrophysics categories.\nPeer-reviewed exoplanet research journals."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#engineering-sources",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#engineering-sources",
+    "title": "Exoplanet Research",
+    "section": "7.4 Engineering Sources",
+    "text": "7.4 Engineering Sources\nPotential sources include:\n\nNASA technical publications.\nNASA NTRS.\nIEEE publications.\nAIAA publications.\nAerospace research institutions.\nUniversity engineering research.\nRobotics research publications.\nInstrumentation journals."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-computing-sources",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-computing-sources",
+    "title": "Exoplanet Research",
+    "section": "7.5 Scientific Computing Sources",
+    "text": "7.5 Scientific Computing Sources\nPotential sources include:\n\nScientific Computing research journals.\nJournal of Open Source Software.\nSoftwareX.\nComputer Physics Communications.\nNumerical methods publications.\nScientific Python project announcements.\nRelevant arXiv categories.\nScientific software repositories."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#source-verification",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#source-verification",
+    "title": "Exoplanet Research",
+    "section": "7.6 Source Verification",
+    "text": "7.6 Source Verification\nBefore integrating a source into an automated system, verify:\n\nAvailability of RSS, Atom, API, or another supported interface.\nTerms of use.\nAuthentication requirements.\nRate limits.\nMetadata quality.\nPublication date reliability.\nLink stability.\nContent relevance.\nLong-term maintainability.\n\nAutomated retrieval should not depend on fragile or unauthorized scraping."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#existing-infrastructure",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#existing-infrastructure",
+    "title": "Exoplanet Research",
+    "section": "8.1 Existing Infrastructure",
+    "text": "8.1 Existing Infrastructure\nThe initial website uses:\n\nPython.\nfeedparser.\nGenerated HTML fragments.\nQuarto includes.\nGitHub Actions.\nGitHub Pages.\n\nThe current general news system retrieves information from:\n\nNASA.\nPhys.org Astronomy.\nSpaceflight Now, filtered for SpaceX-related topics.\n\nThe system currently selects three articles per source."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-architecture",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-architecture",
+    "title": "Exoplanet Research",
+    "section": "8.2 General Architecture",
+    "text": "8.2 General Architecture\nThe preferred automated publishing sequence is:\nSource ↓ Retrieval ↓ Validation ↓ Filtering ↓ Classification ↓ Chronological Sorting ↓ Selection ↓ HTML Generation ↓ Quarto Rendering ↓ Deployment\nEach stage should have a clearly defined responsibility."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#feed-independence",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#feed-independence",
+    "title": "Exoplanet Research",
+    "section": "8.3 Feed Independence",
+    "text": "8.3 Feed Independence\nIndividual sources should be processed independently.\nA failure in one source should not automatically prevent successful sources from updating.\nIf a source fails:\n\nRecord the failure.\nPreserve its previously validated content.\nContinue processing other sources.\nPublish successful updates when appropriate.\nReport the partial failure in the execution log."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#total-failure",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#total-failure",
+    "title": "Exoplanet Research",
+    "section": "8.4 Total Failure",
+    "text": "8.4 Total Failure\nIf all required sources fail, the automation should preserve the existing published website.\nThe system must not replace previously valid content with empty or malformed output."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#persistent-cache",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#persistent-cache",
+    "title": "Exoplanet Research",
+    "section": "8.5 Persistent Cache",
+    "text": "8.5 Persistent Cache\nThe website should eventually maintain a persistent cache of the most recently successful retrieval for each source.\nThis is distinct from retaining the original HTML snapshots committed to the source repository.\nThe persistent cache should support:\n\nSource identification.\nRetrieval timestamp.\nValidation status.\nLast successful content.\nArticle metadata.\nFailure diagnostics.\n\nA dedicated cache mechanism should be implemented before expanding to a large number of automated sources."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scheduling",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scheduling",
+    "title": "Exoplanet Research",
+    "section": "8.6 Scheduling",
+    "text": "8.6 Scheduling\nThe initial news update schedule is every six hours.\nCurrent GitHub Actions cron expression:\n17 /6  * *\nScheduled execution times are interpreted in UTC.\nGitHub Actions scheduled workflows are best-effort and may not start at the exact scheduled minute.\nFuture topic-specific feeds may use different schedules.\nFor example:\n\nGeneral news: Every six hours.\nResearch paper discovery: Daily.\nMission announcements: Daily.\nScientific resource links: Weekly or manually.\nPublication bibliographies: On demand.\n\nUpdate frequency should reflect the rate at which the underlying information changes."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#validation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#validation",
+    "title": "Exoplanet Research",
+    "section": "8.7 Validation",
+    "text": "8.7 Validation\nAutomated content must be validated before publication.\nValidation should include:\n\nSuccessful source retrieval.\nValid response status.\nParseable content.\nNonempty results.\nValid article links.\nReasonable publication dates.\nCorrect topic classification.\nProper HTML escaping.\nSuccessful Quarto rendering.\n\nWhere practical, automated tests should verify these requirements."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#logging",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#logging",
+    "title": "Exoplanet Research",
+    "section": "8.8 Logging",
+    "text": "8.8 Logging\nAutomated retrieval logs should record:\n\nExecution date and time.\nSource.\nRetrieval status.\nNumber of retrieved entries.\nNumber of accepted entries.\nNumber of published entries.\nOutput filename.\nError information.\nOverall execution status.\n\nLogs should permit diagnosis of failed or incomplete updates."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-homepage",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-homepage",
+    "title": "Exoplanet Research",
+    "section": "9.1 Research Homepage",
+    "text": "9.1 Research Homepage\nEvery major research subject shall have a dedicated homepage.\nThe homepage should provide a scientifically meaningful introduction rather than merely a list of links.\nRecommended sections:\n\nResearch Overview.\nScientific Motivation.\nHistorical Background.\nCurrent Scientific Questions.\nResearch Objectives.\nObservational or Experimental Methods.\nComputational Methods.\nCurrent Projects.\nPublications.\nResearch Resources.\n\nThe precise headings may vary with the subject."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#individual-research-projects",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#individual-research-projects",
+    "title": "Exoplanet Research",
+    "section": "9.2 Individual Research Projects",
+    "text": "9.2 Individual Research Projects\nDetailed project pages should follow the scientific method.\nRecommended structure:\n\nProject Overview\nBrief description of the investigation.\n\n\nScientific Motivation\nWhy the scientific problem is important.\n\n\nBackground\nRelevant historical and theoretical context.\n\n\nResearch Questions\nExplicit scientific questions.\n\n\nPhysical Model\nRelevant physical assumptions and governing equations.\n\n\nPredictions\nTestable consequences of the model.\n\n\nObservational or Experimental Strategy\nHow the investigation is conducted.\n\n\nInstrumentation\nFacilities, instruments, sensors, and software.\n\n\nData Acquisition\nDescription of acquired data.\n\n\nCalibration and Reduction\nProcedures used to prepare the data.\n\n\nAnalysis\nMeasurement and modeling methods.\n\n\nValidation and Uncertainty\nNumerical checks, observational uncertainties, and model limitations.\n\n\nResults\nMeasured or calculated findings.\n\n\nInterpretation\nScientific implications.\n\n\nConclusions\nSummary of supported conclusions.\n\n\nPublications and References\nRelevant scholarly literature.\n\n\nFuture Work\nUnresolved questions and planned investigations."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#historical-and-current-research",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#historical-and-current-research",
+    "title": "Exoplanet Research",
+    "section": "9.3 Historical and Current Research",
+    "text": "9.3 Historical and Current Research\nHistorical research and ongoing work should be distinguishable.\nRecommended project status categories:\n\nHistorical Research.\nPublished Research.\nActive Research.\nPreliminary Investigation.\nPlanned Research.\nCompleted Project.\n\nStatus should be clearly indicated when it materially affects interpretation."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#cross-disciplinary-projects",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#cross-disciplinary-projects",
+    "title": "Exoplanet Research",
+    "section": "9.4 Cross-Disciplinary Projects",
+    "text": "9.4 Cross-Disciplinary Projects\nProjects may belong conceptually to more than one division.\nFor example:\nObservatory Automation connects:\n\nResearch.\nEngineering.\nScientific Computing.\n\nA canonical project page should be maintained in one location.\nOther divisions should link to that page rather than duplicating the entire project.\nThis avoids inconsistent updates and redundant maintenance."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#system-documentation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#system-documentation",
+    "title": "Exoplanet Research",
+    "section": "10.1 System Documentation",
+    "text": "10.1 System Documentation\nWhere applicable, include:\n\nBlock diagrams.\nWiring diagrams.\nMechanical drawings.\nCAD renderings.\nSensor specifications.\nControl algorithms.\nSoftware architecture.\nExperimental photographs.\nTelemetry plots.\nPerformance measurements."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#experimental-validation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#experimental-validation",
+    "title": "Exoplanet Research",
+    "section": "10.2 Experimental Validation",
+    "text": "10.2 Experimental Validation\nEngineering claims should be supported by measured performance whenever possible.\nPredicted and measured behavior should be compared explicitly.\nResiduals, uncertainties, limitations, and unexpected behavior should be documented."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scope",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scope",
+    "title": "Exoplanet Research",
+    "section": "11.1 Scope",
+    "text": "11.1 Scope\nScientific Computing documents software and numerical methods used to investigate physical systems.\nIt remains separate from Education."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#recommended-software-project-structure",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#recommended-software-project-structure",
+    "title": "Exoplanet Research",
+    "section": "11.2 Recommended Software Project Structure",
+    "text": "11.2 Recommended Software Project Structure\nA software project page should include:\n\nProject Overview.\nScientific Motivation.\nPhysical or Mathematical Foundation.\nSoftware Architecture.\nNumerical Algorithms.\nDependencies.\nInstallation.\nUsage Examples.\nValidation.\nNumerical Accuracy.\nPerformance.\nKnown Limitations.\nDocumentation.\nSource Repository.\nVersion History.\nReferences."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#numerical-validation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#numerical-validation",
+    "title": "Exoplanet Research",
+    "section": "11.3 Numerical Validation",
+    "text": "11.3 Numerical Validation\nScientific software documentation should emphasize:\n\nDimensional consistency.\nLimiting cases.\nAnalytical benchmarks.\nNumerical convergence.\nFloating-point behavior.\nError estimates.\nReproducibility.\nIndependent validation.\n\nWhere applicable, include comparisons between analytical and numerical solutions."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#source-code",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#source-code",
+    "title": "Exoplanet Research",
+    "section": "11.4 Source Code",
+    "text": "11.4 Source Code\nPublic software pages should link to source repositories when available.\nRepository links should clearly distinguish:\n\nActive development.\nStable releases.\nArchived software.\nExperimental implementations.\n\nDependencies and installation requirements should be documented."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose-2",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose-2",
+    "title": "Exoplanet Research",
+    "section": "12.1 Purpose",
+    "text": "12.1 Purpose\nThe Education division documents instructional philosophy, university courses, computational learning resources, and student research."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#course-homepages",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#course-homepages",
+    "title": "Exoplanet Research",
+    "section": "12.2 Course Homepages",
+    "text": "12.2 Course Homepages\nEach course may have a dedicated homepage.\nRecommended sections:\n\nCourse Overview.\nLearning Objectives.\nPrerequisites.\nCourse Topics.\nRequired Reading.\nComputational Resources.\nJupyter Notebooks.\nJupyter Books.\nScientific Software.\nStudent Projects.\nAdditional References."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#computational-textbooks",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#computational-textbooks",
+    "title": "Exoplanet Research",
+    "section": "12.3 Computational Textbooks",
+    "text": "12.3 Computational Textbooks\nComputational textbooks should be organized around scientific concepts and progressively developed computational examples.\nWhenever possible, materials should connect:\n\nPhysical theory.\nMathematical derivation.\nNumerical implementation.\nVisualization.\nScientific interpretation.\nValidation."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#jupyter-books",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#jupyter-books",
+    "title": "Exoplanet Research",
+    "section": "12.4 Jupyter Books",
+    "text": "12.4 Jupyter Books\nJupyter Books may be published as standalone educational resources.\nExamples include:\n\nAstrophysics.\nOrbital Mechanics.\nDigital Signal Processing.\n\nEach book should provide:\n\nTitle.\nAuthor.\nDescription.\nVersion.\nPublication or release date.\nTable of contents.\nSource repository.\nCitation information when appropriate.\n\nCompleted books may also be listed under Publications.\nBooks used for instruction should remain accessible from Education."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#student-accessibility",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#student-accessibility",
+    "title": "Exoplanet Research",
+    "section": "12.5 Student Accessibility",
+    "text": "12.5 Student Accessibility\nEducational materials should be understandable to their intended audience.\nAdvanced scientific content should not be unnecessarily simplified, but prerequisites, notation, assumptions, and computational requirements should be explained."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#publication-categories",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#publication-categories",
+    "title": "Exoplanet Research",
+    "section": "13.1 Publication Categories",
+    "text": "13.1 Publication Categories\nThe Publications division should distinguish:\n\nPeer-Reviewed Publications\nJournal articles and refereed proceedings.\n\n\nConference Contributions\nConference papers, presentations, and proceedings.\n\n\nTechnical Reports\nScientific and engineering reports.\n\n\nBooks and Computational Texts\nJupyter Books, monographs, and substantial educational works.\n\n\nPreprints\nPublic manuscripts that have not necessarily completed peer review.\n\n\nResearch in Preparation\nOngoing manuscripts and projects intended for future publication."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#bibliographic-metadata",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#bibliographic-metadata",
+    "title": "Exoplanet Research",
+    "section": "13.2 Bibliographic Metadata",
+    "text": "13.2 Bibliographic Metadata\nEach publication should include, when available:\n\nAuthors.\nTitle.\nYear.\nJournal or publisher.\nVolume.\nIssue.\nPages or article number.\nDOI.\nADS bibliographic link.\narXiv identifier.\nAbstract.\nRelated research project."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#publication-status",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#publication-status",
+    "title": "Exoplanet Research",
+    "section": "13.3 Publication Status",
+    "text": "13.3 Publication Status\nPublication status must be explicit.\nExamples:\n\nPublished.\nAccepted.\nIn Press.\nSubmitted.\nPreprint.\nIn Preparation.\n\nA manuscript in preparation should not be represented as a completed publication."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#bibliography-organization",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#bibliography-organization",
+    "title": "Exoplanet Research",
+    "section": "13.4 Bibliography Organization",
+    "text": "13.4 Bibliography Organization\nThe primary bibliography may be organized chronologically.\nAdditional filtering may eventually be provided by:\n\nResearch topic.\nPublication type.\nYear.\nAuthor.\nJournal."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#jupyter-book-publications",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#jupyter-book-publications",
+    "title": "Exoplanet Research",
+    "section": "13.5 Jupyter Book Publications",
+    "text": "13.5 Jupyter Book Publications\nA completed Jupyter Book may be included as a scholarly work.\nIts entry should provide:\n\nBook title.\nVersion.\nAuthor.\nRelease date.\nDescription.\nPublic book link.\nSource repository.\nCitation information.\n\nEducational and publication listings should reference the same authoritative book release."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-style",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-style",
+    "title": "Exoplanet Research",
+    "section": "14.1 General Style",
+    "text": "14.1 General Style\nScientific writing should be:\n\nAccurate.\nClear.\nConcise.\nTechnically rigorous.\nLogically organized.\nAppropriately referenced.\n\nScientific terminology should be used consistently."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#mathematical-notation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#mathematical-notation",
+    "title": "Exoplanet Research",
+    "section": "14.2 Mathematical Notation",
+    "text": "14.2 Mathematical Notation\nQuarto mathematical content should use MathJax-compatible notation.\nInline mathematics:\n\\(E = mc^2\\)\nDisplay mathematics:\n\\[\nE = mc^2\n\\]\nSI units are preferred for scientific calculations.\nAlternative units may be included when appropriate to the discipline."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#equations",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#equations",
+    "title": "Exoplanet Research",
+    "section": "14.3 Equations",
+    "text": "14.3 Equations\nEquations should be accompanied by explanations of:\n\nPhysical meaning.\nVariable definitions.\nUnits.\nAssumptions.\nApplicability.\nLimitations.\n\nImportant derivations should include dimensional checks and limiting cases where appropriate."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#figures",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#figures",
+    "title": "Exoplanet Research",
+    "section": "14.4 Figures",
+    "text": "14.4 Figures\nScientific figures should include:\n\nDescriptive captions.\nClearly labeled axes.\nPhysical units.\nLegends where appropriate.\nSource attribution when required.\n\nFigures should be centered and responsive.\nExample:\n\n\n\nFigure 1. Description of the scientific result.\n\n\nFigure width may be adjusted according to content."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#tables",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#tables",
+    "title": "Exoplanet Research",
+    "section": "14.5 Tables",
+    "text": "14.5 Tables\nTables should include:\n\nDescriptive headings.\nUnits.\nClearly identified quantities.\nAppropriate significant figures.\nUncertainty information when relevant."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#references",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#references",
+    "title": "Exoplanet Research",
+    "section": "14.6 References",
+    "text": "14.6 References\nResearch pages should provide references to original scientific literature.\nPreferred identifiers include:\n\nDOI.\nADS bibliographic code.\narXiv identifier.\nStable journal URL.\n\nWhere possible, references should link directly to authoritative records."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#image-quality",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#image-quality",
+    "title": "Exoplanet Research",
+    "section": "15.1 Image Quality",
+    "text": "15.1 Image Quality\nImages should be appropriate for scientific and professional presentation.\nPreferred formats:\n\nPNG for plots, diagrams, and graphics.\nJPEG for photographs.\nSVG for suitable vector graphics.\nWebP where beneficial and supported."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#image-optimization",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#image-optimization",
+    "title": "Exoplanet Research",
+    "section": "15.2 Image Optimization",
+    "text": "15.2 Image Optimization\nImages should balance visual quality and loading performance.\nLarge photographic images should be optimized before publication.\nOriginal high-resolution files may be retained separately."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#accessibility",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#accessibility",
+    "title": "Exoplanet Research",
+    "section": "15.3 Accessibility",
+    "text": "15.3 Accessibility\nImages must include meaningful alternative text.\nDecorative images may use empty alternative text where appropriate.\nColor alone should not convey essential scientific information."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#attribution",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#attribution",
+    "title": "Exoplanet Research",
+    "section": "15.4 Attribution",
+    "text": "15.4 Attribution\nThird-party images must be used according to applicable licenses and permissions.\nRequired credits should be provided.\nScientific figures reproduced from publications must respect copyright and licensing requirements."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-principles",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#general-principles",
+    "title": "Exoplanet Research",
+    "section": "16.1 General Principles",
+    "text": "16.1 General Principles\nThe directory structure should reflect the conceptual organization of the website.\nEach major division should have its own directory.\nEach specialized subject may have its own subdirectory.\nFiles should use descriptive, consistent names."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#proposed-repository-structure",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#proposed-repository-structure",
+    "title": "Exoplanet Research",
+    "section": "16.2 Proposed Repository Structure",
+    "text": "16.2 Proposed Repository Structure\nJeffreySabbyWebsite/ | |– _quarto.yml |– index.qmd |– about.qmd |– styles.css |– CNAME | |– research/ | |– index.qmd | | | |– eclipsing_binaries/ | | |– index.qmd | | |– observational_programs.qmd | | |– spectroscopy.qmd | | |– radial_velocities.qmd | | |– orbital_models.qmd | | |– current_targets.qmd | | |– publications.qmd | | | | | -- targets/ |   |– RT_CrB/ | | |– index.qmd | | |– observations.qmd | | |– analysis.qmd | | -- results.qmd |   | |   |-- exoplanets/ |   |   |-- index.qmd |   |   |-- detection_methods.qmd |   |   |-- transit_photometry.qmd |   |   |-- radial_velocities.qmd |   |   |-- tess_kepler.qmd |   |   |-- current_targets.qmd |   |– publications.qmd | | | |– rocketry/ | | -- index.qmd |   | |   |-- drones/ |   |– index.qmd | | | |– rovers/ | | -- index.qmd |   | |– observatory_automation/ | -- index.qmd | |-- engineering/ |   |-- index.qmd |   |-- instrumentation/ |   |-- mechatronics/ |   |-- embedded_systems/ |   |-- avionics/ |   |-- autonomous_systems/ |– control_systems/ | |– scientific_computing/ | |– index.qmd | |– numerical_methods/ | |– astrophysics/ | |– orbital_mechanics/ | |– signal_processing/ | |– scientific_software/ | -- validation/ | |-- education/ |   |-- index.qmd |   |-- astrophysics/ |   |-- orbital_mechanics/ |   |-- digital_signal_processing/ |   |-- computational_physics/ |– jupyter_books/ | |– publications/ | |– index.qmd | |– journal_articles.qmd | |– conference_papers.qmd | |– technical_reports.qmd | |– books.qmd | -- preprints.qmd | |-- news/ |   |-- nasa_news.html |   |-- spacex_news.html |   |-- astronomy_news.html |– last_updated.html | |– scripts/ | -- update_news.py | |-- images/ | |-- docs/ |– standards/ | -- WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.md | |-- .github/ |– workflows/ | -- update-news.yml |– _site/\nThis structure is a proposed long-term architecture.\nDirectories and pages should be created incrementally.\nEmpty placeholder directories are not required."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#naming-conventions",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#naming-conventions",
+    "title": "Exoplanet Research",
+    "section": "16.3 Naming Conventions",
+    "text": "16.3 Naming Conventions\nUse lowercase filenames for Quarto pages.\nExamples:\nindex.qmd\ntransit_photometry.qmd\nradial_velocities.qmd\nobservatory_automation.qmd\nUse descriptive names that remain meaningful outside their immediate directory."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-target-names",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-target-names",
+    "title": "Exoplanet Research",
+    "section": "16.4 Research Target Names",
+    "text": "16.4 Research Target Names\nAstronomical target names should remain recognizable.\nExamples:\nRT_CrB\nWW_Aur\nTESS_Targets\nWhen practical, target pages should include standard astronomical identifiers."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose-3",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#purpose-3",
+    "title": "Exoplanet Research",
+    "section": "17.1 Purpose",
+    "text": "17.1 Purpose\nCommon templates should be developed for frequently used page types.\nRecommended templates include:\n\nDivision Homepage.\nResearch Topic Homepage.\nIndividual Research Project.\nEngineering Project.\nScientific Software Project.\nCourse Homepage.\nPublication Entry.\nJupyter Book Entry."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-topic-template",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-topic-template",
+    "title": "Exoplanet Research",
+    "section": "17.2 Research Topic Template",
+    "text": "17.2 Research Topic Template\nRecommended components:\nPage Title\nResearch Overview\nScientific Motivation\nHistorical Background\nCurrent Questions\nResearch Methods\nCurrent Projects\nPublications\nReferences\nThe page should also include:\n\nTopic-specific left navigation.\nTopic-specific discovery panel."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-project-template",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-project-template",
+    "title": "Exoplanet Research",
+    "section": "17.3 Research Project Template",
+    "text": "17.3 Research Project Template\nRecommended components:\nProject Title\nProject Status\nScientific Question\nBackground\nModel and Predictions\nObservational Strategy\nInstrumentation\nData Acquisition\nReduction and Analysis\nResults\nValidation\nInterpretation\nConclusions\nPublications\nFuture Work"
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#engineering-template",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#engineering-template",
+    "title": "Exoplanet Research",
+    "section": "17.4 Engineering Template",
+    "text": "17.4 Engineering Template\nRecommended components:\nProject Title\nEngineering Objective\nRequirements\nDesign\nInstrumentation\nSoftware\nExperimental Testing\nPerformance\nValidation\nResults\nConclusions\nDocumentation"
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-computing-template",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-computing-template",
+    "title": "Exoplanet Research",
+    "section": "17.5 Scientific Computing Template",
+    "text": "17.5 Scientific Computing Template\nRecommended components:\nSoftware Title\nScientific Purpose\nAlgorithms\nDependencies\nInstallation\nUsage\nValidation\nPerformance\nLimitations\nRepository\nReferences"
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#framework",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#framework",
+    "title": "Exoplanet Research",
+    "section": "18.1 Framework",
+    "text": "18.1 Framework\nQuarto will remain the primary website-generation framework."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#source-files",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#source-files",
+    "title": "Exoplanet Research",
+    "section": "18.2 Source Files",
+    "text": "18.2 Source Files\nScientific and narrative pages should use .qmd files.\nSite-wide configuration should remain in _quarto.yml.\nShared styling should remain in styles.css.\nAutomated HTML fragments may be stored in dedicated directories."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#page-metadata",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#page-metadata",
+    "title": "Exoplanet Research",
+    "section": "18.3 Page Metadata",
+    "text": "18.3 Page Metadata\nPages should include appropriate Quarto front matter.\nExample:\nAdditional metadata may be introduced when needed."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#navigation-configuration",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#navigation-configuration",
+    "title": "Exoplanet Research",
+    "section": "18.4 Navigation Configuration",
+    "text": "18.4 Navigation Configuration\nNavigation should be defined centrally whenever possible.\nSeparate sidebar configurations may be used for specialized topic groups.\nNavigation changes should be tested before deployment."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#reusable-components",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#reusable-components",
+    "title": "Exoplanet Research",
+    "section": "18.5 Reusable Components",
+    "text": "18.5 Reusable Components\nRepeated content should be managed through reusable components when practical.\nExamples:\n\nNews feeds.\nScientific paper selections.\nUpdate timestamps.\nResearch resource lists.\nStandard page elements."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#custom-styling",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#custom-styling",
+    "title": "Exoplanet Research",
+    "section": "18.6 Custom Styling",
+    "text": "18.6 Custom Styling\nNew CSS should be added carefully.\nExisting homepage styling should not be modified unnecessarily.\nCSS classes should use descriptive names.\nChanges should be tested against existing pages."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#local-rendering",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#local-rendering",
+    "title": "Exoplanet Research",
+    "section": "18.7 Local Rendering",
+    "text": "18.7 Local Rendering\nBefore publication, run:\nquarto render\nThe build must complete successfully."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#local-preview",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#local-preview",
+    "title": "Exoplanet Research",
+    "section": "18.8 Local Preview",
+    "text": "18.8 Local Preview\nUse:\nquarto preview\nReview:\n\nNavigation.\nSidebar behavior.\nPage alignment.\nTypography.\nFigures.\nNews panels.\nInternal links.\nExternal links.\nMobile layout where practical."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#repository",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#repository",
+    "title": "Exoplanet Research",
+    "section": "19.1 Repository",
+    "text": "19.1 Repository\nGitHub is the primary source repository.\nRepository:\nhttps://github.com/jsabby/JeffreySabbyWebsite"
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#primary-branch",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#primary-branch",
+    "title": "Exoplanet Research",
+    "section": "19.2 Primary Branch",
+    "text": "19.2 Primary Branch\nThe main branch contains authoritative website source files."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#deployment-branch",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#deployment-branch",
+    "title": "Exoplanet Research",
+    "section": "19.3 Deployment Branch",
+    "text": "19.3 Deployment Branch\nThe gh-pages branch contains the published website generated by Quarto."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#deployment-workflow",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#deployment-workflow",
+    "title": "Exoplanet Research",
+    "section": "19.4 Deployment Workflow",
+    "text": "19.4 Deployment Workflow\nThe existing automated workflow performs:\n\nRepository checkout.\nPython environment setup.\nDependency installation.\nNews retrieval.\nQuarto installation.\nWebsite rendering.\nCustom-domain preservation.\nGitHub Pages deployment."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#custom-domain",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#custom-domain",
+    "title": "Exoplanet Research",
+    "section": "19.5 Custom Domain",
+    "text": "19.5 Custom Domain\nThe public website uses:\nhttps://jeffreysabby.com\nThe CNAME file must be preserved during deployment.\nHTTPS must remain enabled."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#commit-practices",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#commit-practices",
+    "title": "Exoplanet Research",
+    "section": "19.6 Commit Practices",
+    "text": "19.6 Commit Practices\nCommits should represent meaningful changes.\nExamples:\nAdd Research homepage\nCreate Exoplanet research section\nAdd exoplanet discovery panel\nPublish orbital mechanics Jupyter Book\nImprove scientific paper retrieval\nAvoid combining unrelated changes into a single commit."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#deployment-validation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#deployment-validation",
+    "title": "Exoplanet Research",
+    "section": "19.7 Deployment Validation",
+    "text": "19.7 Deployment Validation\nAfter deployment:\n\nConfirm GitHub Actions completed successfully.\nOpen the public website.\nVerify the modified pages.\nConfirm navigation works.\nConfirm news panels render correctly.\nVerify custom-domain operation.\nCheck for missing images or broken links."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#public-repository",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#public-repository",
+    "title": "Exoplanet Research",
+    "section": "20.1 Public Repository",
+    "text": "20.1 Public Repository\nThe website source repository is public.\nOnly material intended for public distribution should be committed."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#sensitive-information",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#sensitive-information",
+    "title": "Exoplanet Research",
+    "section": "20.2 Sensitive Information",
+    "text": "20.2 Sensitive Information\nDo not publish:\n\nPasswords.\nAPI credentials.\nPrivate access tokens.\nConfidential student information.\nUnreleased proprietary data.\nRestricted research data.\nPrivate correspondence.\nSensitive institutional information."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#api-credentials",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#api-credentials",
+    "title": "Exoplanet Research",
+    "section": "20.3 API Credentials",
+    "text": "20.3 API Credentials\nIf future automated services require credentials, they should be managed through GitHub Actions secrets or another appropriate secret-management mechanism.\nCredentials must not be embedded in public source files."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#external-links",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#external-links",
+    "title": "Exoplanet Research",
+    "section": "20.4 External Links",
+    "text": "20.4 External Links\nExternal links should use appropriate security attributes.\nFor links opening in a new tab, use:\nrel=“noopener noreferrer”"
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#dependency-maintenance",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#dependency-maintenance",
+    "title": "Exoplanet Research",
+    "section": "20.5 Dependency Maintenance",
+    "text": "20.5 Dependency Maintenance\nPython packages and GitHub Actions dependencies should be reviewed periodically.\nSecurity updates should be applied after compatibility testing."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#accessibility-1",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#accessibility-1",
+    "title": "Exoplanet Research",
+    "section": "21.1 Accessibility",
+    "text": "21.1 Accessibility\nThe website should follow established web accessibility practices.\nRequirements include:\n\nMeaningful headings.\nDescriptive links.\nImage alternative text.\nAdequate color contrast.\nKeyboard-accessible navigation.\nResponsive layout.\nReadable typography.\nSemantic HTML."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-accessibility",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-accessibility",
+    "title": "Exoplanet Research",
+    "section": "21.2 Scientific Accessibility",
+    "text": "21.2 Scientific Accessibility\nScientific content should clearly define specialized notation and terminology.\nFigures and equations should be accompanied by explanatory text.\nWhere appropriate, provide introductory material before advanced technical discussions."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#navigation-usability",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#navigation-usability",
+    "title": "Exoplanet Research",
+    "section": "21.3 Navigation Usability",
+    "text": "21.3 Navigation Usability\nVisitors should not need to understand the complete website hierarchy before locating information.\nEach page should make its immediate context apparent."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#pre-publication-checks",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#pre-publication-checks",
+    "title": "Exoplanet Research",
+    "section": "22.1 Pre-Publication Checks",
+    "text": "22.1 Pre-Publication Checks\nBefore publishing new content, verify:\n\nScientific accuracy.\nCorrect mathematical notation.\nConsistent terminology.\nAppropriate references.\nCorrect figure captions.\nFunctional links.\nCorrect navigation.\nResponsive layout.\nSuccessful Quarto rendering.\nNo unintended changes to existing pages."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#automated-content-checks",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#automated-content-checks",
+    "title": "Exoplanet Research",
+    "section": "22.2 Automated Content Checks",
+    "text": "22.2 Automated Content Checks\nFor automated news and paper feeds, verify:\n\nSuccessful retrieval.\nValid metadata.\nCorrect classification.\nProper chronological ordering.\nAppropriate filtering.\nCorrect output formatting.\nTimestamp accuracy.\nFailure recovery."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-review",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-review",
+    "title": "Exoplanet Research",
+    "section": "22.3 Scientific Review",
+    "text": "22.3 Scientific Review\nSubstantive scientific content should be reviewed for:\n\nPhysical plausibility.\nMathematical consistency.\nDimensional correctness.\nNumerical validity.\nObservational support.\nUncertainty treatment.\nCitation accuracy."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#regression-testing",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#regression-testing",
+    "title": "Exoplanet Research",
+    "section": "22.4 Regression Testing",
+    "text": "22.4 Regression Testing\nChanges to shared CSS, navigation, or templates must be tested against representative existing pages.\nThe homepage should be included in regression checks."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#standard-development-sequence",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#standard-development-sequence",
+    "title": "Exoplanet Research",
+    "section": "23.1 Standard Development Sequence",
+    "text": "23.1 Standard Development Sequence\nAll substantial website additions should follow this sequence:\n\nDefine the scientific or organizational objective.\nIdentify the correct website division.\nEstablish the navigation hierarchy.\nDefine the page structure.\nIdentify required scientific content.\nIdentify relevant figures and data.\nIdentify supporting references.\nIdentify appropriate discovery-panel content.\nCreate the Quarto source files.\nImplement navigation.\nImplement discovery-panel components.\nRender locally.\nInspect the layout.\nValidate scientific content.\nCommit changes.\nPush to GitHub.\nDeploy.\nVerify the public website.\nDocument any required corrections."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#incremental-development",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#incremental-development",
+    "title": "Exoplanet Research",
+    "section": "23.2 Incremental Development",
+    "text": "23.2 Incremental Development\nThe website should be expanded one functional section at a time.\nA preferred sequence is:\n\nBuild the section homepage.\nEstablish its navigation.\nVerify its layout.\nAdd one specialized topic.\nVerify nested navigation.\nAdd the topic-specific discovery panel.\nValidate the complete section.\nExtend the pattern to additional topics.\n\nThis minimizes the risk of large structural errors."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#preservation-of-existing-functionality",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#preservation-of-existing-functionality",
+    "title": "Exoplanet Research",
+    "section": "23.3 Preservation of Existing Functionality",
+    "text": "23.3 Preservation of Existing Functionality\nNew development must not unnecessarily disrupt existing features.\nParticular care should be taken to preserve:\n\nHomepage layout.\nExisting news feeds.\nGitHub Actions automation.\nCustom-domain configuration.\nSidebar styling.\nPublished URLs."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-1-foundation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-1-foundation",
+    "title": "Exoplanet Research",
+    "section": "Phase 1 — Foundation",
+    "text": "Phase 1 — Foundation\nStatus: Substantially Complete.\nCompleted components include:\n\nQuarto website.\nCustom domain.\nHTTPS.\nGitHub repository.\nGitHub Pages deployment.\nThree-column homepage.\nScientific profile.\nResearch interests.\nMechatronics overview.\nGeneral astronomy news feeds.\nAutomated six-hour news updates.\nUTC update timestamp.\nPartial-feed failure handling.\n\nRemaining improvements include persistent news caching and additional automated validation."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-2-research-architecture",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-2-research-architecture",
+    "title": "Exoplanet Research",
+    "section": "Phase 2 — Research Architecture",
+    "text": "Phase 2 — Research Architecture\nObjectives:\n\nAdd Research to the top navigation.\nCreate the Research homepage.\nCreate the Research sidebar.\nEstablish the standard three-column research layout.\nAdd initial research-topic navigation.\nVerify all navigation behavior.\n\nInitial topics:\n\nSpectroscopic Eclipsing Binaries.\nExoplanets.\nRocketry.\nDrones.\nRovers.\nObservatory Automation."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-3-exoplanet-prototype",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-3-exoplanet-prototype",
+    "title": "Exoplanet Research",
+    "section": "Phase 3 — Exoplanet Prototype",
+    "text": "Phase 3 — Exoplanet Prototype\nObjectives:\n\nCreate the Exoplanet homepage.\nEstablish its specialized left sidebar.\nAdd introductory scientific content.\nAdd a topic-specific discovery panel.\nRetrieve exoplanet-related news.\nIdentify suitable scientific-paper sources.\nDisplay selected recent papers.\nAdd authoritative research-resource links.\nValidate automated updates.\nVerify desktop and mobile presentation.\n\nThe Exoplanet section will serve as the initial prototype for nested research subjects."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-4-spectroscopic-eclipsing-binaries",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-4-spectroscopic-eclipsing-binaries",
+    "title": "Exoplanet Research",
+    "section": "Phase 4 — Spectroscopic Eclipsing Binaries",
+    "text": "Phase 4 — Spectroscopic Eclipsing Binaries\nObjectives:\n\nCreate the Eclipsing Binary homepage.\nDocument historical observational programs.\nIntroduce spectroscopy and photometry methods.\nDocument radial-velocity measurements.\nIntroduce orbital and light-curve modeling.\nAdd current research targets.\nEstablish links to publications.\nAdd relevant scientific news and papers.\n\nRT CrB may serve as an initial detailed research-project example."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-5-engineering-and-instrumentation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-5-engineering-and-instrumentation",
+    "title": "Exoplanet Research",
+    "section": "Phase 5 — Engineering and Instrumentation",
+    "text": "Phase 5 — Engineering and Instrumentation\nObjectives:\n\nCreate the Engineering homepage.\nDocument major instrumentation projects.\nOrganize mechatronics work.\nAdd autonomous systems.\nAdd embedded systems.\nAdd telemetry and sensor systems.\nAdd experimental results.\nConnect engineering projects to relevant research programs."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-6-scientific-computing",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-6-scientific-computing",
+    "title": "Exoplanet Research",
+    "section": "Phase 6 — Scientific Computing",
+    "text": "Phase 6 — Scientific Computing\nObjectives:\n\nCreate the Scientific Computing homepage.\nOrganize software projects.\nDocument numerical methods.\nAdd scientific analysis tools.\nLink to public repositories.\nDocument validation procedures.\nAdd software publications and technical reports."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-7-education",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-7-education",
+    "title": "Exoplanet Research",
+    "section": "Phase 7 — Education",
+    "text": "Phase 7 — Education\nObjectives:\n\nCreate the Education homepage.\nOrganize university courses.\nAdd computational notebook resources.\nIntegrate Jupyter Books.\nDocument educational software.\nAdd instructional resources.\nEstablish links to relevant scientific computing projects."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-8-publications",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#phase-8-publications",
+    "title": "Exoplanet Research",
+    "section": "Phase 8 — Publications",
+    "text": "Phase 8 — Publications\nObjectives:\n\nEstablish the historical bibliography.\nAdd DOI and ADS links.\nOrganize publications by type.\nAdd technical reports.\nAdd completed Jupyter Books.\nLink publications to related research pages.\nAdd future publications as they become available."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-paper-discovery",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#scientific-paper-discovery",
+    "title": "Exoplanet Research",
+    "section": "25.1 Scientific Paper Discovery",
+    "text": "25.1 Scientific Paper Discovery\nA future automated paper-discovery system may retrieve relevant publications from sources such as ADS, arXiv, and journal feeds.\nThe system should support:\n\nTopic-specific queries.\nPublication-date filtering.\nAuthor filtering.\nDuplicate detection.\nDOI and arXiv identification.\nAbstract retrieval where permitted.\nScientific relevance ranking.\nConcise research summaries.\nLinks to original publications."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#human-scientific-review",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#human-scientific-review",
+    "title": "Exoplanet Research",
+    "section": "25.2 Human Scientific Review",
+    "text": "25.2 Human Scientific Review\nAutomated paper discovery and scientific interpretation should be treated as separate processes.\nA paper may be discovered automatically without being scientifically endorsed.\nFor particularly important papers, the author may provide additional interpretation or commentary.\nSuch commentary should be clearly distinguished from the original authors’ conclusions."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-archives",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#research-archives",
+    "title": "Exoplanet Research",
+    "section": "25.3 Research Archives",
+    "text": "25.3 Research Archives\nThe website may eventually link to publicly released observational datasets.\nPotential resources include:\n\nLight curves.\nSpectra.\nRadial-velocity measurements.\nOrbital solutions.\nCalibration information.\nData-reduction documentation.\nScientific notebooks.\nSoftware repositories.\n\nLarge datasets should generally be hosted in appropriate scientific archives or repositories rather than directly within the website repository."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#interactive-scientific-content",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#interactive-scientific-content",
+    "title": "Exoplanet Research",
+    "section": "25.4 Interactive Scientific Content",
+    "text": "25.4 Interactive Scientific Content\nFuture development may include:\n\nInteractive light curves.\nOrbital visualizations.\nExoplanet transit models.\nSpectral-line demonstrations.\nObservatory status displays.\nInteractive scientific plots.\nEmbedded computational demonstrations.\n\nInteractive components must remain scientifically accurate and should not compromise website performance or accessibility."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#search-and-discovery",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#search-and-discovery",
+    "title": "Exoplanet Research",
+    "section": "25.5 Search and Discovery",
+    "text": "25.5 Search and Discovery\nAs the website grows, a search function may become necessary.\nSearch should help visitors locate:\n\nResearch topics.\nIndividual projects.\nPublications.\nSoftware.\nEducational materials.\nScientific resources.\n\nSearch functionality should be introduced when the volume of content justifies it."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#authoritative-standard",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#authoritative-standard",
+    "title": "Exoplanet Research",
+    "section": "26.1 Authoritative Standard",
+    "text": "26.1 Authoritative Standard\nThis document is the authoritative architectural and development standard for the website.\nSubstantial architectural changes should be evaluated against its principles."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#versioning",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#versioning",
+    "title": "Exoplanet Research",
+    "section": "26.2 Versioning",
+    "text": "26.2 Versioning\nThe document will use semantic-style version numbering.\nExamples:\n1.0.0 — Initial architectural standard.\n1.1.0 — Addition of a new architectural capability.\n2.0.0 — Major architectural revision.\nEditorial corrections may use patch versions."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#change-documentation",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#change-documentation",
+    "title": "Exoplanet Research",
+    "section": "26.3 Change Documentation",
+    "text": "26.3 Change Documentation\nSignificant changes should record:\n\nDate.\nVersion.\nDescription.\nReason for the change.\nAffected website components."
+  },
+  {
+    "objectID": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#change-log",
+    "href": "docs/STANDARDS/WEBSITE_ARCHITECTURE_AND_DEVELOPMENT_STANDARD.html#change-log",
+    "title": "Exoplanet Research",
+    "section": "26.4 Change Log",
+    "text": "26.4 Change Log\n\n\n\n\n\n\n\n\nVersion\nDate\nDescription\n\n\n\n\n1.0.0\n2026-10-08\nInitial website architecture and development standard"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dr. Jeffrey Sabby",
+    "section": "",
+    "text": "News updated: October 09, 2026 at 01:19 UTC\n\nNASA — Latest News\n\n  \n    October 08, 2026\n    \n      NASA Briefing to Highlight Contributions to Martian Moons Mission\n    \n  \n  \n    October 08, 2026\n    \n      NASA Announces Bold Science Initiatives for America’s Golden Age Summit\n    \n  \n  \n    October 08, 2026\n    \n      NASA’s SSPICY Mission to Demonstrate In-Space Inspection Technologies\n    \n  \n\n\nMore NASA News\n\nSpaceX — Missions & Launches\n\n  \n    October 04, 2026\n    \n      SpaceX scrubs launch attempt for 21 data transport satellites for the Space Development Agency\n    \n  \n  \n    October 01, 2026\n    \n      Falcon Heavy flies its first mission for U.S. spy satellite agency\n    \n  \n  \n    October 01, 2026\n    \n      Launch preview: More than 100 spacecraft hitch a ride to orbit on SpaceX’s Transporter-18\n    \n  \n\n\nVisit SpaceX\n\nAstronomy Research\n\n  \n    October 08, 2026\n    \n      Astronomers pinpoint the most distant fast radio burst ever detected\n    \n  \n  \n    October 08, 2026\n    \n      Largest 2D map of the universe helps scientists discover new gravitational lenses\n    \n  \n  \n    October 08, 2026\n    \n      Solar Orbiter tracks origin of mysterious magnetic switchbacks\n    \n  \n\n\nMore Astronomy News"
+  },
+  {
+    "objectID": "index.html#scientific-identity",
+    "href": "index.html#scientific-identity",
+    "title": "Dr. Jeffrey Sabby",
+    "section": "Scientific Identity",
+    "text": "Scientific Identity\nI am an astrophysicist, physicist, educator, observational astronomer, and engineer whose work is driven by a fundamental interest in understanding physical systems through observation, measurement, computation, and experiment.\nMy research has focused particularly on stellar astrophysics, eclipsing binary systems, spectroscopy, stellar radial and rotational velocities, exoplanets, and observational astronomy. I am especially interested in problems where careful observations can be combined with physical models and computational methods to extract fundamental properties of astronomical systems.\nMuch of my work also lies at the intersection of astronomy, instrumentation, mechatronics, and computation. I design and build astronomical instrumentation and automated observatories, develop scientific software and data-analysis methods, and work with embedded computers, sensors, telemetry, data-acquisition systems, autonomous vehicles, and feedback-control systems. My engineering interests include Raspberry Pi and microcontroller-based systems, real-time sensing, avionics, GNSS/RTK positioning, 3D-printed mechanical systems, autonomous rovers and multirotor aircraft, and experimentally validated control systems.\nTeaching and research are closely connected in my work. I approach both from the perspective that physics is not simply a collection of established results, but a process of asking questions, constructing testable models, making measurements, confronting those models with evidence, and revising our understanding when the observations demand it."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Dr. Jeffrey Sabby",
+    "section": "Research Interests",
+    "text": "Research Interests\nMy current and continuing research interests include:\n\nStellar astrophysics\nEclipsing and spectroscopic binary systems\nStellar radial and rotational velocities\nAstronomical spectroscopy\nExoplanet detection and characterization\nTime-series analysis\nObservational astronomy\nAstronomical instrumentation\nMechatronics and embedded systems\nSensors, telemetry, and data acquisition\nAutonomous systems and feedback control\nMicrocontrollers, Raspberry Pi, and real-time instrumentation\n3D-printed mechanical and electromechanical systems\nAutomated observatories\nScientific computing and data analysis"
+  },
+  {
+    "objectID": "index.html#scientific-approach",
+    "href": "index.html#scientific-approach",
+    "title": "Dr. Jeffrey Sabby",
+    "section": "Scientific Approach",
+    "text": "Scientific Approach\nMy work follows a simple principle: physical understanding should remain anchored to observation and testable prediction.\nThe recurring workflow is:\nQuestion → Model → Prediction → Observation → Measurement → Analysis → Validation → Interpretation\nComputational methods, instrumentation, and theory are tools within that process. Their value ultimately depends on whether they improve our ability to make reproducible measurements, test physical models, quantify uncertainty, and extract reliable information from nature."
+  },
+  {
+    "objectID": "index.html#mechatronics-and-engineering",
+    "href": "index.html#mechatronics-and-engineering",
+    "title": "Dr. Jeffrey Sabby",
+    "section": "Mechatronics and Engineering",
+    "text": "Mechatronics and Engineering\nMy engineering work emphasizes the integration of mechanics, electronics, sensors, computation, and control into experimentally testable systems.\nRecent projects have included:\n\nNavio2/Raspberry Pi avionics systems\nAutonomous rover platforms\nAutonomous quadcopter and hexacopter systems\nReal-time telemetry and data acquisition\nRTK-enhanced GNSS positioning\nEnvironmental sensor packages\n3D-printed avionics housings\n3D-printed gimbal and thrust-vectoring hardware\nFeedback-control systems for rocket stabilization\nAutonomous mission planning\nEmbedded sensing and microcontroller-based instrumentation\n\nA recurring theme in these projects is the integration of physical modeling with direct experimental measurement. Systems are designed, instrumented, tested, and analyzed using recorded sensor and telemetry data so that predicted behavior can be compared directly with measured performance.\nThese projects reflect the same philosophy that guides my astrophysical research: construct a physical model, instrument the system, acquire quantitative data, compare prediction with measurement, and use the residuals to improve the design."
+  },
+  {
+    "objectID": "index.html#current-areas-of-work",
+    "href": "index.html#current-areas-of-work",
+    "title": "Dr. Jeffrey Sabby",
+    "section": "Current Areas of Work",
+    "text": "Current Areas of Work\nCurrent efforts include observational studies of binary stars and exoplanets, astronomical data analysis, scientific software development, automated observing systems, embedded instrumentation, autonomous mechatronic systems, and computational approaches to astrophysical and engineering problems.\nAdditional sections of this site will document current research projects, publications, observatories, scientific software, teaching materials, mechatronics projects, and selected technical work.\n\n\nResearch • Publications • Teaching • Software • Observatories • Mechatronics"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -7,45 +1008,39 @@
     "text": "About this site"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jeffrey Sabby",
-    "section": "",
-    "text": "News updated: October 08, 2026 at 23:41 UTC\n\nNASA — Latest News\n\n  \n    October 08, 2026\n    \n      NASA Briefing to Highlight Contributions to Martian Moons Mission\n    \n  \n  \n    October 08, 2026\n    \n      NASA Announces Bold Science Initiatives for America’s Golden Age Summit\n    \n  \n  \n    October 08, 2026\n    \n      NASA’s SSPICY Mission to Demonstrate In-Space Inspection Technologies\n    \n  \n\n\nMore NASA News\n\nSpaceX — Missions & Launches\n\n  \n    October 04, 2026\n    \n      SpaceX scrubs launch attempt for 21 data transport satellites for the Space Development Agency\n    \n  \n  \n    October 01, 2026\n    \n      Falcon Heavy flies its first mission for U.S. spy satellite agency\n    \n  \n  \n    October 01, 2026\n    \n      Launch preview: More than 100 spacecraft hitch a ride to orbit on SpaceX’s Transporter-18\n    \n  \n\n\nVisit SpaceX\n\nAstronomy Research\n\n  \n    October 08, 2026\n    \n      Astronomers pinpoint the most distant fast radio burst ever detected\n    \n  \n  \n    October 08, 2026\n    \n      Largest 2D map of the universe helps scientists discover new gravitational lenses\n    \n  \n  \n    October 08, 2026\n    \n      Solar Orbiter tracks origin of mysterious magnetic switchbacks\n    \n  \n\n\nMore Astronomy News"
+    "objectID": "research/index.html#research-overview",
+    "href": "research/index.html#research-overview",
+    "title": "Scientific Research",
+    "section": "Research Overview",
+    "text": "Research Overview\nMy research interests encompass observational astrophysics, experimental physics, scientific instrumentation, and the development of autonomous systems for scientific investigation. These activities share a common objective: developing quantitative descriptions of physical systems and testing those descriptions through careful observation, experimentation, and computational analysis.\nThroughout my research career, I have been particularly interested in problems that require the integration of theoretical physics, precision measurements, numerical modeling, and the design or adaptation of scientific instrumentation.\nMy work extends from the determination of fundamental stellar properties to the development of automated observatories, embedded control systems, and autonomous experimental platforms.\nThe following research areas reflect these interconnected scientific and engineering interests.",
+    "crumbs": [
+      "Home",
+      "Research Areas",
+      "Research Overview"
+    ]
   },
   {
-    "objectID": "index.html#scientific-identity",
-    "href": "index.html#scientific-identity",
-    "title": "Jeffrey Sabby",
-    "section": "Scientific Identity",
-    "text": "Scientific Identity\nI am an astrophysicist, physicist, educator, observational astronomer, and engineer whose work is driven by a fundamental interest in understanding physical systems through observation, measurement, computation, and experiment.\nMy research has focused particularly on stellar astrophysics, eclipsing binary systems, spectroscopy, stellar radial and rotational velocities, exoplanets, and observational astronomy. I am especially interested in problems where careful observations can be combined with physical models and computational methods to extract fundamental properties of astronomical systems.\nMuch of my work also lies at the intersection of astronomy, instrumentation, mechatronics, and computation. I design and build astronomical instrumentation and automated observatories, develop scientific software and data-analysis methods, and work with embedded computers, sensors, telemetry, data-acquisition systems, autonomous vehicles, and feedback-control systems. My engineering interests include Raspberry Pi and microcontroller-based systems, real-time sensing, avionics, GNSS/RTK positioning, 3D-printed mechanical systems, autonomous rovers and multirotor aircraft, and experimentally validated control systems.\nTeaching and research are closely connected in my work. I approach both from the perspective that physics is not simply a collection of established results, but a process of asking questions, constructing testable models, making measurements, confronting those models with evidence, and revising our understanding when the observations demand it."
+    "objectID": "research/index.html#research-areas",
+    "href": "research/index.html#research-areas",
+    "title": "Scientific Research",
+    "section": "Research Areas",
+    "text": "Research Areas\n\nSpectroscopic Eclipsing Binaries\nEclipsing binary star systems provide some of the most powerful observational laboratories for determining fundamental stellar properties. When photometric light curves are combined with spectroscopic radial-velocity measurements, it becomes possible to determine stellar masses, radii, orbital parameters, and other physical characteristics with considerable precision.\nMy research has emphasized the spectroscopic investigation of eclipsing binary systems, particularly the measurement of stellar radial and rotational velocities. These measurements provide essential constraints on orbital solutions, stellar rotation, and the physical properties of binary components.\nAn important aspect of this work involves combining observations obtained at different orbital phases with theoretical models of binary-star dynamics. The interpretation of these observations requires careful attention to instrumental calibration, spectral-line analysis, observational uncertainty, and the physical assumptions underlying orbital and stellar models.\nMy continuing interests include the reanalysis of historical observations, eclipse-timing variations, stellar activity, orbital evolution, and the application of modern computational techniques to previously investigated systems.\n\n\nExoplanets\nThe discovery and characterization of planets orbiting other stars represents a natural extension of stellar spectroscopy, orbital mechanics, and astronomical photometry.\nMy interests in exoplanet research include transit photometry, radial-velocity detection, orbital modeling, and the analysis of astronomical time-series observations. These methods provide complementary information about planetary systems, including orbital periods, planetary dimensions, orbital eccentricities, and constraints on planetary masses.\nTransit observations require careful analysis of stellar brightness variations, including the distinction between planetary transits and signals produced by stellar activity, eclipsing binary systems, or instrumental effects.\nSimilarly, radial-velocity investigations depend on precise spectroscopic measurements and the ability to distinguish planetary orbital motion from other sources of stellar velocity variability.\nSpace-based missions such as Kepler and the Transiting Exoplanet Survey Satellite (TESS) have created extensive observational archives that provide opportunities for independent analysis, model validation, and the investigation of previously identified planetary candidates.\n\n\nRocketry\nMy interests in experimental rocketry involve the application of classical mechanics, fluid dynamics, propulsion physics, electronics, and feedback-control theory to the design and investigation of rocket systems.\nRocket flight provides a particularly useful experimental environment for examining the relationship between theoretical predictions and measured system behavior. Important considerations include propulsion performance, aerodynamic forces, vehicle stability, flight trajectories, and the response of onboard instrumentation to rapidly changing environmental conditions.\nI am particularly interested in the integration of embedded electronics, sensors, telemetry, and data-acquisition systems into experimental platforms.\nThese technologies make it possible to record flight parameters, reconstruct trajectories, compare observations with numerical simulations, and evaluate the performance of mechanical and electronic subsystems.\nThe broader scientific objective is to develop instrumented experimental systems in which physical models can be evaluated against reproducible measurements.\n\n\nDrones and Unmanned Aerial Systems\nUnmanned aerial vehicles provide versatile experimental platforms for investigating flight dynamics, autonomous navigation, sensor integration, and real-time feedback control.\nMy interests include the relationship between vehicle dynamics and the algorithms used to maintain stable flight, execute controlled maneuvers, and respond to changes in environmental conditions.\nThese systems involve several interconnected areas of physics and engineering, including rigid-body dynamics, aerodynamics, inertial measurement, electronic instrumentation, and computational control.\nParticular attention is given to the integration of microcontrollers, onboard computers, inertial sensors, positioning systems, and communication interfaces.\nBeyond flight control, drones provide opportunities for developing mobile scientific instrumentation capable of collecting environmental, positional, and other experimental measurements.\nThe combination of autonomous operation and scientific data acquisition makes unmanned aerial systems valuable platforms for both engineering investigations and applied research.\n\n\nRobotic Rovers\nRobotic rovers offer opportunities to investigate autonomous ground navigation, electromechanical design, sensor integration, and the interaction between computational control systems and physical environments.\nMy interests include the design of mobile robotic platforms capable of acquiring environmental information, processing sensor measurements, and responding to changing operating conditions.\nThese investigations involve mechanical systems, electric motors, feedback control, embedded computing, and the development of algorithms for navigation and obstacle detection.\nRover platforms are particularly useful for examining the relationship between theoretical control models and the performance of real electromechanical systems.\nThey also provide practical environments for experimenting with distributed sensors, telemetry, remote operation, and autonomous decision-making.\nAn important long-term objective is the development of robotic platforms that can function as mobile scientific instruments, extending observational and experimental capabilities beyond fixed laboratory environments.\n\n\nObservatory Automation\nThe development of automated astronomical observatories has been an important component of my scientific and engineering work.\nI have designed and constructed three automated observatories, integrating astronomical instrumentation with mechanical systems, electronics, computer control, and scientific data-acquisition software.\nAn automated observatory requires the coordinated operation of numerous subsystems, including telescope mounts, imaging detectors, spectroscopic instruments, focus mechanisms, environmental sensors, and observatory enclosures.\nThese systems must operate reliably while maintaining the measurement precision required for scientific observations.\nMy interests include robotic telescope operation, instrumentation control, automated observing sequences, environmental monitoring, and the development of software systems for acquiring and processing astronomical data.\nObservatory automation also provides a natural connection between observational astrophysics and mechatronics. Mechanical design, embedded electronics, sensor systems, feedback control, and scientific computing must function together as an integrated experimental facility.\nThe ultimate objective is to increase the reliability, efficiency, and scientific productivity of astronomical observations while maintaining the calibration, traceability, and reproducibility required for quantitative research.",
+    "crumbs": [
+      "Home",
+      "Research Areas",
+      "Research Overview"
+    ]
   },
   {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Jeffrey Sabby",
-    "section": "Research Interests",
-    "text": "Research Interests\nMy current and continuing research interests include:\n\nStellar astrophysics\nEclipsing and spectroscopic binary systems\nStellar radial and rotational velocities\nAstronomical spectroscopy\nExoplanet detection and characterization\nTime-series analysis\nObservational astronomy\nAstronomical instrumentation\nMechatronics and embedded systems\nSensors, telemetry, and data acquisition\nAutonomous systems and feedback control\nMicrocontrollers, Raspberry Pi, and real-time instrumentation\n3D-printed mechanical and electromechanical systems\nAutomated observatories\nScientific computing and data analysis"
-  },
-  {
-    "objectID": "index.html#scientific-approach",
-    "href": "index.html#scientific-approach",
-    "title": "Jeffrey Sabby",
-    "section": "Scientific Approach",
-    "text": "Scientific Approach\nMy work follows a simple principle: physical understanding should remain anchored to observation and testable prediction.\nThe recurring workflow is:\nQuestion → Model → Prediction → Observation → Measurement → Analysis → Validation → Interpretation\nComputational methods, instrumentation, and theory are tools within that process. Their value ultimately depends on whether they improve our ability to make reproducible measurements, test physical models, quantify uncertainty, and extract reliable information from nature."
-  },
-  {
-    "objectID": "index.html#mechatronics-and-engineering",
-    "href": "index.html#mechatronics-and-engineering",
-    "title": "Jeffrey Sabby",
-    "section": "Mechatronics and Engineering",
-    "text": "Mechatronics and Engineering\nMy engineering work emphasizes the integration of mechanics, electronics, sensors, computation, and control into experimentally testable systems.\nRecent projects have included:\n\nNavio2/Raspberry Pi avionics systems\nAutonomous rover platforms\nAutonomous quadcopter and hexacopter systems\nReal-time telemetry and data acquisition\nRTK-enhanced GNSS positioning\nEnvironmental sensor packages\n3D-printed avionics housings\n3D-printed gimbal and thrust-vectoring hardware\nFeedback-control systems for rocket stabilization\nAutonomous mission planning\nEmbedded sensing and microcontroller-based instrumentation\n\nA recurring theme in these projects is the integration of physical modeling with direct experimental measurement. Systems are designed, instrumented, tested, and analyzed using recorded sensor and telemetry data so that predicted behavior can be compared directly with measured performance.\nThese projects reflect the same philosophy that guides my astrophysical research: construct a physical model, instrument the system, acquire quantitative data, compare prediction with measurement, and use the residuals to improve the design."
-  },
-  {
-    "objectID": "index.html#current-areas-of-work",
-    "href": "index.html#current-areas-of-work",
-    "title": "Jeffrey Sabby",
-    "section": "Current Areas of Work",
-    "text": "Current Areas of Work\nCurrent efforts include observational studies of binary stars and exoplanets, astronomical data analysis, scientific software development, automated observing systems, embedded instrumentation, autonomous mechatronic systems, and computational approaches to astrophysical and engineering problems.\nAdditional sections of this site will document current research projects, publications, observatories, scientific software, teaching materials, mechatronics projects, and selected technical work.\n\n\nResearch • Publications • Teaching • Software • Observatories • Mechatronics"
+    "objectID": "research/index.html#research-philosophy",
+    "href": "research/index.html#research-philosophy",
+    "title": "Scientific Research",
+    "section": "Research Philosophy",
+    "text": "Research Philosophy\nMy approach to scientific investigation is grounded in the relationship between theoretical predictions and observational or experimental evidence.\nA physical model must ultimately be evaluated through measurements that can test its assumptions and predictions. This requires careful experimental design, appropriate instrumentation, systematic data reduction, uncertainty analysis, and independent validation.\nComputational methods play an increasingly important role in this process. Numerical simulations, statistical inference, optimization algorithms, and scientific visualization provide powerful tools for investigating complex physical systems.\nHowever, computational results must remain consistent with established physical principles and be evaluated against analytical benchmarks, limiting cases, and observational evidence whenever possible.\nI place particular emphasis on reproducibility, dimensional consistency, physical plausibility, and the explicit identification of uncertainties and model limitations.\nAcross astrophysics, experimental physics, and engineering, my objective is to develop scientifically meaningful conclusions supported by quantitative evidence.",
+    "crumbs": [
+      "Home",
+      "Research Areas",
+      "Research Overview"
+    ]
   }
 ]
