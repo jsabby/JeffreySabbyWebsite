@@ -628,14 +628,17 @@
 
             legend: {
                 orientation: "h",
-                y: -0.25
+                x: 0.5,
+                xanchor: "center",
+                y: window.innerWidth <= 768 ? -0.42 : -0.25,
+                yanchor: "top"
             },
 
             margin: {
                 l: 65,
                 r: 20,
                 t: 55,
-                b: 100
+                b: window.innerWidth <= 768 ? 155 : 100
             },
 
             paper_bgcolor: "#ffffff",
