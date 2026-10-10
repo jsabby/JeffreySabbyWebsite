@@ -1,6 +1,7 @@
 project:
   type: website
   resources:
+    - news/*.html
     - research/eclipsing_binaries/data/*.csv
     - research/eclipsing_binaries/dashboard/*.js
     - research/eclipsing_binaries/dashboard/*.css
