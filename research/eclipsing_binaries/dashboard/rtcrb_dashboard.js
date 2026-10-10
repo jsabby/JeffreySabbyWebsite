@@ -9,7 +9,7 @@
        SPECOB spectroscopic solution
        Sabby & Lacy (2003)
 
-   Version: 1.0.0
+   Version: 1.0.1
    Date: 2026-10-09
 
    Scientific policy:
@@ -140,6 +140,7 @@
     const orbitalPlanePlot =
         document.getElementById("rtcrb-orbital-plane-plot");
 
+
     /* --------------------------------------------------------
        4. Utility Functions
        -------------------------------------------------------- */
@@ -192,6 +193,50 @@
             error
         );
     }
+
+
+    /* --------------------------------------------------------
+       4A. Plotly Device Configuration
+       -------------------------------------------------------- */
+
+    // Identify iPad and iPhone devices.
+    //
+    // Modern iPadOS Safari may identify itself as macOS.
+    // The additional MacIntel/touchscreen check accounts
+    // for this behavior.
+    //
+    // Desktop computers retain the Plotly modebar.
+
+    const isAppleMobileDevice =
+
+        /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+
+        (
+            navigator.platform === "MacIntel" &&
+            navigator.maxTouchPoints > 1
+        );
+
+
+    // Shared configuration for all four Plotly graphs.
+    //
+    // Desktop:
+    //     Modebar available on mouse hover.
+    //
+    // iPad / iPhone:
+    //     Modebar hidden.
+    //
+    // Plot responsiveness and scientific interaction
+    // remain enabled.
+
+    const PLOTLY_CONFIG = {
+
+        responsive: true,
+
+        displaylogo: false,
+
+        displayModeBar: false
+
+    };
 
 
     /* --------------------------------------------------------
@@ -384,10 +429,7 @@
 
             layout,
 
-            {
-                responsive: true,
-                displaylogo: false
-            }
+            PLOTLY_CONFIG
 
         );
     }
@@ -620,10 +662,7 @@
 
             layout,
 
-            {
-                responsive: true,
-                displaylogo: false
-            }
+            PLOTLY_CONFIG
 
         );
     }
@@ -1068,10 +1107,7 @@
 
             layout,
 
-            {
-                responsive: true,
-                displaylogo: false
-            }
+            PLOTLY_CONFIG
 
         );
     }
@@ -1179,10 +1215,7 @@
 
             layout,
 
-            {
-                responsive: true,
-                displaylogo: false
-            }
+            PLOTLY_CONFIG
 
         );
     }
