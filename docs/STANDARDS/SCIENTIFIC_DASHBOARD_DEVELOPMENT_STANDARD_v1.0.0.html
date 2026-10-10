@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>scientific_dashboard_development_standard_v1.0.0 – Dr. Jeffrey Sabby Ph.D</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-05b5cac302f10f8e745d1afe76d12ebf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Dr.&nbsp;Jeffrey Sabby Ph.D</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#scientific-dashboard-development-standard" id="toc-scientific-dashboard-development-standard" class="nav-link active" data-scroll-target="#scientific-dashboard-development-standard">Scientific Dashboard Development Standard</a>
+  <ul class="collapse">
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">1. Purpose</a></li>
+  <li><a href="#scientific-principles" id="toc-scientific-principles" class="nav-link" data-scroll-target="#scientific-principles">2. Scientific Principles</a>
+  <ul class="collapse">
+  <li><a href="#scientific-integrity" id="toc-scientific-integrity" class="nav-link" data-scroll-target="#scientific-integrity">2.1 Scientific Integrity</a></li>
+  <li><a href="#distinguishing-observations-and-models" id="toc-distinguishing-observations-and-models" class="nav-link" data-scroll-target="#distinguishing-observations-and-models">2.2 Distinguishing Observations and Models</a></li>
+  <li><a href="#units-and-physical-quantities" id="toc-units-and-physical-quantities" class="nav-link" data-scroll-target="#units-and-physical-quantities">2.3 Units and Physical Quantities</a></li>
+  <li><a href="#numerical-validation" id="toc-numerical-validation" class="nav-link" data-scroll-target="#numerical-validation">2.4 Numerical Validation</a></li>
+  </ul></li>
+  <li><a href="#dashboard-architecture" id="toc-dashboard-architecture" class="nav-link" data-scroll-target="#dashboard-architecture">3. Dashboard Architecture</a>
+  <ul class="collapse">
+  <li><a href="#separation-of-responsibilities" id="toc-separation-of-responsibilities" class="nav-link" data-scroll-target="#separation-of-responsibilities">3.1 Separation of Responsibilities</a></li>
+  <li><a href="#recommended-directory-structure" id="toc-recommended-directory-structure" class="nav-link" data-scroll-target="#recommended-directory-structure">3.2 Recommended Directory Structure</a></li>
+  <li><a href="#naming-conventions" id="toc-naming-conventions" class="nav-link" data-scroll-target="#naming-conventions">3.3 Naming Conventions</a></li>
+  </ul></li>
+  <li><a href="#scientific-data-management" id="toc-scientific-data-management" class="nav-link" data-scroll-target="#scientific-data-management">4. Scientific Data Management</a>
+  <ul class="collapse">
+  <li><a href="#original-data" id="toc-original-data" class="nav-link" data-scroll-target="#original-data">4.1 Original Data</a></li>
+  <li><a href="#data-provenance" id="toc-data-provenance" class="nav-link" data-scroll-target="#data-provenance">4.2 Data Provenance</a></li>
+  <li><a href="#data-processing" id="toc-data-processing" class="nav-link" data-scroll-target="#data-processing">4.3 Data Processing</a></li>
+  <li><a href="#missing-and-invalid-values" id="toc-missing-and-invalid-values" class="nav-link" data-scroll-target="#missing-and-invalid-values">4.4 Missing and Invalid Values</a></li>
+  </ul></li>
+  <li><a href="#visualization-standards" id="toc-visualization-standards" class="nav-link" data-scroll-target="#visualization-standards">5. Visualization Standards</a>
+  <ul class="collapse">
+  <li><a href="#plotting-library" id="toc-plotting-library" class="nav-link" data-scroll-target="#plotting-library">5.1 Plotting Library</a></li>
+  <li><a href="#plot-requirements" id="toc-plot-requirements" class="nav-link" data-scroll-target="#plot-requirements">5.2 Plot Requirements</a></li>
+  <li><a href="#scientific-plot-styling" id="toc-scientific-plot-styling" class="nav-link" data-scroll-target="#scientific-plot-styling">5.3 Scientific Plot Styling</a></li>
+  <li><a href="#plotly-configuration" id="toc-plotly-configuration" class="nav-link" data-scroll-target="#plotly-configuration">5.4 Plotly Configuration</a></li>
+  <li><a href="#legends" id="toc-legends" class="nav-link" data-scroll-target="#legends">5.5 Legends</a></li>
+  </ul></li>
+  <li><a href="#interactive-controls" id="toc-interactive-controls" class="nav-link" data-scroll-target="#interactive-controls">6. Interactive Controls</a>
+  <ul class="collapse">
+  <li><a href="#shared-state" id="toc-shared-state" class="nav-link" data-scroll-target="#shared-state">6.1 Shared State</a></li>
+  <li><a href="#synchronization" id="toc-synchronization" class="nav-link" data-scroll-target="#synchronization">6.2 Synchronization</a></li>
+  <li><a href="#animation" id="toc-animation" class="nav-link" data-scroll-target="#animation">6.3 Animation</a></li>
+  <li><a href="#animation-controls" id="toc-animation-controls" class="nav-link" data-scroll-target="#animation-controls">6.4 Animation Controls</a></li>
+  <li><a href="#touchscreen-compatibility" id="toc-touchscreen-compatibility" class="nav-link" data-scroll-target="#touchscreen-compatibility">6.5 Touchscreen Compatibility</a></li>
+  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">6.6 Accessibility</a></li>
+  </ul></li>
+  <li><a href="#responsive-design" id="toc-responsive-design" class="nav-link" data-scroll-target="#responsive-design">7. Responsive Design</a>
+  <ul class="collapse">
+  <li><a href="#supported-device-classes" id="toc-supported-device-classes" class="nav-link" data-scroll-target="#supported-device-classes">7.1 Supported Device Classes</a></li>
+  <li><a href="#desktop-layout" id="toc-desktop-layout" class="nav-link" data-scroll-target="#desktop-layout">7.2 Desktop Layout</a></li>
+  <li><a href="#tablet-layout" id="toc-tablet-layout" class="nav-link" data-scroll-target="#tablet-layout">7.3 Tablet Layout</a></li>
+  <li><a href="#smartphone-layout" id="toc-smartphone-layout" class="nav-link" data-scroll-target="#smartphone-layout">7.4 Smartphone Layout</a></li>
+  <li><a href="#mobile-breakpoint" id="toc-mobile-breakpoint" class="nav-link" data-scroll-target="#mobile-breakpoint">7.5 Mobile Breakpoint</a></li>
+  </ul></li>
+  <li><a href="#scientific-animation-and-geometry" id="toc-scientific-animation-and-geometry" class="nav-link" data-scroll-target="#scientific-animation-and-geometry">8. Scientific Animation and Geometry</a>
+  <ul class="collapse">
+  <li><a href="#physical-consistency" id="toc-physical-consistency" class="nav-link" data-scroll-target="#physical-consistency">8.1 Physical Consistency</a></li>
+  <li><a href="#coordinate-systems" id="toc-coordinate-systems" class="nav-link" data-scroll-target="#coordinate-systems">8.2 Coordinate Systems</a></li>
+  <li><a href="#scale" id="toc-scale" class="nav-link" data-scroll-target="#scale">8.3 Scale</a></li>
+  <li><a href="#aspect-ratio" id="toc-aspect-ratio" class="nav-link" data-scroll-target="#aspect-ratio">8.4 Aspect Ratio</a></li>
+  <li><a href="#eclipse-geometry" id="toc-eclipse-geometry" class="nav-link" data-scroll-target="#eclipse-geometry">8.5 Eclipse Geometry</a></li>
+  </ul></li>
+  <li><a href="#performance-and-reliability" id="toc-performance-and-reliability" class="nav-link" data-scroll-target="#performance-and-reliability">9. Performance and Reliability</a>
+  <ul class="collapse">
+  <li><a href="#rendering-performance" id="toc-rendering-performance" class="nav-link" data-scroll-target="#rendering-performance">9.1 Rendering Performance</a></li>
+  <li><a href="#data-loading" id="toc-data-loading" class="nav-link" data-scroll-target="#data-loading">9.2 Data Loading</a></li>
+  <li><a href="#error-handling" id="toc-error-handling" class="nav-link" data-scroll-target="#error-handling">9.3 Error Handling</a></li>
+  <li><a href="#scientific-reliability" id="toc-scientific-reliability" class="nav-link" data-scroll-target="#scientific-reliability">9.4 Scientific Reliability</a></li>
+  </ul></li>
+  <li><a href="#testing-and-validation" id="toc-testing-and-validation" class="nav-link" data-scroll-target="#testing-and-validation">10. Testing and Validation</a>
+  <ul class="collapse">
+  <li><a href="#local-testing" id="toc-local-testing" class="nav-link" data-scroll-target="#local-testing">10.1 Local Testing</a></li>
+  <li><a href="#functional-testing" id="toc-functional-testing" class="nav-link" data-scroll-target="#functional-testing">10.2 Functional Testing</a></li>
+  <li><a href="#scientific-validation" id="toc-scientific-validation" class="nav-link" data-scroll-target="#scientific-validation">10.3 Scientific Validation</a></li>
+  <li><a href="#cross-platform-testing" id="toc-cross-platform-testing" class="nav-link" data-scroll-target="#cross-platform-testing">10.4 Cross-Platform Testing</a></li>
+  <li><a href="#regression-testing" id="toc-regression-testing" class="nav-link" data-scroll-target="#regression-testing">10.5 Regression Testing</a></li>
+  </ul></li>
+  <li><a href="#version-control-and-publication" id="toc-version-control-and-publication" class="nav-link" data-scroll-target="#version-control-and-publication">11. Version Control and Publication</a>
+  <ul class="collapse">
+  <li><a href="#repository" id="toc-repository" class="nav-link" data-scroll-target="#repository">11.1 Repository</a></li>
+  <li><a href="#commit-requirements" id="toc-commit-requirements" class="nav-link" data-scroll-target="#commit-requirements">11.2 Commit Requirements</a></li>
+  <li><a href="#publication" id="toc-publication" class="nav-link" data-scroll-target="#publication">11.3 Publication</a></li>
+  <li><a href="#post-publication-validation" id="toc-post-publication-validation" class="nav-link" data-scroll-target="#post-publication-validation">11.4 Post-Publication Validation</a></li>
+  </ul></li>
+  <li><a href="#versioning-and-change-management" id="toc-versioning-and-change-management" class="nav-link" data-scroll-target="#versioning-and-change-management">12. Versioning and Change Management</a>
+  <ul class="collapse">
+  <li><a href="#semantic-versioning" id="toc-semantic-versioning" class="nav-link" data-scroll-target="#semantic-versioning">12.1 Semantic Versioning</a></li>
+  <li><a href="#version-headers" id="toc-version-headers" class="nav-link" data-scroll-target="#version-headers">12.2 Version Headers</a></li>
+  <li><a href="#stable-baselines" id="toc-stable-baselines" class="nav-link" data-scroll-target="#stable-baselines">12.3 Stable Baselines</a></li>
+  </ul></li>
+  <li><a href="#documentation-requirements" id="toc-documentation-requirements" class="nav-link" data-scroll-target="#documentation-requirements">13. Documentation Requirements</a></li>
+  <li><a href="#reference-implementation-rt-coronae-borealis" id="toc-reference-implementation-rt-coronae-borealis" class="nav-link" data-scroll-target="#reference-implementation-rt-coronae-borealis">14. Reference Implementation: RT Coronae Borealis</a>
+  <ul class="collapse">
+  <li><a href="#scientific-basis" id="toc-scientific-basis" class="nav-link" data-scroll-target="#scientific-basis">14.1 Scientific Basis</a></li>
+  <li><a href="#scientific-components" id="toc-scientific-components" class="nav-link" data-scroll-target="#scientific-components">14.2 Scientific Components</a></li>
+  <li><a href="#interactive-controls-1" id="toc-interactive-controls-1" class="nav-link" data-scroll-target="#interactive-controls-1">14.3 Interactive Controls</a></li>
+  <li><a href="#scientific-provenance" id="toc-scientific-provenance" class="nav-link" data-scroll-target="#scientific-provenance">14.4 Scientific Provenance</a></li>
+  <li><a href="#validated-features" id="toc-validated-features" class="nav-link" data-scroll-target="#validated-features">14.5 Validated Features</a></li>
+  </ul></li>
+  <li><a href="#future-scientific-applications" id="toc-future-scientific-applications" class="nav-link" data-scroll-target="#future-scientific-applications">15. Future Scientific Applications</a>
+  <ul class="collapse">
+  <li><a href="#spectroscopic-eclipsing-binaries" id="toc-spectroscopic-eclipsing-binaries" class="nav-link" data-scroll-target="#spectroscopic-eclipsing-binaries">15.1 Spectroscopic Eclipsing Binaries</a></li>
+  <li><a href="#exoplanets" id="toc-exoplanets" class="nav-link" data-scroll-target="#exoplanets">15.2 Exoplanets</a></li>
+  <li><a href="#observational-astronomy" id="toc-observational-astronomy" class="nav-link" data-scroll-target="#observational-astronomy">15.3 Observational Astronomy</a></li>
+  <li><a href="#computational-physics-and-astrophysics" id="toc-computational-physics-and-astrophysics" class="nav-link" data-scroll-target="#computational-physics-and-astrophysics">15.4 Computational Physics and Astrophysics</a></li>
+  </ul></li>
+  <li><a href="#development-workflow" id="toc-development-workflow" class="nav-link" data-scroll-target="#development-workflow">16. Development Workflow</a>
+  <ul class="collapse">
+  <li><a href="#phase-1-scientific-definition" id="toc-phase-1-scientific-definition" class="nav-link" data-scroll-target="#phase-1-scientific-definition">Phase 1 — Scientific Definition</a></li>
+  <li><a href="#phase-2-data-preparation" id="toc-phase-2-data-preparation" class="nav-link" data-scroll-target="#phase-2-data-preparation">Phase 2 — Data Preparation</a></li>
+  <li><a href="#phase-3-physical-modeling" id="toc-phase-3-physical-modeling" class="nav-link" data-scroll-target="#phase-3-physical-modeling">Phase 3 — Physical Modeling</a></li>
+  <li><a href="#phase-4-software-architecture" id="toc-phase-4-software-architecture" class="nav-link" data-scroll-target="#phase-4-software-architecture">Phase 4 — Software Architecture</a></li>
+  <li><a href="#phase-5-initial-implementation" id="toc-phase-5-initial-implementation" class="nav-link" data-scroll-target="#phase-5-initial-implementation">Phase 5 — Initial Implementation</a></li>
+  <li><a href="#phase-6-interactivity" id="toc-phase-6-interactivity" class="nav-link" data-scroll-target="#phase-6-interactivity">Phase 6 — Interactivity</a></li>
+  <li><a href="#phase-7-scientific-validation" id="toc-phase-7-scientific-validation" class="nav-link" data-scroll-target="#phase-7-scientific-validation">Phase 7 — Scientific Validation</a></li>
+  <li><a href="#phase-8-responsive-design" id="toc-phase-8-responsive-design" class="nav-link" data-scroll-target="#phase-8-responsive-design">Phase 8 — Responsive Design</a></li>
+  <li><a href="#phase-9-functional-testing" id="toc-phase-9-functional-testing" class="nav-link" data-scroll-target="#phase-9-functional-testing">Phase 9 — Functional Testing</a></li>
+  <li><a href="#phase-10-publication" id="toc-phase-10-publication" class="nav-link" data-scroll-target="#phase-10-publication">Phase 10 — Publication</a></li>
+  <li><a href="#phase-11-post-publication-verification" id="toc-phase-11-post-publication-verification" class="nav-link" data-scroll-target="#phase-11-post-publication-verification">Phase 11 — Post-Publication Verification</a></li>
+  <li><a href="#phase-12-maintenance-and-expansion" id="toc-phase-12-maintenance-and-expansion" class="nav-link" data-scroll-target="#phase-12-maintenance-and-expansion">Phase 12 — Maintenance and Expansion</a></li>
+  </ul></li>
+  <li><a href="#governing-principle" id="toc-governing-principle" class="nav-link" data-scroll-target="#governing-principle">17. Governing Principle</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">18. References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="scientific-dashboard-development-standard" class="level1">
+<h1>Scientific Dashboard Development Standard</h1>
+<p><strong>Project:</strong> JeffreySabbyWebsite<br>
+<strong>Document:</strong> SCIENTIFIC_DASHBOARD_DEVELOPMENT_STANDARD<br>
+<strong>Version:</strong> 1.0.0<br>
+<strong>Date:</strong> 2026-10-09<br>
+<strong>Status:</strong> Initial Standard<br>
+<strong>Author:</strong> Dr.&nbsp;Jeffrey A. Sabby<br>
+<strong>Development Collaboration:</strong> Kepler (OpenAI GPT-6)</p>
+<hr>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">1. Purpose</h2>
+<p>This document establishes the scientific, computational, architectural, and presentation standards for interactive scientific dashboards developed for the JeffreySabbyWebsite project.</p>
+<p>Scientific dashboards are intended to provide interactive representations of observational measurements, theoretical models, numerical calculations, and physical systems.</p>
+<p>The primary objectives are:</p>
+<ol type="1">
+<li>Preserve the scientific integrity of original research data.</li>
+<li>Present observational measurements and theoretical models accurately.</li>
+<li>Provide interactive tools for exploring physical relationships.</li>
+<li>Ensure reproducibility and traceability.</li>
+<li>Maintain compatibility across desktop, tablet, and mobile devices.</li>
+<li>Establish consistent software architecture and presentation.</li>
+<li>Support future expansion without compromising validated implementations.</li>
+</ol>
+<p>The RT Coronae Borealis interactive orbital dashboard, completed in October 2026, serves as the initial reference implementation.</p>
+<hr>
+</section>
+<section id="scientific-principles" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-principles">2. Scientific Principles</h2>
+<p>Every scientific dashboard must follow the principles of the scientific method.</p>
+<p>The preferred scientific workflow is:</p>
+<p>Question → Background → Model/Hypothesis → Predictions → Observational Strategy → Target Selection → Instrumentation → Observation → Raw Data → Calibration/Reduction → Measurement → Analysis/Modeling → Uncertainty/Validation → Results → Interpretation → Conclusion → Publication → New Questions.</p>
+<p>Not every dashboard requires every stage, but applicable stages must be identifiable.</p>
+<section id="scientific-integrity" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-integrity">2.1 Scientific Integrity</h3>
+<p>Original observational measurements must not be altered for presentation purposes.</p>
+<p>The following operations require explicit documentation:</p>
+<ul>
+<li>Data filtering.</li>
+<li>Outlier rejection.</li>
+<li>Smoothing.</li>
+<li>Interpolation.</li>
+<li>Rebinning.</li>
+<li>Normalization.</li>
+<li>Phase folding.</li>
+<li>Coordinate transformations.</li>
+<li>Model fitting.</li>
+<li>Numerical approximations.</li>
+</ul>
+<p>Whenever possible, retain the original observations separately from processed data and calculated models.</p>
+</section>
+<section id="distinguishing-observations-and-models" class="level3">
+<h3 class="anchored" data-anchor-id="distinguishing-observations-and-models">2.2 Distinguishing Observations and Models</h3>
+<p>Observational measurements and theoretical predictions must be visually distinguishable.</p>
+<p>Recommended conventions:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scientific Quantity</th>
+<th>Presentation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Observational measurements</td>
+<td>Individual markers</td>
+</tr>
+<tr class="even">
+<td>Calculated model</td>
+<td>Continuous curve</td>
+</tr>
+<tr class="odd">
+<td>Uncertainties</td>
+<td>Error bars or uncertainty bands</td>
+</tr>
+<tr class="even">
+<td>Reference values</td>
+<td>Dashed or dotted lines</td>
+</tr>
+<tr class="odd">
+<td>Current interactive state</td>
+<td>Distinct indicator</td>
+</tr>
+<tr class="even">
+<td>Rejected measurements</td>
+<td>Separate symbols, when scientifically appropriate</td>
+</tr>
+</tbody>
+</table>
+<p>Graph legends must identify the origin and meaning of each displayed series.</p>
+</section>
+<section id="units-and-physical-quantities" class="level3">
+<h3 class="anchored" data-anchor-id="units-and-physical-quantities">2.3 Units and Physical Quantities</h3>
+<p>SI units are preferred for internal calculations.</p>
+<p>Astronomical units may be used when they improve scientific interpretation.</p>
+<p>Examples include:</p>
+<ul>
+<li>Solar masses.</li>
+<li>Solar radii.</li>
+<li>Astronomical units.</li>
+<li>Parsecs.</li>
+<li>Days.</li>
+<li>Kilometers per second.</li>
+</ul>
+<p>Every dimensional axis must identify its physical quantity and units.</p>
+<p>Dimensionless quantities should be identified explicitly.</p>
+</section>
+<section id="numerical-validation" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-validation">2.4 Numerical Validation</h3>
+<p>Numerical calculations should be validated using appropriate methods, including:</p>
+<ul>
+<li>Dimensional analysis.</li>
+<li>Analytical benchmarks.</li>
+<li>Limiting cases.</li>
+<li>Conservation laws.</li>
+<li>Independent calculations.</li>
+<li>Numerical convergence tests.</li>
+<li>Comparison with published results.</li>
+</ul>
+<p>Where relevant, numerical precision and uncertainty propagation must be documented.</p>
+<hr>
+</section>
+</section>
+<section id="dashboard-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="dashboard-architecture">3. Dashboard Architecture</h2>
+<section id="separation-of-responsibilities" class="level3">
+<h3 class="anchored" data-anchor-id="separation-of-responsibilities">3.1 Separation of Responsibilities</h3>
+<p>A scientific dashboard should separate:</p>
+<ol type="1">
+<li>Scientific data.</li>
+<li>Scientific calculations.</li>
+<li>Visualization.</li>
+<li>User interaction.</li>
+<li>Presentation styling.</li>
+<li>Documentation.</li>
+</ol>
+<p>For the Quarto-based website, the preferred implementation uses:</p>
+<ul>
+<li>Quarto Markdown (<code>.qmd</code>) for scientific narrative and page structure.</li>
+<li>JavaScript (<code>.js</code>) for interactive behavior and visualization.</li>
+<li>CSS (<code>.css</code>) for presentation and responsive layout.</li>
+<li>CSV or other documented formats for scientific datasets.</li>
+</ul>
+<p>Scientific calculations must not depend on visual styling.</p>
+</section>
+<section id="recommended-directory-structure" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-directory-structure">3.2 Recommended Directory Structure</h3>
+<p>A dashboard should be stored within the appropriate research section.</p>
+<p>Example:</p>
+<pre class="text"><code>research/
+    eclipsing_binaries/
+        index.qmd
+        dashboard/
+            rtcrb_dashboard.js
+            rtcrb_dashboard.css
+        data/
+            rtcrb_photometry.csv
+            rtcrb_radial_velocities.csv
+            rtcrb_spectroscopic_model.csv
+            RTCRB_DATA_README.md</code></pre>
+<p>The same general architecture can be adapted to other research areas.</p>
+<p>Avoid unnecessary duplication of datasets.</p>
+</section>
+<section id="naming-conventions" class="level3">
+<h3 class="anchored" data-anchor-id="naming-conventions">3.3 Naming Conventions</h3>
+<p>Use descriptive, lowercase filenames with underscores.</p>
+<p>Examples:</p>
+<pre class="text"><code>rtcrb_dashboard.js
+rtcrb_dashboard.css
+rtcrb_photometry.csv
+rtcrb_radial_velocities.csv</code></pre>
+<p>JavaScript identifiers should use consistent naming conventions.</p>
+<p>Prefer <code>camelCase</code> for variables and functions.</p>
+<p>Use descriptive identifiers for scientific quantities.</p>
+<p>Avoid ambiguous names when physical interpretation is important.</p>
+<hr>
+</section>
+</section>
+<section id="scientific-data-management" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-data-management">4. Scientific Data Management</h2>
+<section id="original-data" class="level3">
+<h3 class="anchored" data-anchor-id="original-data">4.1 Original Data</h3>
+<p>Original observational data should be preserved in its native form whenever practical.</p>
+<p>Converted datasets must retain sufficient provenance to reconstruct their relationship to the original files.</p>
+</section>
+<section id="data-provenance" class="level3">
+<h3 class="anchored" data-anchor-id="data-provenance">4.2 Data Provenance</h3>
+<p>Each dataset should document:</p>
+<ul>
+<li>Scientific target.</li>
+<li>Original investigator or institution.</li>
+<li>Observing facility.</li>
+<li>Instrumentation.</li>
+<li>Observation dates, when available.</li>
+<li>Original filename.</li>
+<li>Original data format.</li>
+<li>Conversion procedure.</li>
+<li>Column definitions.</li>
+<li>Physical units.</li>
+<li>References.</li>
+<li>Known limitations.</li>
+</ul>
+<p>A dedicated data README is recommended.</p>
+</section>
+<section id="data-processing" class="level3">
+<h3 class="anchored" data-anchor-id="data-processing">4.3 Data Processing</h3>
+<p>Any transformation applied to observational measurements must be documented.</p>
+<p>Processed data should not silently replace original measurements.</p>
+<p>If multiple versions of a dataset exist, their relationships must be explicit.</p>
+</section>
+<section id="missing-and-invalid-values" class="level3">
+<h3 class="anchored" data-anchor-id="missing-and-invalid-values">4.4 Missing and Invalid Values</h3>
+<p>Missing or invalid numerical values must be handled explicitly.</p>
+<p>JavaScript implementations should verify numerical values before plotting.</p>
+<p>Invalid values must not be silently converted into physically meaningful measurements.</p>
+<hr>
+</section>
+</section>
+<section id="visualization-standards" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-standards">5. Visualization Standards</h2>
+<section id="plotting-library" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-library">5.1 Plotting Library</h3>
+<p>Plotly.js is the preferred interactive plotting library for the initial generation of scientific dashboards.</p>
+<p>Other libraries may be used when they provide a clear scientific or technical advantage.</p>
+</section>
+<section id="plot-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="plot-requirements">5.2 Plot Requirements</h3>
+<p>Every scientific plot should include:</p>
+<ol type="1">
+<li>A descriptive title.</li>
+<li>Labeled axes.</li>
+<li>Physical units where applicable.</li>
+<li>A legend when multiple datasets are displayed.</li>
+<li>Distinguishable observational and model representations.</li>
+<li>Appropriate axis limits.</li>
+<li>Readable typography.</li>
+<li>Responsive behavior.</li>
+</ol>
+</section>
+<section id="scientific-plot-styling" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-plot-styling">5.3 Scientific Plot Styling</h3>
+<p>Use consistent colors for the same physical components throughout a dashboard.</p>
+<p>For a binary-star system, for example:</p>
+<ul>
+<li>Primary component: blue.</li>
+<li>Secondary component: red.</li>
+<li>Observational measurements: distinguishable markers.</li>
+<li>Current orbital phase: green dashed indicator.</li>
+</ul>
+<p>These colors are conventions, not physical statements about stellar temperatures.</p>
+</section>
+<section id="plotly-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="plotly-configuration">5.4 Plotly Configuration</h3>
+<p>The RT CrB reference implementation uses:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> PLOTLY_CONFIG <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">responsive</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">displaylogo</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">displayModeBar</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This configuration suppresses Plotly toolbars on all supported devices.</p>
+<p>Plot interaction and responsive resizing remain enabled.</p>
+<p>All plots within a dashboard should use a shared Plotly configuration unless a documented exception is required.</p>
+</section>
+<section id="legends" class="level3">
+<h3 class="anchored" data-anchor-id="legends">5.5 Legends</h3>
+<p>Legends must not obscure:</p>
+<ul>
+<li>Observational measurements.</li>
+<li>Calculated curves.</li>
+<li>Axis labels.</li>
+<li>Plot titles.</li>
+<li>Other scientific annotations.</li>
+</ul>
+<p>Legend positioning must be tested at narrow screen widths.</p>
+<p>Mobile devices may require additional bottom margins and different legend positions.</p>
+<hr>
+</section>
+</section>
+<section id="interactive-controls" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-controls">6. Interactive Controls</h2>
+<section id="shared-state" class="level3">
+<h3 class="anchored" data-anchor-id="shared-state">6.1 Shared State</h3>
+<p>When several visualizations represent the same physical system, they should share a common application state.</p>
+<p>For example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> state <span class="op">=</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">phase</span><span class="op">:</span> <span class="fl">0.0</span><span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">playing</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">animationTimer</span><span class="op">:</span> <span class="kw">null</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A change in the shared state must be reflected consistently across all dependent visualizations.</p>
+</section>
+<section id="synchronization" class="level3">
+<h3 class="anchored" data-anchor-id="synchronization">6.2 Synchronization</h3>
+<p>Interactive controls must update every relevant visualization.</p>
+<p>For an eclipsing-binary dashboard, the orbital phase may control:</p>
+<ul>
+<li>Photometric phase indicator.</li>
+<li>Radial-velocity phase indicator.</li>
+<li>Projected stellar positions.</li>
+<li>Face-on orbital positions.</li>
+</ul>
+<p>All four representations must correspond to the same orbital phase.</p>
+</section>
+<section id="animation" class="level3">
+<h3 class="anchored" data-anchor-id="animation">6.3 Animation</h3>
+<p>Animations must not create overlapping update cycles that exceed the browser’s rendering capability.</p>
+<p>The RT CrB implementation waits for all Plotly updates to finish before scheduling the next animation frame.</p>
+<p>The preferred pattern is:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">await</span> <span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>(updates)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The next animation frame is scheduled only after the current update has completed.</p>
+</section>
+<section id="animation-controls" class="level3">
+<h3 class="anchored" data-anchor-id="animation-controls">6.4 Animation Controls</h3>
+<p>Where animation is provided, include appropriate controls:</p>
+<ul>
+<li>Play.</li>
+<li>Pause.</li>
+<li>Reset.</li>
+<li>Manual parameter adjustment.</li>
+</ul>
+<p>Controls should have predictable behavior.</p>
+<p>Reset must restore a documented initial state.</p>
+</section>
+<section id="touchscreen-compatibility" class="level3">
+<h3 class="anchored" data-anchor-id="touchscreen-compatibility">6.5 Touchscreen Compatibility</h3>
+<p>Interactive controls must support:</p>
+<ul>
+<li>Mouse input.</li>
+<li>Touch input.</li>
+<li>Apple Pencil or comparable stylus input.</li>
+<li>Keyboard activation where applicable.</li>
+</ul>
+<p>On touch devices, pointer events may provide more reliable interaction than click events alone.</p>
+<p>When both pointer and click handlers are used, duplicate activation must be prevented.</p>
+</section>
+<section id="accessibility" class="level3">
+<h3 class="anchored" data-anchor-id="accessibility">6.6 Accessibility</h3>
+<p>Interactive controls should use semantic HTML elements.</p>
+<p>Buttons should have meaningful labels.</p>
+<p>Where applicable, maintain accessibility attributes such as:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>button<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"aria-pressed"</span><span class="op">,</span> <span class="st">"true"</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Accessibility should be evaluated alongside visual presentation.</p>
+<hr>
+</section>
+</section>
+<section id="responsive-design" class="level2">
+<h2 class="anchored" data-anchor-id="responsive-design">7. Responsive Design</h2>
+<section id="supported-device-classes" class="level3">
+<h3 class="anchored" data-anchor-id="supported-device-classes">7.1 Supported Device Classes</h3>
+<p>Dashboards should be evaluated on:</p>
+<ol type="1">
+<li>Desktop computers.</li>
+<li>Tablet computers.</li>
+<li>Smartphones.</li>
+</ol>
+<p>Testing should include portrait and landscape orientations where relevant.</p>
+</section>
+<section id="desktop-layout" class="level3">
+<h3 class="anchored" data-anchor-id="desktop-layout">7.2 Desktop Layout</h3>
+<p>Desktop presentations should preserve the established website architecture.</p>
+<p>Scientific graphs should occupy sufficient horizontal space to display their contents clearly.</p>
+</section>
+<section id="tablet-layout" class="level3">
+<h3 class="anchored" data-anchor-id="tablet-layout">7.3 Tablet Layout</h3>
+<p>Tablet layouts should preserve side-by-side scientific visualizations when sufficient horizontal space is available.</p>
+<p>For the RT CrB dashboard, the projected orbital geometry and face-on orbital-plane view remain side by side on the iPad Pro in landscape orientation.</p>
+</section>
+<section id="smartphone-layout" class="level3">
+<h3 class="anchored" data-anchor-id="smartphone-layout">7.4 Smartphone Layout</h3>
+<p>On narrow screens:</p>
+<ul>
+<li>Multi-column visualizations may stack vertically.</li>
+<li>Graphs may require additional height.</li>
+<li>Legends may require multiple rows.</li>
+<li>Interactive controls must remain usable.</li>
+<li>Titles and subtitles must wrap without clipping.</li>
+<li>Axis labels must remain visible.</li>
+</ul>
+<p>Responsive behavior should be implemented through CSS media queries and, when necessary, visualization-specific layout adjustments.</p>
+</section>
+<section id="mobile-breakpoint" class="level3">
+<h3 class="anchored" data-anchor-id="mobile-breakpoint">7.5 Mobile Breakpoint</h3>
+<p>The initial RT CrB dashboard uses a breakpoint of:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="fu">(</span><span class="kw">max-width</span><span class="ch">:</span> <span class="dv">768</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Mobile-specific presentation */</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This breakpoint is a reference value rather than a universal requirement.</p>
+<p>Actual device behavior must determine whether additional breakpoints are necessary.</p>
+<hr>
+</section>
+</section>
+<section id="scientific-animation-and-geometry" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-animation-and-geometry">8. Scientific Animation and Geometry</h2>
+<section id="physical-consistency" class="level3">
+<h3 class="anchored" data-anchor-id="physical-consistency">8.1 Physical Consistency</h3>
+<p>Animated visualizations must preserve the physical meaning of their coordinates.</p>
+<p>The same physical parameters must be used consistently across related diagrams.</p>
+</section>
+<section id="coordinate-systems" class="level3">
+<h3 class="anchored" data-anchor-id="coordinate-systems">8.2 Coordinate Systems</h3>
+<p>Every coordinate system must be defined.</p>
+<p>Examples include:</p>
+<ul>
+<li>Orbital-plane coordinates.</li>
+<li>Observer-projected coordinates.</li>
+<li>Line-of-sight coordinates.</li>
+<li>Barycentric coordinates.</li>
+</ul>
+<p>Coordinate transformations must be documented.</p>
+</section>
+<section id="scale" class="level3">
+<h3 class="anchored" data-anchor-id="scale">8.3 Scale</h3>
+<p>Where visualizations represent physical dimensions, their scales must be physically meaningful.</p>
+<p>For orbital geometry, the relative stellar radii and orbital separation should be represented consistently.</p>
+</section>
+<section id="aspect-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="aspect-ratio">8.4 Aspect Ratio</h3>
+<p>Geometrical plots must preserve equal coordinate scaling when required.</p>
+<p>For Plotly, this may be implemented using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>yaxis<span class="op">:</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">scaleanchor</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">scaleratio</span><span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Without equal scaling, circular orbits may appear elliptical because of display geometry rather than physical eccentricity.</p>
+</section>
+<section id="eclipse-geometry" class="level3">
+<h3 class="anchored" data-anchor-id="eclipse-geometry">8.5 Eclipse Geometry</h3>
+<p>For eclipsing-binary visualizations, the projected foreground and background stellar components must be determined from their line-of-sight coordinates.</p>
+<p>The drawing order must reproduce the correct eclipse configuration.</p>
+<hr>
+</section>
+</section>
+<section id="performance-and-reliability" class="level2">
+<h2 class="anchored" data-anchor-id="performance-and-reliability">9. Performance and Reliability</h2>
+<section id="rendering-performance" class="level3">
+<h3 class="anchored" data-anchor-id="rendering-performance">9.1 Rendering Performance</h3>
+<p>Animation performance should be evaluated on both desktop and mobile hardware.</p>
+<p>Avoid initiating new rendering operations before previous operations have completed.</p>
+</section>
+<section id="data-loading" class="level3">
+<h3 class="anchored" data-anchor-id="data-loading">9.2 Data Loading</h3>
+<p>Data files should be loaded asynchronously.</p>
+<p>Failures must produce meaningful error messages.</p>
+</section>
+<section id="error-handling" class="level3">
+<h3 class="anchored" data-anchor-id="error-handling">9.3 Error Handling</h3>
+<p>Dashboard initialization and animation should use appropriate error handling.</p>
+<p>Errors should be reported to the browser console.</p>
+<p>Where practical, the dashboard should display a readable status message.</p>
+</section>
+<section id="scientific-reliability" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-reliability">9.4 Scientific Reliability</h3>
+<p>Rendering failures must not silently produce misleading scientific results.</p>
+<p>If required data cannot be loaded, the dashboard must report the failure rather than presenting an apparently valid but incomplete scientific visualization.</p>
+<hr>
+</section>
+</section>
+<section id="testing-and-validation" class="level2">
+<h2 class="anchored" data-anchor-id="testing-and-validation">10. Testing and Validation</h2>
+<section id="local-testing" class="level3">
+<h3 class="anchored" data-anchor-id="local-testing">10.1 Local Testing</h3>
+<p>Before publication, launch the Quarto preview:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verify that all scientific plots render correctly.</p>
+</section>
+<section id="functional-testing" class="level3">
+<h3 class="anchored" data-anchor-id="functional-testing">10.2 Functional Testing</h3>
+<p>For animated dashboards, test:</p>
+<ol type="1">
+<li>Initial rendering.</li>
+<li>Manual parameter adjustment.</li>
+<li>Play.</li>
+<li>Pause.</li>
+<li>Reset.</li>
+<li>Synchronization between visualizations.</li>
+<li>Data-loading status.</li>
+<li>Browser resizing.</li>
+<li>Touchscreen interactions.</li>
+</ol>
+</section>
+<section id="scientific-validation" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-validation">10.3 Scientific Validation</h3>
+<p>Confirm that:</p>
+<ul>
+<li>Observational data match the documented source.</li>
+<li>Calculated models match their documented source.</li>
+<li>Units are correct.</li>
+<li>Coordinate transformations are correct.</li>
+<li>Orbital phases are consistent.</li>
+<li>Physical scales are preserved.</li>
+<li>Numerical results agree with validated benchmarks.</li>
+</ul>
+</section>
+<section id="cross-platform-testing" class="level3">
+<h3 class="anchored" data-anchor-id="cross-platform-testing">10.4 Cross-Platform Testing</h3>
+<p>The initial RT CrB dashboard was functionally tested on:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Platform</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mac mini / macOS</td>
+<td>Passed</td>
+</tr>
+<tr class="even">
+<td>iPad Pro / iPadOS</td>
+<td>Passed</td>
+</tr>
+<tr class="odd">
+<td>iPhone / iOS</td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<p>These results establish the initial reference implementation.</p>
+<p>They do not imply compatibility with every browser, operating system, or device.</p>
+</section>
+<section id="regression-testing" class="level3">
+<h3 class="anchored" data-anchor-id="regression-testing">10.5 Regression Testing</h3>
+<p>Previously validated behavior must be rechecked after changes to:</p>
+<ul>
+<li>JavaScript.</li>
+<li>CSS.</li>
+<li>Data files.</li>
+<li>Quarto page structure.</li>
+<li>Plotly configuration.</li>
+<li>Animation logic.</li>
+</ul>
+<p>Changes intended for one device must not unintentionally degrade other devices.</p>
+<hr>
+</section>
+</section>
+<section id="version-control-and-publication" class="level2">
+<h2 class="anchored" data-anchor-id="version-control-and-publication">11. Version Control and Publication</h2>
+<section id="repository" class="level3">
+<h3 class="anchored" data-anchor-id="repository">11.1 Repository</h3>
+<p>The authoritative source repository is:</p>
+<pre class="text"><code>https://github.com/jsabby/JeffreySabbyWebsite</code></pre>
+<p>The primary development branch is:</p>
+<pre class="text"><code>main</code></pre>
+<p>The published website is deployed through:</p>
+<pre class="text"><code>gh-pages</code></pre>
+</section>
+<section id="commit-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="commit-requirements">11.2 Commit Requirements</h3>
+<p>Dashboard changes should be committed with descriptive messages.</p>
+<p>Examples:</p>
+<pre class="text"><code>Add RT CrB interactive orbital dashboard
+
+Synchronize RT CrB orbital animations
+
+Improve RT CrB dashboard layout for iPhone
+
+Correct RT CrB spectroscopic legend spacing</code></pre>
+</section>
+<section id="publication" class="level3">
+<h3 class="anchored" data-anchor-id="publication">11.3 Publication</h3>
+<p>After local validation, publish using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The published website is:</p>
+<pre class="text"><code>https://jeffreysabby.com</code></pre>
+</section>
+<section id="post-publication-validation" class="level3">
+<h3 class="anchored" data-anchor-id="post-publication-validation">11.4 Post-Publication Validation</h3>
+<p>After deployment:</p>
+<ol type="1">
+<li>Refresh the published page.</li>
+<li>Confirm that updated files are loaded.</li>
+<li>Verify that all scientific plots render.</li>
+<li>Test interactive controls.</li>
+<li>Confirm mobile compatibility.</li>
+<li>Check for visible layout regressions.</li>
+</ol>
+<p>GitHub Pages caching may delay the appearance of newly published files.</p>
+<hr>
+</section>
+</section>
+<section id="versioning-and-change-management" class="level2">
+<h2 class="anchored" data-anchor-id="versioning-and-change-management">12. Versioning and Change Management</h2>
+<section id="semantic-versioning" class="level3">
+<h3 class="anchored" data-anchor-id="semantic-versioning">12.1 Semantic Versioning</h3>
+<p>Dashboard implementations should use semantic versioning:</p>
+<pre class="text"><code>MAJOR.MINOR.PATCH</code></pre>
+<p>Recommended interpretation:</p>
+<ul>
+<li><strong>MAJOR:</strong> Incompatible architectural or interface changes.</li>
+<li><strong>MINOR:</strong> New backward-compatible scientific or interactive capabilities.</li>
+<li><strong>PATCH:</strong> Bug fixes, corrections, and presentation improvements.</li>
+</ul>
+</section>
+<section id="version-headers" class="level3">
+<h3 class="anchored" data-anchor-id="version-headers">12.2 Version Headers</h3>
+<p>JavaScript files should include a descriptive header.</p>
+<p>Example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"> * RT CrB — Interactive Scientific Dashboard</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * Project: JeffreySabbyWebsite</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"> * Target: RT Coronae Borealis</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"> * Scientific sources:</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"> *     EBOP photometric solution</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"> *     SPECOB spectroscopic solution</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"> *     Sabby &amp; Lacy (2003)</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co"> * Version: 1.0.1</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"> * Date: 2026-10-09</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="co"> * Scientific policy:</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co"> *     Original observational and model values are preserved.</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="stable-baselines" class="level3">
+<h3 class="anchored" data-anchor-id="stable-baselines">12.3 Stable Baselines</h3>
+<p>A dashboard that passes scientific and functional validation should be treated as a stable baseline.</p>
+<p>New features should be developed incrementally.</p>
+<p>Previously validated behavior should be preserved unless a documented scientific or technical reason requires modification.</p>
+<hr>
+</section>
+</section>
+<section id="documentation-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-requirements">13. Documentation Requirements</h2>
+<p>Every substantial dashboard should document:</p>
+<ol type="1">
+<li>Scientific purpose.</li>
+<li>Physical system or phenomenon.</li>
+<li>Observational data sources.</li>
+<li>Theoretical or numerical models.</li>
+<li>Physical assumptions.</li>
+<li>Coordinate systems.</li>
+<li>Units.</li>
+<li>Interactive controls.</li>
+<li>Known limitations.</li>
+<li>Validation procedures.</li>
+<li>References.</li>
+<li>Software version.</li>
+</ol>
+<p>Documentation may be distributed among the Quarto page, source-code comments, and accompanying Markdown files.</p>
+<hr>
+</section>
+<section id="reference-implementation-rt-coronae-borealis" class="level2">
+<h2 class="anchored" data-anchor-id="reference-implementation-rt-coronae-borealis">14. Reference Implementation: RT Coronae Borealis</h2>
+<section id="scientific-basis" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-basis">14.1 Scientific Basis</h3>
+<p>The initial reference implementation presents the spectroscopic eclipsing binary RT Coronae Borealis.</p>
+<p>Scientific reference:</p>
+<p>Sabby, J. A., &amp; Lacy, C. H. S. (2003), <em>Absolute Properties of the Eclipsing Binary Star RT Coronae Borealis</em>, The Astronomical Journal, 125, 1448–1457.</p>
+</section>
+<section id="scientific-components" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-components">14.2 Scientific Components</h3>
+<p>The dashboard includes four synchronized visualizations:</p>
+<ol type="1">
+<li>EBOP photometric observations and calculated solution.</li>
+<li>SPECOB radial-velocity observations and calculated solutions.</li>
+<li>Observer-projected orbital geometry.</li>
+<li>Face-on orbital-plane geometry.</li>
+</ol>
+</section>
+<section id="interactive-controls-1" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-controls-1">14.3 Interactive Controls</h3>
+<p>The dashboard provides:</p>
+<ul>
+<li>Orbital-phase slider.</li>
+<li>Numerical orbital-phase display.</li>
+<li>Play/Pause.</li>
+<li>Reset.</li>
+</ul>
+</section>
+<section id="scientific-provenance" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-provenance">14.4 Scientific Provenance</h3>
+<p>The original EBOP and SPECOB research datasets are preserved.</p>
+<p>The dashboard does not perform new fitting of the original observational data.</p>
+<p>The orbital geometry visualization is calculated from adopted published physical parameters.</p>
+</section>
+<section id="validated-features" class="level3">
+<h3 class="anchored" data-anchor-id="validated-features">14.5 Validated Features</h3>
+<p>The reference implementation demonstrates:</p>
+<ul>
+<li>Shared scientific state.</li>
+<li>Synchronized interactive plots.</li>
+<li>Asynchronous rendering.</li>
+<li>Touch-compatible controls.</li>
+<li>Responsive design.</li>
+<li>Cross-platform operation.</li>
+<li>Quarto integration.</li>
+<li>GitHub Pages publication.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="future-scientific-applications" class="level2">
+<h2 class="anchored" data-anchor-id="future-scientific-applications">15. Future Scientific Applications</h2>
+<p>The dashboard architecture is intended to support additional research applications.</p>
+<section id="spectroscopic-eclipsing-binaries" class="level3">
+<h3 class="anchored" data-anchor-id="spectroscopic-eclipsing-binaries">15.1 Spectroscopic Eclipsing Binaries</h3>
+<p>Potential applications include:</p>
+<ul>
+<li>Light-curve analysis.</li>
+<li>Radial-velocity analysis.</li>
+<li>Orbital geometry.</li>
+<li>Eclipse timing.</li>
+<li>O–C diagrams.</li>
+<li>Stellar rotation.</li>
+<li>Starspot modulation.</li>
+<li>Absolute stellar dimensions.</li>
+<li>Comparison with stellar evolutionary models.</li>
+</ul>
+</section>
+<section id="exoplanets" class="level3">
+<h3 class="anchored" data-anchor-id="exoplanets">15.2 Exoplanets</h3>
+<p>Potential applications include:</p>
+<ul>
+<li>Transit photometry.</li>
+<li>Radial-velocity measurements.</li>
+<li>Orbital geometry.</li>
+<li>Transit timing variations.</li>
+<li>Parameter estimation.</li>
+<li>Exoplanet detection.</li>
+</ul>
+</section>
+<section id="observational-astronomy" class="level3">
+<h3 class="anchored" data-anchor-id="observational-astronomy">15.3 Observational Astronomy</h3>
+<p>Potential applications include:</p>
+<ul>
+<li>Spectroscopic observations.</li>
+<li>Photometric time series.</li>
+<li>Detector characterization.</li>
+<li>Calibration and reduction.</li>
+<li>Observatory monitoring.</li>
+<li>Instrumentation performance.</li>
+</ul>
+</section>
+<section id="computational-physics-and-astrophysics" class="level3">
+<h3 class="anchored" data-anchor-id="computational-physics-and-astrophysics">15.4 Computational Physics and Astrophysics</h3>
+<p>Potential applications include:</p>
+<ul>
+<li>Orbital mechanics.</li>
+<li>Numerical integration.</li>
+<li>Dynamical systems.</li>
+<li>Stellar structure.</li>
+<li>Radiative processes.</li>
+<li>Signal processing.</li>
+<li>Scientific uncertainty analysis.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="development-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="development-workflow">16. Development Workflow</h2>
+<p>The recommended dashboard development workflow is:</p>
+<section id="phase-1-scientific-definition" class="level3">
+<h3 class="anchored" data-anchor-id="phase-1-scientific-definition">Phase 1 — Scientific Definition</h3>
+<p>Define the scientific objective, physical system, and required measurements.</p>
+</section>
+<section id="phase-2-data-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="phase-2-data-preparation">Phase 2 — Data Preparation</h3>
+<p>Identify, preserve, document, and validate the scientific datasets.</p>
+</section>
+<section id="phase-3-physical-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="phase-3-physical-modeling">Phase 3 — Physical Modeling</h3>
+<p>Establish the theoretical framework, numerical methods, and physical assumptions.</p>
+</section>
+<section id="phase-4-software-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="phase-4-software-architecture">Phase 4 — Software Architecture</h3>
+<p>Define the data structures, visualization components, and shared application state.</p>
+</section>
+<section id="phase-5-initial-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="phase-5-initial-implementation">Phase 5 — Initial Implementation</h3>
+<p>Develop the scientific plots and confirm correct rendering.</p>
+</section>
+<section id="phase-6-interactivity" class="level3">
+<h3 class="anchored" data-anchor-id="phase-6-interactivity">Phase 6 — Interactivity</h3>
+<p>Implement parameter controls, synchronization, and animation where appropriate.</p>
+</section>
+<section id="phase-7-scientific-validation" class="level3">
+<h3 class="anchored" data-anchor-id="phase-7-scientific-validation">Phase 7 — Scientific Validation</h3>
+<p>Verify the physical calculations and compare results against independent benchmarks.</p>
+</section>
+<section id="phase-8-responsive-design" class="level3">
+<h3 class="anchored" data-anchor-id="phase-8-responsive-design">Phase 8 — Responsive Design</h3>
+<p>Adapt the presentation for desktop, tablet, and smartphone devices.</p>
+</section>
+<section id="phase-9-functional-testing" class="level3">
+<h3 class="anchored" data-anchor-id="phase-9-functional-testing">Phase 9 — Functional Testing</h3>
+<p>Verify all controls, rendering operations, and cross-platform behavior.</p>
+</section>
+<section id="phase-10-publication" class="level3">
+<h3 class="anchored" data-anchor-id="phase-10-publication">Phase 10 — Publication</h3>
+<p>Commit validated changes and publish through the established website deployment process.</p>
+</section>
+<section id="phase-11-post-publication-verification" class="level3">
+<h3 class="anchored" data-anchor-id="phase-11-post-publication-verification">Phase 11 — Post-Publication Verification</h3>
+<p>Test the published implementation and establish a stable version.</p>
+</section>
+<section id="phase-12-maintenance-and-expansion" class="level3">
+<h3 class="anchored" data-anchor-id="phase-12-maintenance-and-expansion">Phase 12 — Maintenance and Expansion</h3>
+<p>Introduce new scientific capabilities incrementally while preserving validated functionality.</p>
+<hr>
+</section>
+</section>
+<section id="governing-principle" class="level2">
+<h2 class="anchored" data-anchor-id="governing-principle">17. Governing Principle</h2>
+<p>A scientific dashboard is not merely an animated illustration.</p>
+<p>It is an interactive scientific communication instrument.</p>
+<p>Its value depends on the accuracy of its physical interpretation, the integrity of its underlying data, the reproducibility of its calculations, and the clarity of its presentation.</p>
+<p><strong>Scientific correctness takes precedence over visual appearance.</strong></p>
+<p><strong>Validated functionality must be preserved during subsequent development.</strong></p>
+<p><strong>Original observations, calculated models, and illustrative geometry must remain clearly distinguishable.</strong></p>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">18. References</h2>
+<ol type="1">
+<li><p>Sabby, J. A., &amp; Lacy, C. H. S. (2003). <em>Absolute Properties of the Eclipsing Binary Star RT Coronae Borealis</em>. The Astronomical Journal, 125, 1448–1457.</p></li>
+<li><p>Plotly Technologies Inc.&nbsp;<em>Plotly JavaScript Graphing Library</em>. https://plotly.com/javascript/</p></li>
+<li><p>Posit Software, PBC. <em>Quarto Documentation</em>. https://quarto.org/</p></li>
+<li><p>GitHub. <em>GitHub Pages Documentation</em>. https://docs.github.com/en/pages</p></li>
+<li><p>JeffreySabbyWebsite. <em>Website Architecture and Development Standard</em>, Version 1.1.0.</p></li>
+</ol>
+<hr>
+<p><strong>End of Document</strong></p>
+<p><strong>Scientific Dashboard Development Standard — Version 1.0.0</strong></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(
+        ".sidebar a[href^='http']"
+    );
+
+    links.forEach(function (link) {
+        if (link.hostname !== window.location.hostname) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+        }
+    });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jeffreysabby\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
